@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Universal extends CI_Controller
+class Paskibraka extends CI_Controller
 {
 
     public function index()
@@ -9,11 +9,11 @@ class Universal extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Universal'
+            'page' => 'Data Paskibraka'
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
-        $this->load->view('datacenter/universal', $data);
+        $this->load->view('datacenter/1pbskksdp/paskibraka', $data);
         $this->load->view('template/universal/footer', $data);
     }
 }
