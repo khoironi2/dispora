@@ -8,6 +8,7 @@ class Tahun2021 extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
             'page' => 'Data Tahun 2021'
         ];
         $this->load->view('template/universal/header', $data);

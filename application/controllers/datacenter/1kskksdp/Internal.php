@@ -8,6 +8,7 @@ class Internal extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
             'page' => 'Data Internal'
         ];
         $this->load->view('template/universal/header', $data);

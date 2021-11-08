@@ -10,8 +10,8 @@
     <!--begin::Header Mobile-->
     <div id="kt_header_mobile" class="header-mobile">
         <!--begin::Logo-->
-        <a href="index.html">
-            <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo5/dist/assets/media/logos/logo-1.svg" class="logo-default max-h-30px" />
+        <a href="<?= base_url('datacenter/universal') ?>">
+            <img alt="Logo" src="<?= base_url('assets/img/logo/logo-banten.png') ?>" class="logo-default max-h-30px" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -584,11 +584,11 @@
                                                     <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Seleksi Kewirausahaan Muda Pemula">Seleksi Kewirausahaan Muda Pemula</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Pelatihan Keterampilan Kepramukaan') {
+                                            <li class="menu-item <?php if ($page == 'Data Gelar Karya Pemuda') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/pemuda_pelopor') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2pbspfspkp/gelar_karya_pemuda') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -600,14 +600,14 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Pelatihan Keterampilan Kepramukaan">Pelatihan Keterampilan Kepramukaan</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Gelar Karya Pemuda">Data Gelar Karya Pemuda</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data KNPI dan Ornasisai Kepemudaan Lainnya') {
+                                            <li class="menu-item <?php if ($page == 'Data Pelatihan Keterampilan Pemuda') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/papn') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2pbspfspkp/pelatihan_keterampilan_pemuda') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -621,14 +621,14 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data KNPI dan Ornasisai Kepemudaan Lainnya">KNPI dan Ornasisai Kepemudaan Lainnya</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Pelatihan Keterampilan Pemuda">Data Pelatihan Keterampilan Pemuda</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Latihan Dasar Kepemimpinan') {
+                                            <li class="menu-item <?php if ($page == 'Data Apresiasi keterampilan Pemuda') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/lbb') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2pbspfspkp/apresiasi_penghargaan') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -644,64 +644,7 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Latihan Dasar Kepemimpinan">Latihan Dasar Kepemimpinan</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Revitalisasi Kepemudaan') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/ltub') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M3.5,3 L5,3 L5,19.5 C5,20.3284271 4.32842712,21 3.5,21 L3.5,21 C2.67157288,21 2,20.3284271 2,19.5 L2,4.5 C2,3.67157288 2.67157288,3 3.5,3 Z" fill="#000000" />
-                                                                <path d="M6.99987583,2.99995344 L19.754647,2.99999303 C20.3069317,2.99999474 20.7546456,3.44771138 20.7546439,3.99999613 C20.7546431,4.24703684 20.6631995,4.48533385 20.497938,4.66895776 L17.5,8 L20.4979317,11.3310353 C20.8673908,11.7415453 20.8341123,12.3738351 20.4236023,12.7432941 C20.2399776,12.9085564 20.0016794,13 19.7546376,13 L6.99987583,13 L6.99987583,2.99995344 Z" fill="#000000" opacity="0.3" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Revitalisasi Kepemudaan">Revitalisasi Kepemudaan</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Evaluasi Kepemudaan') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/duta_pancasila') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M9.89442719,16.9422697 L8.10557281,16.0478425 C9.18098918,13.8970098 11.7963808,13.0252125 13.9472136,14.1006289 C14.7898516,14.5219479 15.4731082,15.2052045 15.8944272,16.0478425 L14.1055728,16.9422697 C13.8777812,16.4866865 13.5083696,16.1172749 13.0527864,15.8894833 C11.8899107,15.3080454 10.4758651,15.7793939 9.89442719,16.9422697 Z M21.9058667,8.11925961 C22.4393328,8.26220142 22.7559153,8.81053838 22.6129734,9.34400448 L20.9657703,15.4914504 C20.8228285,16.0249165 20.2744915,16.341499 19.7410254,16.1985572 C19.2075593,16.0556153 18.8909768,15.5072784 19.0339186,14.9738123 L20.6811218,8.82636639 C20.8240636,8.29290029 21.3724006,7.9763178 21.9058667,8.11925961 Z M2.09413334,8.11925961 C2.62759945,7.9763178 3.1759364,8.29290029 3.31887821,8.82636639 L4.87179248,14.6219213 C5.0147343,15.1553875 4.69815181,15.7037244 4.1646857,15.8466662 C3.6312196,15.989608 3.08288264,15.6730255 2.93994083,15.1395594 L1.38702656,9.34400448 C1.24408475,8.81053838 1.56066724,8.26220142 2.09413334,8.11925961 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                                <path d="M6.5,20 C4.01471863,20 2,17.9852814 2,15.5 C2,13.0147186 4.01471863,11 6.5,11 C8.98528137,11 11,13.0147186 11,15.5 C11,17.9852814 8.98528137,20 6.5,20 Z M17.5,20 C15.0147186,20 13,17.9852814 13,15.5 C13,13.0147186 15.0147186,11 17.5,11 C19.9852814,11 22,13.0147186 22,15.5 C22,17.9852814 19.9852814,20 17.5,20 Z" fill="#000000" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Evaluasi Kepemudaan">Evaluasi Kepemudaan</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Perijinan Organisasi Kepemudaan') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/duta_pancasila') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M9,10 L9,19 L10.1525987,19.3841996 C11.3761964,19.7920655 12.6575468,20 13.9473319,20 L17.5405883,20 C18.9706314,20 20.2018758,18.990621 20.4823303,17.5883484 L21.231529,13.8423552 C21.5564648,12.217676 20.5028146,10.6372006 18.8781353,10.3122648 C18.6189212,10.260422 18.353992,10.2430672 18.0902299,10.2606513 L14.5,10.5 L14.8641964,6.49383981 C14.9326895,5.74041495 14.3774427,5.07411874 13.6240179,5.00562558 C13.5827848,5.00187712 13.5414031,5 13.5,5 L13.5,5 C12.5694044,5 11.7070439,5.48826024 11.2282564,6.28623939 L9,10 Z" fill="#000000" />
-                                                                <rect fill="#000000" opacity="0.3" x="2" y="9" width="5" height="11" rx="1" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Perijinan Organisasi Kepemudaan">Perijinan Organisasi Kepemudaan</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Apresiasi keterampilan Pemuda">Data Apresiasi keterampilan Pemuda</span>
                                                 </a>
                                             </li>
 
@@ -709,7 +652,7 @@
                                             </li>
 
                                             <li class="menu-item menu-item-active" aria-haspopup="true">
-                                                <a class="menu-link">
+                                                <a href="<?= base_url('datacenter/2dkp/kewirausahaan_pemuda') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -721,29 +664,67 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Program Pembinaan Kepramukaan">Data Program Pembinaan Kepramukaan</span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Kewirausahaan Pemuda">Data Kewirausahaan Pemuda</span>
                                                 </a>
+                                            </li>
+                                            <li class="menu-item mb-3">
+                                            </li>
+                                            <li class="menu-item menu-item-active" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/2ppbb/profil_pemuda_berprestasi_banten') ?>" class="menu-link">
+                                                    <span class="svg-icon menu-icon">
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
+                                                                <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Profil Pemuda Berprestasi Banten">Data Profil Pemuda Berprestasi Banten</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item mb-3">
+                                            </li>
+                                            <li class="menu-item menu-item-active" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/2ddfpskp/daya_dukungfpsskp') ?>" class="menu-link">
+                                                    <span class="svg-icon menu-icon">
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
+                                                                <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Daya Dukung Fasilitas Penghargaan - Sarpras dan Kewirausahaan Pemuda">Data Daya Dukung Fasilitas Penghargaan - Sarpras dan Kewirausahaan Pemuda</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item mb-3">
+                                            </li>
+                                            <li class="menu-item menu-item-active" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/2pspkkp/proposal_sarpras_kegiatan_kewirausahaan_pemuda') ?>" class="menu-link">
+                                                    <span class="svg-icon menu-icon">
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
+                                                                <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Proposal Sarpras dan Kegiatan Kewirausahaan Pemuda">Proposal Sarpras dan Kegiatan Kewirausahaan Pemuda</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item mb-3">
                                             </li>
 
                                             <li class="menu-item menu-item-active " aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1psdpb/psdpbanten') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
-                                                                <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Peta Sumber daya Pemuda Banten">Peta Sumber Daya Pemuda Banten</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item mb-3">
-                                            </li>
-                                            <li class="menu-item menu-item-active " aria-haspopup="true">
                                                 <a class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
@@ -756,16 +737,16 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Kerjasama Seksi Kepeloporan - Kepemimpinan dan Sumber Daya Pemuda">Kerjasama Kepeloporan & Kepemimpinan Sumber Daya Pemuda Dispora Banten</span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Capaian Target Program Penghargaan - Fasilitasi Sarpras Dan Kewirausahaan Pemuda Dispora Banten">Data Capaian Target Program Penghargaan - Fasilitasi Sarpras Dan Kewirausahaan Pemuda Dispora Banten</span>
                                                 </a>
                                             </li>
                                             <li class="menu-item mb-3">
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Internal') {
+                                            <li class="menu-item <?php if ($page == 'Data Capaian Target Program Penghargaan Tahun 2019') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1kskksdp/internal') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2ctppfspkpdb/tahun2019') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -778,104 +759,47 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Internal">Internal</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Capaian Target Program Penghargaan Tahun 2019">Tahun 2019</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Eksternal') {
+                                            <li class="menu-item <?php if ($page == 'Data Capaian Target Program Penghargaan Tahun 2020') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1kskksdp/eksternal') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2ctppfspkpdb/tahun2020') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                 <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <rect fill="#000000" opacity="0.3" transform="translate(10.000000, 12.000000) rotate(-90.000000) translate(-10.000000, -12.000000) " x="9" y="5" width="2" height="14" rx="1" />
-                                                                <rect fill="#000000" opacity="0.3" x="19" y="3" width="2" height="18" rx="1" />
-                                                                <path d="M7.70710318,15.7071045 C7.31657888,16.0976288 6.68341391,16.0976288 6.29288961,15.7071045 C5.90236532,15.3165802 5.90236532,14.6834152 6.29288961,14.2928909 L12.2928896,8.29289093 C12.6714686,7.914312 13.281055,7.90106637 13.675721,8.26284357 L19.675721,13.7628436 C20.08284,14.136036 20.1103429,14.7686034 19.7371505,15.1757223 C19.3639581,15.5828413 18.7313908,15.6103443 18.3242718,15.2371519 L13.0300721,10.3841355 L7.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-12.999999, -11.999997) " />
+                                                                <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-14.000000, -12.000000) " x="13" y="5" width="2" height="14" rx="1" />
+                                                                <rect fill="#000000" opacity="0.3" x="3" y="3" width="2" height="18" rx="1" />
+                                                                <path d="M5.7071045,15.7071045 C5.3165802,16.0976288 4.68341522,16.0976288 4.29289093,15.7071045 C3.90236664,15.3165802 3.90236664,14.6834152 4.29289093,14.2928909 L10.2928909,8.29289093 C10.6714699,7.914312 11.2810563,7.90106637 11.6757223,8.26284357 L17.6757223,13.7628436 C18.0828413,14.136036 18.1103443,14.7686034 17.7371519,15.1757223 C17.3639594,15.5828413 16.7313921,15.6103443 16.3242731,15.2371519 L11.0300735,10.3841355 L5.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(11.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-11.000001, -11.999997) " />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Eksternal">Eksternal</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Capaian Target Program Penghargaan Tahun 2020">Tahun 2020</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item mb-3">
-                                            </li>
-                                            <li class="menu-item menu-item-active " aria-haspopup="true">
-                                                <a class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
-                                                                <path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Capaian Target Program Kepeloporan - Kepemimpinan dan Sumber Daya Pemuda Dispora Banten">Data Capaian Target Program Kepeloporan - Kepemimpinan dan Sumber Daya Pemuda Dispora Banten</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item mb-3">
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Tahun 2019') {
+                                            <li class="menu-item <?php if ($page == 'Data Capaian Target Program Penghargaan Tahun 2021') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1ctpkksdpdb/tahun2019') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2ctppfspkpdb/tahun2021') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                 <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M9.26193932,16.6476484 C8.90425297,17.0684559 8.27315905,17.1196257 7.85235158,16.7619393 C7.43154411,16.404253 7.38037434,15.773159 7.73806068,15.3523516 L16.2380607,5.35235158 C16.6013618,4.92493855 17.2451015,4.87991302 17.6643638,5.25259068 L22.1643638,9.25259068 C22.5771466,9.6195087 22.6143273,10.2515811 22.2474093,10.6643638 C21.8804913,11.0771466 21.2484189,11.1143273 20.8356362,10.7474093 L17.0997854,7.42665306 L9.26193932,16.6476484 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(14.999995, 11.000002) rotate(-180.000000) translate(-14.999995, -11.000002) " />
-                                                                <path d="M4.26193932,17.6476484 C3.90425297,18.0684559 3.27315905,18.1196257 2.85235158,17.7619393 C2.43154411,17.404253 2.38037434,16.773159 2.73806068,16.3523516 L11.2380607,6.35235158 C11.6013618,5.92493855 12.2451015,5.87991302 12.6643638,6.25259068 L17.1643638,10.2525907 C17.5771466,10.6195087 17.6143273,11.2515811 17.2474093,11.6643638 C16.8804913,12.0771466 16.2484189,12.1143273 15.8356362,11.7474093 L12.0997854,8.42665306 L4.26193932,17.6476484 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.999995, 12.000002) rotate(-180.000000) translate(-9.999995, -12.000002) " />
+                                                                <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-14.000000, -12.000000) " x="13" y="5" width="2" height="14" rx="1" />
+                                                                <rect fill="#000000" opacity="0.3" x="3" y="3" width="2" height="18" rx="1" />
+                                                                <path d="M5.7071045,15.7071045 C5.3165802,16.0976288 4.68341522,16.0976288 4.29289093,15.7071045 C3.90236664,15.3165802 3.90236664,14.6834152 4.29289093,14.2928909 L10.2928909,8.29289093 C10.6714699,7.914312 11.2810563,7.90106637 11.6757223,8.26284357 L17.6757223,13.7628436 C18.0828413,14.136036 18.1103443,14.7686034 17.7371519,15.1757223 C17.3639594,15.5828413 16.7313921,15.6103443 16.3242731,15.2371519 L11.0300735,10.3841355 L5.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(11.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-11.000001, -11.999997) " />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Tahun 2019">Tahun 2019</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Tahun 2020') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1ctpkksdpdb/tahun2020') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M9.26193932,16.6476484 C8.90425297,17.0684559 8.27315905,17.1196257 7.85235158,16.7619393 C7.43154411,16.404253 7.38037434,15.773159 7.73806068,15.3523516 L16.2380607,5.35235158 C16.6013618,4.92493855 17.2451015,4.87991302 17.6643638,5.25259068 L22.1643638,9.25259068 C22.5771466,9.6195087 22.6143273,10.2515811 22.2474093,10.6643638 C21.8804913,11.0771466 21.2484189,11.1143273 20.8356362,10.7474093 L17.0997854,7.42665306 L9.26193932,16.6476484 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(14.999995, 11.000002) rotate(-180.000000) translate(-14.999995, -11.000002) " />
-                                                                <path d="M4.26193932,17.6476484 C3.90425297,18.0684559 3.27315905,18.1196257 2.85235158,17.7619393 C2.43154411,17.404253 2.38037434,16.773159 2.73806068,16.3523516 L11.2380607,6.35235158 C11.6013618,5.92493855 12.2451015,5.87991302 12.6643638,6.25259068 L17.1643638,10.2525907 C17.5771466,10.6195087 17.6143273,11.2515811 17.2474093,11.6643638 C16.8804913,12.0771466 16.2484189,12.1143273 15.8356362,11.7474093 L12.0997854,8.42665306 L4.26193932,17.6476484 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.999995, 12.000002) rotate(-180.000000) translate(-9.999995, -12.000002) " />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Tahun 2020'">Tahun 2020</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Data Tahun 2021') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1ctpkksdpdb/tahun2021') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M9.26193932,16.6476484 C8.90425297,17.0684559 8.27315905,17.1196257 7.85235158,16.7619393 C7.43154411,16.404253 7.38037434,15.773159 7.73806068,15.3523516 L16.2380607,5.35235158 C16.6013618,4.92493855 17.2451015,4.87991302 17.6643638,5.25259068 L22.1643638,9.25259068 C22.5771466,9.6195087 22.6143273,10.2515811 22.2474093,10.6643638 C21.8804913,11.0771466 21.2484189,11.1143273 20.8356362,10.7474093 L17.0997854,7.42665306 L9.26193932,16.6476484 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(14.999995, 11.000002) rotate(-180.000000) translate(-14.999995, -11.000002) " />
-                                                                <path d="M4.26193932,17.6476484 C3.90425297,18.0684559 3.27315905,18.1196257 2.85235158,17.7619393 C2.43154411,17.404253 2.38037434,16.773159 2.73806068,16.3523516 L11.2380607,6.35235158 C11.6013618,5.92493855 12.2451015,5.87991302 12.6643638,6.25259068 L17.1643638,10.2525907 C17.5771466,10.6195087 17.6143273,11.2515811 17.2474093,11.6643638 C16.8804913,12.0771466 16.2484189,12.1143273 15.8356362,11.7474093 L12.0997854,8.42665306 L4.26193932,17.6476484 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.999995, 12.000002) rotate(-180.000000) translate(-9.999995, -12.000002) " />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Tahun 2021'">Tahun 2021</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Capaian Target Program Penghargaan Tahun 2021">Tahun 2021</span>
                                                 </a>
                                             </li>
 
@@ -974,11 +898,11 @@
                                                     <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data KNPI dan Ornasisai Kepemudaan Lainnya">KNPI dan Ornasisai Kepemudaan Lainnya</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Latihan Dasar Kepemimpinan') {
+                                            <li class="menu-item <?php if ($page == 'Data Apresiasi keterampilan Pemuda') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('datacenter/1pbskksdp/lbb') ?>" class="menu-link">
+                                                <a href="<?= base_url('datacenter/2pbspfspkp/pelatihan_keterampilan_pemuda') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -994,7 +918,7 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Latihan Dasar Kepemimpinan">Latihan Dasar Kepemimpinan</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Apresiasi keterampilan Pemuda">Data Apresiasi keterampilan Pemuda</span>
                                                 </a>
                                             </li>
                                             <li class="menu-item <?php if ($page == 'Data Revitalisasi Kepemudaan') {
