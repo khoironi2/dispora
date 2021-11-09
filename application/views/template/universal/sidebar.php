@@ -104,23 +104,26 @@
                                     </span>
                                 </a>
                             </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Informasi Daftar Kegiatan Bidang Kepemudaan">
-                                <a href="#" class="nav-link btn btn-icon btn-icon-white btn-hover-transparent-white" data-toggle="tab" data-target="#kt_aside_tab_4" role="tab">
+                            <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Daftar Bursa kegiatan">
+                                <a href="#" class="nav-link btn btn-icon btn-icon-white btn-hover-transparent-white <?php if ($tab == 'tab4') {
+                                                                                                                        echo 'active';
+                                                                                                                    } else {
+                                                                                                                    } ?>" data-toggle="tab" data-target="#kt_aside_tab_4" role="tab">
                                     <span class="svg-icon svg-icon-xl">
-                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/General/Shield-check.svg-->
+                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Media/Equalizer.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                 <rect x="0" y="0" width="24" height="24" />
-                                                <path d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z" fill="#000000" opacity="0.3" />
-                                                <path d="M11.1750002,14.75 C10.9354169,14.75 10.6958335,14.6541667 10.5041669,14.4625 L8.58750019,12.5458333 C8.20416686,12.1625 8.20416686,11.5875 8.58750019,11.2041667 C8.97083352,10.8208333 9.59375019,10.8208333 9.92916686,11.2041667 L11.1750002,12.45 L14.3375002,9.2875 C14.7208335,8.90416667 15.2958335,8.90416667 15.6791669,9.2875 C16.0625002,9.67083333 16.0625002,10.2458333 15.6791669,10.6291667 L11.8458335,14.4625 C11.6541669,14.6541667 11.4145835,14.75 11.1750002,14.75 Z" fill="#000000" />
+                                                <path d="M12,10.9996338 C12.8356605,10.3719448 13.8743941,10 15,10 C17.7614237,10 20,12.2385763 20,15 C20,17.7614237 17.7614237,20 15,20 C13.8743941,20 12.8356605,19.6280552 12,19.0003662 C11.1643395,19.6280552 10.1256059,20 9,20 C6.23857625,20 4,17.7614237 4,15 C4,12.2385763 6.23857625,10 9,10 C10.1256059,10 11.1643395,10.3719448 12,10.9996338 Z M13.3336047,12.504354 C13.757474,13.2388026 14,14.0910788 14,15 C14,15.9088933 13.7574889,16.761145 13.3336438,17.4955783 C13.8188886,17.8206693 14.3938466,18 15,18 C16.6568542,18 18,16.6568542 18,15 C18,13.3431458 16.6568542,12 15,12 C14.3930587,12 13.8175971,12.18044 13.3336047,12.504354 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                <circle fill="#000000" cx="12" cy="9" r="5" />
                                             </g>
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
                                 </a>
                             </li>
+                            <!--end::Item-->
+                            <!--begin::Item-->
                             <!--end::Item-->
                             <!--end::Item-->
                         </ul>
@@ -1090,10 +1093,10 @@
                                 <!--end::Aside Menu-->
                                 <!--end::List-->
                             </div>
-                            <div class="tab-pane" <?php if ($tab == 'tab4') {
+                            <div class="tab-pane <?php if ($tab == 'tab4') {
                                                         echo 'fade show active';
                                                     } else {
-                                                    } ?> id="kt_aside_tab_4">
+                                                    } ?>" id="kt_aside_tab_4">
                                 <!--begin::Aside Menu-->
                                 <div class="aside-menu-wrapper flex-column-fluid px-3 px-lg-10 py-5" id="kt_aside_menu_wrapper">
                                     <!--begin::Menu Container-->
@@ -1101,7 +1104,7 @@
                                         <!--begin::Menu Nav-->
                                         <ul class="menu-nav">
                                             <li class="menu-item menu-item-active" aria-haspopup="true">
-                                                <a href="index.html" class="menu-link">
+                                                <a class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Design/Layers.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -1113,71 +1116,71 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text">Daftar Bursa Kegiatan</span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Data Program Berjalan Seksi Kepramukaan dan Kelembagaan Pemuda">Data Program Berjalan Seksi Kepramukaan dan Kelembagaan Pemuda</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-section">
-                                                <h4 class="menu-text" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda">Kepeloporan Kepemimpinan SDP</h4>
-                                                <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                                            <li class="menu-item mb-3">
                                             </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="builder.html" class="menu-link">
+                                            <li class="menu-item <?php if ($page == 'Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda') {
+                                                                        echo 'menu-item-active';
+                                                                    } else {
+                                                                    }; ?>" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/4bursa/kkp') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                                 <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000" />
-                                                                <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
+                                                                <path d="M3.5,3 L5,3 L5,19.5 C5,20.3284271 4.32842712,21 3.5,21 L3.5,21 C2.67157288,21 2,20.3284271 2,19.5 L2,4.5 C2,3.67157288 2.67157288,3 3.5,3 Z" fill="#000000" />
+                                                                <path d="M6.99987583,2.99995344 L19.754647,2.99999303 C20.3069317,2.99999474 20.7546456,3.44771138 20.7546439,3.99999613 C20.7546431,4.24703684 20.6631995,4.48533385 20.497938,4.66895776 L17.5,8 L20.4979317,11.3310353 C20.8673908,11.7415453 20.8341123,12.3738351 20.4236023,12.7432941 C20.2399776,12.9085564 20.0016794,13 19.7546376,13 L6.99987583,13 L6.99987583,2.99995344 Z" fill="#000000" opacity="0.3" />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda">Data KK SDP</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Bursa Kepeloporan Kepemimpinan dan Sumber Daya pemuda">Bursa KKSDP</span>
                                                 </a>
                                             </li>
-                                            </li>
-                                            <li class="menu-section">
-                                                <h4 class="menu-text" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Penghargaan, Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda">Penghargaan Sarpras KP</h4>
-                                                <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="builder.html" class="menu-link">
+                                            <li class="menu-item <?php if ($page == 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda') {
+                                                                        echo 'menu-item-active';
+                                                                    } else {
+                                                                    }; ?>" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/4bursa/psarpraskwu') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000" />
-                                                                <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Penghargaan, Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda">Data PSARPRAS KP</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda">Bursa Kewirausahaan</span>
                                                 </a>
                                             </li>
-                                            </li>
-                                            <li class="menu-section">
-                                                <h4 class="menu-text" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Kepramukaan dan Kelembagaan Pemuda">Kepramukaan Kelembagaan</h4>
-                                                <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-                                            </li>
-                                            <li class="menu-item" aria-haspopup="true">
-                                                <a href="builder.html" class="menu-link">
+                                            <li class="menu-item <?php if ($page == 'Bursa Kepramukaan dan Kelembagaan Pemuda') {
+                                                                        echo 'menu-item-active';
+                                                                    } else {
+                                                                    }; ?>" aria-haspopup="true">
+                                                <a href="<?= base_url('datacenter/4bursa/kepramukaan') ?>" class="menu-link">
                                                     <span class="svg-icon menu-icon">
                                                         <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000" />
-                                                                <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <rect fill="#000000" opacity="0.3" transform="translate(13.000000, 6.000000) rotate(-450.000000) translate(-13.000000, -6.000000) " x="12" y="8.8817842e-16" width="2" height="12" rx="1" />
+                                                                <path d="M9.79289322,3.79289322 C10.1834175,3.40236893 10.8165825,3.40236893 11.2071068,3.79289322 C11.5976311,4.18341751 11.5976311,4.81658249 11.2071068,5.20710678 L8.20710678,8.20710678 C7.81658249,8.59763107 7.18341751,8.59763107 6.79289322,8.20710678 L3.79289322,5.20710678 C3.40236893,4.81658249 3.40236893,4.18341751 3.79289322,3.79289322 C4.18341751,3.40236893 4.81658249,3.40236893 5.20710678,3.79289322 L7.5,6.08578644 L9.79289322,3.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(7.500000, 6.000000) rotate(-270.000000) translate(-7.500000, -6.000000) " />
+                                                                <rect fill="#000000" opacity="0.3" transform="translate(11.000000, 18.000000) scale(1, -1) rotate(90.000000) translate(-11.000000, -18.000000) " x="10" y="12" width="2" height="12" rx="1" />
+                                                                <path d="M18.7928932,15.7928932 C19.1834175,15.4023689 19.8165825,15.4023689 20.2071068,15.7928932 C20.5976311,16.1834175 20.5976311,16.8165825 20.2071068,17.2071068 L17.2071068,20.2071068 C16.8165825,20.5976311 16.1834175,20.5976311 15.7928932,20.2071068 L12.7928932,17.2071068 C12.4023689,16.8165825 12.4023689,16.1834175 12.7928932,15.7928932 C13.1834175,15.4023689 13.8165825,15.4023689 14.2071068,15.7928932 L16.5,18.0857864 L18.7928932,15.7928932 Z" fill="#000000" fill-rule="nonzero" transform="translate(16.500000, 18.000000) scale(1, -1) rotate(270.000000) translate(-16.500000, -18.000000) " />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Seksi Kepramukaan dan Kelembagaan Pemuda">Data KKP</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Bursa Kepramukaan dan Kelembagaan Pemuda">Bursa Kepramukaan</span>
                                                 </a>
                                             </li>
+
                                         </ul>
                                         <!--end::Menu Nav-->
                                     </div>
@@ -1186,176 +1189,216 @@
                                 <!--end::Aside Menu-->
                                 <!--end::List-->
                             </div>
-                            <!--end::Tab Pane-->
+                            <!--end::Aside Menu-->
+                            <!--end::List-->
                         </div>
-                        <!--end::Tab Content-->
+                        <!--end::Tab Pane-->
                     </div>
-                    <!--end::Workspace-->
+                    <!--end::Tab Content-->
                 </div>
-                <!--end::Secondary-->
+                <!--end::Workspace-->
             </div>
-            <!--end::Aside-->
-            <!--begin::Wrapper-->
-            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-                <!--begin::Content-->
-                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                    <!--begin::Subheader-->
-                    <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
-                        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-                            <!--begin::Info-->
-                            <div class="d-flex align-items-center flex-wrap mr-1">
-                                <!--begin::Page Heading-->
-                                <div class="d-flex align-items-baseline flex-wrap mr-5">
-                                    <!--begin::Page Title-->
-                                    <h5 class="text-dark font-weight-bold my-1 mr-5"><?= $title; ?></h5>
-                                    <!--end::Page Title-->
-                                </div>
-                                <!--end::Page Heading-->
+            <!--end::Secondary-->
+        </div>
+        <!--end::Aside-->
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+            <!--begin::Content-->
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                <!--begin::Subheader-->
+                <div class="subheader py-6 py-lg-8 subheader-transparent" id="kt_subheader">
+                    <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                        <!--begin::Info-->
+                        <div class="d-flex align-items-center flex-wrap mr-1">
+                            <!--begin::Page Heading-->
+                            <div class="d-flex align-items-baseline flex-wrap mr-5">
+                                <!--begin::Page Title-->
+                                <h5 class="text-dark font-weight-bold my-1 mr-5">
+                                    <!-- <?= $page; ?> -->
+                                </h5>
+                                <!--end::Page Title-->
                             </div>
-                            <!--end::Info-->
-                            <!--begin::Toolbar-->
-                            <div class="d-flex align-items-center flex-wrap">
-                                <!--begin::Dropdown-->
-                                <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="top">
-                                    <a href="#" class="btn btn-fixed-height btn-bg-white btn-text-dark-50 btn-hover-text-primary btn-icon-primary font-weight-bolder font-size-sm px-5 my-1 mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="svg-icon svg-icon-md">
-                                            <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Communication/Add-user.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <polygon points="0 0 24 0 24 24 0 24" />
-                                                    <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                    <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>Add Member</a>
-                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right p-0 m-0">
-                                        <!--begin::Navigation-->
-                                        <ul class="navi navi-hover">
-                                            <li class="navi-header pb-1">
-                                                <span class="text-primary text-uppercase font-weight-bolder font-size-sm">Add new:</span>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-shopping-cart-1"></i>
-                                                    </span>
-                                                    <span class="navi-text">Order</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-calendar-8"></i>
-                                                    </span>
-                                                    <span class="navi-text">Event</span>
-                                                    <span class="navi-link-badge">
-                                                        <span class="label label-light-danger label-inline font-weight-bold">new</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-graph-1"></i>
-                                                    </span>
-                                                    <span class="navi-text">Report</span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-rocket-1"></i>
-                                                    </span>
-                                                    <span class="navi-text">Post</span>
-                                                    <span class="navi-link-badge">
-                                                        <span class="label label-light-success label-rounded font-weight-bolder">5</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-icon">
-                                                        <i class="flaticon2-writing"></i>
-                                                    </span>
-                                                    <span class="navi-text">File</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!--end::Navigation-->
-                                    </div>
+                            <!--end::Page Heading-->
+                        </div>
+                        <!--end::Info-->
+                        <!--begin::Toolbar-->
+                        <div class="d-flex align-items-center flex-wrap">
+                            <!--begin::Dropdown-->
+                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="top">
+                                <a href="#" class="btn btn-fixed-height btn-bg-white btn-text-dark-50 btn-hover-text-primary btn-icon-primary font-weight-bolder font-size-sm px-5 my-1 mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="svg-icon svg-icon-md">
+                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Communication/Add-user.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                            </g>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                    </span>Add Member</a>
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right p-0 m-0">
+                                    <!--begin::Navigation-->
+                                    <ul class="navi navi-hover">
+                                        <li class="navi-header pb-1">
+                                            <span class="text-primary text-uppercase font-weight-bolder font-size-sm">Add new:</span>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-icon">
+                                                    <i class="flaticon2-shopping-cart-1"></i>
+                                                </span>
+                                                <span class="navi-text">Order</span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-icon">
+                                                    <i class="flaticon2-calendar-8"></i>
+                                                </span>
+                                                <span class="navi-text">Event</span>
+                                                <span class="navi-link-badge">
+                                                    <span class="label label-light-danger label-inline font-weight-bold">new</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-icon">
+                                                    <i class="flaticon2-graph-1"></i>
+                                                </span>
+                                                <span class="navi-text">Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-icon">
+                                                    <i class="flaticon2-rocket-1"></i>
+                                                </span>
+                                                <span class="navi-text">Post</span>
+                                                <span class="navi-link-badge">
+                                                    <span class="label label-light-success label-rounded font-weight-bolder">5</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-icon">
+                                                    <i class="flaticon2-writing"></i>
+                                                </span>
+                                                <span class="navi-text">File</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--end::Navigation-->
                                 </div>
-                                <!--end::Dropdown-->
-                                <!--begin::Dropdown-->
-                                <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="top">
-                                    <a href="#" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5 my-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="svg-icon svg-icon-md">
-                                            <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Files/File.svg-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <polygon points="0 0 24 0 24 24 0 24" />
-                                                    <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                    <rect fill="#000000" x="6" y="11" width="9" height="2" rx="1" />
-                                                    <rect fill="#000000" x="6" y="15" width="5" height="2" rx="1" />
-                                                </g>
-                                            </svg>
-                                            <!--end::Svg Icon-->
-                                        </span>New Report</a>
-                                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 m-0">
-                                        <!--begin::Navigation-->
-                                        <ul class="navi navi-hover">
-                                            <li class="navi-header font-weight-bold py-4">
-                                                <span class="font-size-lg">Choose Option:</span>
-                                                <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-                                            </li>
-                                            <li class="navi-separator mb-3 opacity-70"></li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-text">
-                                                        <span class="label label-xl label-inline label-light-primary">Orders</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-text">
-                                                        <span class="label label-xl label-inline label-light-danger">Reports</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-text">
-                                                        <span class="label label-xl label-inline label-light-warning">Tasks</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-text">
-                                                        <span class="label label-xl label-inline label-light-success">Events</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-item">
-                                                <a href="#" class="navi-link">
-                                                    <span class="navi-text">
-                                                        <span class="label label-xl label-inline label-light-dark">Members</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="navi-separator mt-3 opacity-70"></li>
-                                            <li class="navi-footer py-4">
-                                                <a class="btn btn-primary font-weight-bold btn-sm px-5" href="#">
-                                                    <i class="ki ki-plus icon-sm"></i>Create</a>
-                                            </li>
-                                        </ul>
-                                        <!--end::Navigation-->
-                                    </div>
-                                </div>
-                                <!--end::Dropdown-->
                             </div>
-                            <!--end::Toolbar-->
+                            <!--end::Dropdown-->
+                            <!--begin::Dropdown-->
+                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="top">
+                                <a href="#" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5 my-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="svg-icon svg-icon-md">
+                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Files/File.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                <rect fill="#000000" x="6" y="11" width="9" height="2" rx="1" />
+                                                <rect fill="#000000" x="6" y="15" width="5" height="2" rx="1" />
+                                            </g>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                    </span>New Report</a>
+                                <div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 m-0">
+                                    <!--begin::Navigation-->
+                                    <ul class="navi navi-hover">
+                                        <li class="navi-header font-weight-bold py-4">
+                                            <span class="font-size-lg">Choose Option:</span>
+                                            <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
+                                        </li>
+                                        <li class="navi-separator mb-3 opacity-70"></li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-text">
+                                                    <span class="label label-xl label-inline label-light-primary">Orders</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-text">
+                                                    <span class="label label-xl label-inline label-light-danger">Reports</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-text">
+                                                    <span class="label label-xl label-inline label-light-warning">Tasks</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-text">
+                                                    <span class="label label-xl label-inline label-light-success">Events</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="navi-text">
+                                                    <span class="label label-xl label-inline label-light-dark">Members</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="navi-separator mt-3 opacity-70"></li>
+                                        <li class="navi-footer py-4">
+                                            <a class="btn btn-primary font-weight-bold btn-sm px-5" href="#">
+                                                <i class="ki ki-plus icon-sm"></i>Create</a>
+                                        </li>
+                                    </ul>
+                                    <!--end::Navigation-->
+                                </div>
+                            </div>
+                            <!--end::Dropdown-->
+                        </div>
+                        <!--end::Toolbar-->
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card card-custom gutter-b">
+                        <div class="card-body d-flex align-items-center py-5 py-lg-10">
+                            <!--begin::Icon-->
+                            <div class="d-flex flex-center position-relative ml-5 mr-15 ml-lg-9">
+                                <span class="svg-icon svg-icon-5x svg-icon-primary position-absolute opacity-15">
+                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Layout/Layout-polygon.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 70 70" fill="none">
+                                        <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                                            <path d="M28 4.04145C32.3316 1.54059 37.6684 1.54059 42 4.04145L58.3109 13.4585C62.6425 15.9594 65.3109 20.5812 65.3109 25.5829V44.4171C65.3109 49.4188 62.6425 54.0406 58.3109 56.5415L42 65.9585C37.6684 68.4594 32.3316 68.4594 28 65.9585L11.6891 56.5415C7.3575 54.0406 4.68911 49.4188 4.68911 44.4171V25.5829C4.68911 20.5812 7.3575 15.9594 11.6891 13.4585L28 4.04145Z" fill="#000000" />
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="svg-icon svg-icon-2x svg-icon-primary position-absolute">
+                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Tools/Compass.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <path d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z" fill="#000000" opacity="0.3" />
+                                            <path d="M12,10 C13.1045695,10 14,9.1045695 14,8 C14,6.8954305 13.1045695,6 12,6 C10.8954305,6 10,6.8954305 10,8 C10,9.1045695 10.8954305,10 12,10 Z M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z" fill="#000000" fill-rule="nonzero" />
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </div>
+                            <!--end::Icon-->
+                            <!--begin::Description-->
+                            <div class="m-0 text-dark-50 font-weight-bold font-size-lg"><?= $title ?>
+                            </div>
+                            <!--end::Description-->
                         </div>
                     </div>
-                    <!--end::Subheader-->
+                </div>
+                <!--end::Subheader-->
