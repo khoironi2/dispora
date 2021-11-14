@@ -267,7 +267,7 @@
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>pemuda";
+                                    window.location.href = "<?php echo base_url() ?>pemuda/dashboard";
                                 });
 
                         } else if (response == "admin") {

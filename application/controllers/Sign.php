@@ -117,4 +117,18 @@ class Sign extends CI_Controller
             }
         }
     }
+
+    public function logout()
+    {
+        date_default_timezone_set("ASIA/JAKARTA");
+        $email = $this->session->userdata('email');
+        $data = array('time_logout_user' => date('Y-m-d H:i:s'));
+
+        $this->User_model->logout($data, $email);
+        $this->session->sess_destroy();
+        echo '<script>
+            alert("Sukses! Anda berhasil logout."); 
+            window.location.href="' . base_url() . '";
+            </script>';
+    }
 }
