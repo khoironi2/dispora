@@ -76,7 +76,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'garisdes_garisdes',
+	'username' => 'garisdes_darimu',
 	'password' => 'Kbu{STH4a7=$',
 	'database' => 'garisdes_dispora',
 	'dbdriver' => 'mysqli',
