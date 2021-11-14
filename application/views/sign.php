@@ -5,7 +5,7 @@
         <!--begin::Signin-->
         <div class="login-form login-signin">
             <!--begin::Form-->
-            <div class="form">
+            <div class="form" novalidate="novalidate" id="kt_login_signin_form">
                 <!--begin::Title-->
                 <div class="pb-13 pt-lg-0 pt-5">
                     <h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Halo sobat Dispora</h3>
@@ -123,6 +123,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
 <script>
     $(document).ready(function() {
 
@@ -236,7 +237,6 @@
                 });
 
             } else if (password.length == "") {
-
                 Swal.fire({
                     type: 'warning',
                     title: 'Oops...',
