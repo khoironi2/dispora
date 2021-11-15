@@ -2,6 +2,17 @@
 
 class User_model extends CI_Model
 {
+    public function getnotAdmin()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $level = array('admin');
+        $this->db->where_not_in('level_user', $level);
+        $this->db->order_by('id_user', 'DESC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
 
     public function cek_login($email)
     {
@@ -34,5 +45,16 @@ class User_model extends CI_Model
     {
         $this->db->where('email', $email);
         $this->db->update('tbl_user', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->db->where('id_user', $id);
+        $this->db->delete('tbl_user');
+
+        if ($this->db->affected_rows() > 0)
+            return true;
+        else
+            return false;
     }
 }
