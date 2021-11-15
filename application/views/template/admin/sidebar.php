@@ -11,7 +11,9 @@
     <div id="kt_header_mobile" class="header-mobile">
         <!--begin::Logo-->
         <a href="<?= base_url('datacenter/universal') ?>">
-            <img alt="Logo" src="<?= base_url('assets/img/logo/logo-banten.png') ?>" class="logo-default max-h-30px" />
+            <?php foreach ($pengaturan as $key) : ?>
+                <img alt="Logo" src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" class="logo-default max-h-30px" />
+            <?php endforeach ?>
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -29,103 +31,105 @@
             <!--begin::Aside-->
             <div class="aside aside-left d-flex aside-fixed" id="kt_aside">
                 <!--begin::Primary-->
-                <div class="aside-primary d-flex flex-column align-items-center flex-row-auto">
-                    <!--begin::Brand-->
-                    <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-5 py-lg-12">
-                        <!--begin::Logo-->
-                        <a href="<?= base_url('datacenter/universal') ?>">
-                            <img alt="Logo" src="<?= base_url('assets/img/logo/logo-banten.png') ?>" class="max-h-40px" />
-                        </a>
-                        <!--end::Logo-->
-                    </div>
-                    <!--end::Brand-->
-                    <!--begin::Nav Wrapper-->
-                    <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid py-5 scroll scroll-pull">
-                        <!--begin::Nav-->
-                        <ul class="nav flex-column" role="tablist">
-                            <!--begin::Item-->
-                            <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Seksi Kepeloporan Kepemimpinan dan Sumber Daya Pemuda">
-                                <a href="#" class="nav-link btn btn-icon btn-icon-white btn-hover-transparent-white <?php if ($tab == 'tab1') {
-                                                                                                                        echo 'active';
-                                                                                                                    } else {
-                                                                                                                    } ?>" data-toggle="tab" data-target="#kt_aside_tab_1" role="tab">
-                                    <span class="svg-icon svg-icon-xl">
-                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24" />
-                                                <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-                                                <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-                                            </g>
-                                        </svg>
-                                        <!--end::Svg Icon-->
-                                    </span>
-                                </a>
-                            </li>
-                            <!--end::Item-->
-                            <!--begin::Item-->
+                <?php foreach ($pengaturan as $key) : ?>
+                    <div style="background-color: <?= $key['warna_sidebar'] ?>;" class="aside-primary d-flex flex-column align-items-center flex-row-auto">
+                        <!--begin::Brand-->
+                        <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-5 py-lg-12">
+                            <!--begin::Logo-->
+                            <a href="<?= base_url('datacenter/universal') ?>">
+                                <img alt="Logo" src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" class="max-h-40px" />
+                            </a>
+                            <!--end::Logo-->
+                        </div>
+                        <!--end::Brand-->
+                        <!--begin::Nav Wrapper-->
+                        <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid py-5 scroll scroll-pull">
+                            <!--begin::Nav-->
+                            <ul class="nav flex-column" role="tablist">
+                                <!--begin::Item-->
+                                <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Seksi Kepeloporan Kepemimpinan dan Sumber Daya Pemuda">
+                                    <a href="#" class="nav-link btn btn-icon btn-icon-white btn-hover-transparent-white <?php if ($tab == 'tab1') {
+                                                                                                                            echo 'active';
+                                                                                                                        } else {
+                                                                                                                        } ?>" data-toggle="tab" data-target="#kt_aside_tab_1" role="tab">
+                                        <span class="svg-icon svg-icon-xl">
+                                            <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24" />
+                                                    <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+                                                    <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
+                                                </g>
+                                            </svg>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                    </a>
+                                </li>
+                                <!--end::Item-->
+                                <!--begin::Item-->
 
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <!--end::Item-->
-                            <!--end::Item-->
-                        </ul>
-                        <!--end::Nav-->
-                    </div>
-                    <!--end::Nav Wrapper-->
-                    <!--begin::Footer-->
-                    <div class="aside-footer d-flex flex-column align-items-center flex-column-auto py-4 py-lg-10">
-                        <!--begin::Aside Toggle-->
-                        <span class="aside-toggle btn btn-icon btn-primary btn-hover-primary shadow-sm" id="kt_aside_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Toggle Aside">
-                            <i class="ki ki-bold-arrow-back icon-sm"></i>
-                        </span>
-                        <!--end::Aside Toggle-->
-                        <!--begin::Quick Actions-->
-                        <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white mb-3" id="kt_quick_actions_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Quick Actions">
-                            <span class="svg-icon svg-icon-xl">
-                                <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Media/Equalizer.svg-->
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24" />
-                                        <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5" />
-                                        <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5" />
-                                        <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5" />
-                                        <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5" />
-                                    </g>
-                                </svg>
-                                <!--end::Svg Icon-->
+                                <!--end::Item-->
+                                <!--begin::Item-->
+                                <!--end::Item-->
+                                <!--end::Item-->
+                            </ul>
+                            <!--end::Nav-->
+                        </div>
+                        <!--end::Nav Wrapper-->
+                        <!--begin::Footer-->
+                        <div class="aside-footer d-flex flex-column align-items-center flex-column-auto py-4 py-lg-10">
+                            <!--begin::Aside Toggle-->
+                            <span class="aside-toggle btn btn-icon btn-primary btn-hover-primary shadow-sm" id="kt_aside_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Toggle Aside">
+                                <i class="ki ki-bold-arrow-back icon-sm"></i>
                             </span>
-                        </a>
-                        <!--end::Quick Actions-->
-                        <!--begin::Quick Panel-->
-                        <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white mb-3 position-relative" id="kt_quick_panel_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Quick Panel">
-                            <span class="svg-icon svg-icon-xl">
-                                <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24" />
-                                        <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-                                        <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-                                    </g>
-                                </svg>
-                                <!--end::Svg Icon-->
-                            </span>
-                            <span class="label label-sm label-light-danger label-rounded font-weight-bolder position-absolute top-0 right-0 mt-1 mr-1">3</span>
-                        </a>
-                        <!--end::Quick Panel-->
-                        <!--begin::User-->
-                        <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" id="kt_quick_user_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="<?= $user['nama'] ?>">
-                            <div class="symbol symbol-30 bg-gray-100">
-                                <div class="symbol-label">
-                                    <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo5/dist/assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" />
+                            <!--end::Aside Toggle-->
+                            <!--begin::Quick Actions-->
+                            <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white mb-3" id="kt_quick_actions_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Quick Actions">
+                                <span class="svg-icon svg-icon-xl">
+                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Media/Equalizer.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5" />
+                                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5" />
+                                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5" />
+                                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5" />
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                            </a>
+                            <!--end::Quick Actions-->
+                            <!--begin::Quick Panel-->
+                            <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white mb-3 position-relative" id="kt_quick_panel_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Quick Panel">
+                                <span class="svg-icon svg-icon-xl">
+                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+                                            <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="label label-sm label-light-danger label-rounded font-weight-bolder position-absolute top-0 right-0 mt-1 mr-1">3</span>
+                            </a>
+                            <!--end::Quick Panel-->
+                            <!--begin::User-->
+                            <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" id="kt_quick_user_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="<?= $user['nama'] ?>">
+                                <div class="symbol symbol-30 bg-gray-100">
+                                    <div class="symbol-label">
+                                        <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo5/dist/assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" />
+                                    </div>
+                                    <i class="symbol-badge bg-success"></i>
                                 </div>
-                                <i class="symbol-badge bg-success"></i>
-                            </div>
-                        </a>
-                        <!--end::User-->
+                            </a>
+                            <!--end::User-->
+                        </div>
+                        <!--end::Footer-->
                     </div>
-                    <!--end::Footer-->
-                </div>
+                <?php endforeach ?>
                 <!--end::Primary-->
                 <!--begin::Secondary-->
                 <div class="aside-secondary d-flex flex-row-fluid">

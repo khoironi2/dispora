@@ -21,13 +21,15 @@ class User extends CI_Controller
             'tab' => 'tab1',
             'page' => 'Manajemen Akses User',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
-            'usernotadmin' => $this->User_model->getnotAdmin()
+            'usernotadmin' => $this->User_model->getnotAdmin(),
+            'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template/admin/header', $data);
         $this->load->view('template/admin/sidebar');
         $this->load->view('admin/user', $data);
         $this->load->view('template/admin/footer', $data);
     }
+
 
     public function delete($id)
     {

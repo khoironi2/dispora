@@ -84,25 +84,27 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <!--begin::Main-->
     <div class="d-flex flex-column flex-root">
         <!--begin::Login-->
-        <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
-            <!--begin::Aside-->
-            <div class="login-aside d-flex flex-column flex-row-auto" style="background-color: #3EB7E9;">
-                <!--begin::Aside Top-->
-                <div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
-                    <!--begin::Aside header-->
-                    <a href="<?= base_url() ?>" class="text-center mb-15">
-                        <img src="<?= base_url('assets') ?>/img/logo/logo-banten.png" alt="logo" class="h-70px" />
-                    </a>
-                    <!--end::Aside header-->
-                    <!--begin::Aside title-->
-                    <h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg text-white"><?= $title1 ?>
-                        <br /><?= $title2 ?>
-                    </h3>
+        <?php foreach ($pengaturan as $key) : ?>
+            <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+                <!--begin::Aside-->
+                <div class="login-aside d-flex flex-column flex-row-auto" style="background-color: <?= $key['warna_utama'] ?>;">
+                    <!--begin::Aside Top-->
+                    <div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
+                        <!--begin::Aside header-->
+                        <a href="<?= base_url() ?>" class="text-center mb-15">
+                            <img src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" alt="logo" class="h-70px" />
+                        </a>
+                        <!--end::Aside header-->
+                        <!--begin::Aside title-->
+                        <p class="font-weight-bolder text-center font-size-h6 font-size-h3-lg text-white"><?= $key['nama_depan'] ?>
+                            <br /><?= $key['nama_provinsi'] ?>
+                        </p>
+                    <?php endforeach ?>
                     <!--end::Aside title-->
+                    </div>
+                    <!--end::Aside Top-->
+                    <!--begin::Aside Bottom-->
+                    <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(<?= base_url('assets/img/logo/' . $key['flyer_branch']) ?>)"></div>
+                    <!--end::Aside Bottom-->
                 </div>
-                <!--end::Aside Top-->
-                <!--begin::Aside Bottom-->
-                <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(assets/img/logo/run-01-01.png)"></div>
-                <!--end::Aside Bottom-->
-            </div>
-            <!--begin::Aside-->
+                <!--begin::Aside-->

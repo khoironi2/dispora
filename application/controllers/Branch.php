@@ -9,7 +9,8 @@ class Branch extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'title1' => 'Dinas Olahraga dan Kepemudaan',
-            'title2' => 'Provinsi &amp; Banten'
+            'title2' => 'Provinsi &amp; Banten',
+            'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template_branch/header', $data);
         $this->load->view('branch', $data);
