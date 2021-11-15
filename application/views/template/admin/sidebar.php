@@ -425,8 +425,10 @@
                             </div>
                             <!--end::Icon-->
                             <!--begin::Description-->
-                            <div class="m-0 text-dark-50 font-weight-bold font-size-lg"><?= $title ?>
-                            </div>
+                            <?php foreach ($pengaturan as $key) : ?>
+                                <div class="m-0 text-dark-50 font-weight-bold font-size-lg"><?= $key['nama_aplikasi'] ?>
+                                </div>
+                            <?php endforeach ?>
                             <!--end::Description-->
                         </div>
                     </div>

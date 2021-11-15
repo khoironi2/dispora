@@ -9,7 +9,8 @@ class Universal extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Universal'
+            'page' => 'Universal',
+            'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
