@@ -37,7 +37,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
-    <title><?= $title; ?></title>
+    <?php foreach ($pengaturan as $key) : ?>
+        <title><?= $key['nama_aplikasi'] ?></title>
+        <link rel="shortcut icon" href="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" />
+    <?php endforeach ?>
     <meta name="description" content="Aplikasi Pusat Data Keolahragaan dan Kepemudaan" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--begin::Fonts-->
@@ -53,7 +56,6 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="<?= base_url('assets') ?>/img/logo/logo-banten.png" />
     <!-- Hotjar Tracking Code for keenthemes.com -->
     <script>
         (function(h, o, t, j, a, r) {
