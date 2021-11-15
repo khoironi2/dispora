@@ -1,5 +1,5 @@
 <!--begin::Entry-->
-<div class="d-flex flex-column-fluid">
+<div class="">
     <!--begin::Container-->
     <div class="container">
         <!--begin::Dashboard-->
