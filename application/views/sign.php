@@ -54,12 +54,12 @@
                 <!--end::Form group-->
                 <!--begin::Form group-->
                 <div class="form-group">
-                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" id="email" autocomplete="off" />
+                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" id="registrer_email" autocomplete="off" />
                 </div>
                 <!--end::Form group-->
                 <!--begin::Form group-->
                 <div class="form-group">
-                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" id="password" autocomplete="off" />
+                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" id="register_password" autocomplete="off" />
                 </div>
                 <!--end::Form group-->
                 <!--begin::Form group-->
@@ -130,8 +130,8 @@
         $(".btn-register").click(function() {
 
             var nama = $("#nama").val();
-            var email = $("#email").val();
-            var password = $("#password").val();
+            var registrer_email = $("#registrer_email").val();
+            var register_password = $("#register_password").val();
 
             if (nama.length == "") {
 
@@ -141,7 +141,7 @@
                     text: 'Nama Lengkap Wajib Diisi !'
                 });
 
-            } else if (email.length == "") {
+            } else if (registrer_email.length == "") {
 
                 Swal.fire({
                     type: 'warning',
@@ -149,7 +149,7 @@
                     text: 'email Wajib Diisi !'
                 });
 
-            } else if (password.length == "") {
+            } else if (register_password.length == "") {
 
                 Swal.fire({
                     type: 'warning',
@@ -166,8 +166,8 @@
                     type: "POST",
                     data: {
                         "nama": nama,
-                        "email": email,
-                        "password": password
+                        "email": registrer_email,
+                        "password": register_password
                     },
 
                     success: function(response) {

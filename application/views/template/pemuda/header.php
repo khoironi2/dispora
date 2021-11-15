@@ -58,6 +58,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="<?= base_url('assets') ?>/img/logo/logo-banten.png" />
     <!-- Hotjar Tracking Code for keenthemes.com -->
+    <link href="<?= base_url('assets/') ?>theme/demo5/dist/assets/css/pages/wizard/wizard-21036.css?v=2.1.1" rel="stylesheet" type="text/css" />
     <link href="<?= base_url('assets/') ?>css/style.css" rel="stylesheet" type="text/css" />
     <script>
         (function(h, o, t, j, a, r) {
