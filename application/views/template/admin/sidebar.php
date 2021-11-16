@@ -120,7 +120,7 @@
                             <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" id="kt_quick_user_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="<?= $user['nama'] ?>">
                                 <div class="symbol symbol-30 bg-gray-100">
                                     <div class="symbol-label">
-                                        <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo5/dist/assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" />
+                                        <img alt="Logo" src="<?= base_url('assets/img/account/' . $user['foto_user']) ?>" class="h-75 align-self-end" />
                                     </div>
                                     <i class="symbol-badge bg-success"></i>
                                 </div>

@@ -200,7 +200,7 @@
         <!--begin::Header-->
         <div class="d-flex align-items-center mt-5">
             <div class="symbol symbol-100 mr-5">
-                <div class="symbol-label" style="background-image:url('<?= base_url('assets/') ?>theme/demo5/dist/assets/media/users/150-6.jpg')"></div>
+                <div class="symbol-label" style="background-image:url(<?= base_url('assets/img/account/' . $user['foto_user']) ?>)"></div>
                 <i class="symbol-badge bg-success"></i>
             </div>
             <div class="d-flex flex-column">
@@ -253,8 +253,8 @@
                         </div>
                     </div>
                     <div class="navi-text">
-                        <div class="font-weight-bold">My Account</div>
-                        <div class="text-muted">Profile info
+                        <div class="font-weight-bold">Akun Saya</div>
+                        <div class="text-muted">Informasi profil
                             <span class="label label-light-danger label-inline font-weight-bold">update</span>
                         </div>
                     </div>
@@ -1564,6 +1564,27 @@
 
 <script src="<?= base_url('assets/') ?>theme/demo5/dist/assets/js/pages/custom/wizard/wizard-21036.js?v=2.1.1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.0/js/bootstrap-colorpicker.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#provinsi").change(function() {
+            var url = "<?php echo site_url('admin/account/kabupaten'); ?>/" + $(this).val();
+            $('#kabupaten').load(url);
+            return false;
+        });
+        $("#kabupaten").change(function() {
+            var url = "<?php echo site_url('admin/account/kecamatan'); ?>/" + $(this).val();
+            $('#kecamatan').load(url);
+            return false;
+        })
+        $("#kecamatan").change(function() {
+            var url = "<?php echo site_url('admin/account/kelurahan'); ?>/" + $(this).val();
+            $('#kelurahan').load(url);
+            return false;
+        })
+    });
+</script>
+
 </body>
 <!--end::Body-->
 
