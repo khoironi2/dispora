@@ -281,7 +281,7 @@
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>admin/dashboard";
+                                    window.location.href = "<?php echo base_url() ?>admin/pengaturan";
                                 });
 
                         } else if (response == "pimpinan") {

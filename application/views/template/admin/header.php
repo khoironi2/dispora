@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="<?= base_url('assets/') ?>theme/demo5/dist/assets/plugins/custom/datatables/datatables.bundle1036.css?v=2.1.1" rel="stylesheet" type="text/css" />
+    <!-- <link href="<?= base_url('assets/') ?>theme/demo5/dist/assets/plugins/custom/datatables/datatables.bundle1036.css?v=2.1.1" rel="stylesheet" type="text/css" /> -->
 
     <link href="<?= base_url('assets/') ?>theme/demo5/dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle1036.css?v=2.1.1" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
@@ -79,5 +79,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.0/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/buttons.bootstrap4.min.css">
 </head>
 <!--end::Head-->

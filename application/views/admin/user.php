@@ -1,101 +1,86 @@
-<!--begin::Entry-->
-<div class="">
-    <!--begin::Container-->
-    <div class="container">
-        <!--begin::Dashboard-->
-        <!--begin::Row-->
-        <div class="row">
-            <div class="col">
-                <!--begin::Stats Widget 10-->
-                <div class="card card-custom">
-                    <div class="card-header flex-wrap py-5">
-                        <div class="card-title">
-                            <h3 class="card-label"><?= $page; ?>
-                                <!-- <span class="d-block text-muted pt-2 font-size-sm">extended pagination options</span> -->
-                            </h3>
-                        </div>
-                        <div class="card-toolbar">
-                            <!--begin::Dropdown-->
-
-                            <!--end::Dropdown-->
-                            <!--begin::Button-->
-                            <a href="#" data-toggle="modal" data-target="#buat" class="btn btn-primary font-weight-bolder">
-                                <span class="svg-icon svg-icon-md">
-                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Design/Flatten.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24" />
-                                            <circle fill="#000000" cx="9" cy="15" r="6" />
-                                            <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>Buat Baru</a>
-                            <!--end::Button-->
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <!--begin: Datatable-->
-                        <table class="table table-separate table-head-custom table-checkable" id="myTable">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th></th>
-                                    <th>Hak Akses</th>
-                                    <th>Nama</th>
-                                    <th>Email</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1;
-                                foreach ($usernotadmin as $key) : ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <th>
-                                            <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                                <img class="symbol-label" src="../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                            </div>
-                                        </th>
-                                        <td><?= $key['level_user'] ?></td>
-                                        <td><?= $key['nama'] ?></td>
-                                        <td><?= $key['email'] ?></td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#edit<?= $key['id_user'] ?>">
-                                                <span style="font-size: 3em; color: red;">
-                                                    <i class="far fa-edit"></i>
-                                                </span>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#delete<?= $key['id_user'] ?>">
-                                                <span style="font-size: 3em; color: red;">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach ?>
-
-                            </tbody>
-                        </table>
-                        <!--end: Datatable-->
-                    </div>
-                </div>
-                <!--end::Stats Widget 10-->
-            </div>
-            <!--begin::Card-->
-
-            <!--end::Card-->
-        </div>
-
-        <!--end::Tables Widget 5-->
-        <!--end::Dashboard-->
-    </div>
-    <!--end::Container-->
-</div>
-<!--end::Entry-->
-</div>
 <!--end::Content-->
+<div class="container">
+    <div class="card card-custom gutter-b">
+        <div class="card card-custom">
+            <div class="card-header flex-wrap py-5">
+                <div class="card-title">
+                    <h3 class="card-label"><?= $page; ?>
+                        <!-- <span class="d-block text-muted pt-2 font-size-sm">extended pagination options</span> -->
+                    </h3>
+                </div>
+                <div class="card-toolbar">
+                    <!--begin::Dropdown-->
 
+                    <!--end::Dropdown-->
+                    <!--begin::Button-->
+                    <a href="#" data-toggle="modal" data-target="#buat" class="btn btn-primary font-weight-bolder">
+                        <span class="svg-icon svg-icon-md">
+                            <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Design/Flatten.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <circle fill="#000000" cx="9" cy="15" r="6" />
+                                    <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>Buat Baru</a>
+                    <!--end::Button-->
+                </div>
+            </div>
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th></th>
+                            <th>Akses</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $no = 1;
+                        foreach ($usernotadmin as $key) : ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td>
+                                    <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                        <img class="symbol-label" src="../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
+                                    </div>
+                                </td>
+                                <td><?= $key['level_user'] ?></td>
+                                <td><?= $key['nama'] ?></td>
+                                <td><?= $key['email'] ?></td>
+                                <td>
+                                    <a data-toggle="modal" data-target="#edit<?= $key['id_user'] ?>">
+                                        <span style="font-size: 3em; color: red;">
+                                            <i class="far fa-edit"></i>
+                                        </span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#delete<?= $key['id_user'] ?>">
+                                        <span style="font-size: 3em; color: red;">
+                                            <i class="far fa-trash-alt"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- /.card -->
+
+            <!-- /.card-body -->
+
+
+        </div>
+    </div>
+    <p><?= $this->session->flashdata('message'); ?></p>
+</div>
 
 <!-- Button trigger modal-->
 <!-- Modal buat-->
