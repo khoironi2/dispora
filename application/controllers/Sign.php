@@ -84,6 +84,7 @@ class Sign extends CI_Controller
                     $this->session->set_userdata('nama', $cek_login->nama);
                     $this->session->set_userdata('email', $cek_login->email);
                     $this->session->set_userdata('level_user', $cek_login->level_user);
+                    $this->session->set_userdata('foto_user', $cek_login->foto_user);
                     date_default_timezone_set("ASIA/JAKARTA");
                     //$email = $this->session->userdata('email');
                     $data = array('time_login_user' => date('Y-m-d H:i:s'));

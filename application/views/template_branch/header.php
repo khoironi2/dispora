@@ -40,8 +40,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <?php foreach ($pengaturan as $key) : ?>
         <title><?= $key['nama_aplikasi'] ?></title>
         <link rel="shortcut icon" href="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" />
+        <meta name="description" content="<?= $key['deskripsi'] ?>" />
     <?php endforeach ?>
-    <meta name="description" content="Aplikasi Pusat Data Keolahragaan dan Kepemudaan" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
