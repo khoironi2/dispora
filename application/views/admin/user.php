@@ -114,7 +114,7 @@
                             <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" id="register_password" autocomplete="off" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleSelectl">Large Select</label>
+                            <label for="exampleSelectl">Hak Akses</label>
                             <select name="level_user" class="form-control form-control-lg form-control-solid" id="level_user">
                                 <option value="">Pilih</option>
                                 <option value="pemuda">Pemuda</option>
@@ -146,17 +146,55 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update User <?= $key['nama'] ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary font-weight-bold">Save changes</button>
+                    <div class="login-form login-signup">
+                        <!--begin::Form-->
+                        <div class="form" novalidate="novalidate" id="kt_login_signup_form">
+                            <form action="<?= base_url('admin/user/editData') ?>" method="POST">
+                                <!--begin::Title-->
+                                <!--end::Title-->
+                                <!--begin::Form group-->
+                                <div class="form-group">
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Nama lengkap" name="nama" id="edit_nama" value="<?= $key['nama'] ?>" autocomplete="off" />
+                                    <input hidden class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" name="id_user" id="edit_id_user" value="<?= $key['id_user'] ?>" autocomplete="off" />
+                                </div>
+                                <!--end::Form group-->
+                                <!--begin::Form group-->
+                                <div class="form-group">
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" value="<?= $key['email'] ?>" id="edit_email" autocomplete="off" />
+                                </div>
+                                <!--end::Form group-->
+                                <!--begin::Form group-->
+
+                                <div class="form-group">
+                                    <label for="exampleSelectl">Hak Akses</label>
+                                    <select name="level_user" class="form-control form-control-lg form-control-solid" id="edit_level_user">
+                                        <option value="<?= $key['level_user'] ?>"><?= $key['level_user'] ?></option>
+                                        <option value="">Pilih</option>
+                                        <option value="pemuda">Pemuda</option>
+                                        <option value="pimpinan">Pimpinan</option>
+                                        <option value="operator">Operator</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <!--end::Form group-->
+
+                                <!--end::Form group-->
+                                <!--begin::Form group-->
+                                <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
+                                    <button type="submit" class="btn btn-edit btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Apply</button>
+                                    <!-- <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button> -->
+                                </div>
+                                <!--end::Form group-->
+                            </form>
+                        </div>
+                        <!--end::Form-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -240,7 +278,7 @@
                 //ajax
                 $.ajax({
 
-                    url: "<?php echo base_url() ?>Sign/register",
+                    url: "<?php echo base_url() ?>admin/User/register",
                     type: "POST",
                     data: {
                         "nama": nama,

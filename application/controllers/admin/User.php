@@ -29,6 +29,85 @@ class User extends CI_Controller
         $this->load->view('admin/user', $data);
         $this->load->view('template/admin/footer', $data);
     }
+    public function register()
+    {
+
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+            $errors = $this->form_validation->error_array();
+            $this->session->set_flashdata('errors', $errors);
+            $this->session->set_flashdata('input', $this->input->post());
+            redirect('/sign');
+        } else {
+
+            $nama = $this->input->post('nama');
+            $email = $this->input->post('email');
+            $level = $this->input->post('level_user');
+            $password = $this->input->post('password');
+            $pass = password_hash($password, PASSWORD_DEFAULT);
+            // $level = $this->input->post('level');
+            date_default_timezone_set("ASIA/JAKARTA");
+            $data = [
+                'nama' => $nama,
+                'email' => $email,
+                'password' => $pass,
+                'level_user' => $level,
+                'timestamp' => date('Y-m-d H:i:s')
+            ];
+
+            $insert = $this->User_model->register("tbl_user", $data);
+
+            if ($insert) {
+                echo "success";
+                // $this->session->set_flashdata('success_login', 'Sukses, Anda telah terdaftar.');
+                // redirect('/dispora/sign');
+            } else {
+
+                echo "error";
+            }
+        }
+    }
+    public function editData()
+    {
+
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+            $errors = $this->form_validation->error_array();
+            $this->session->set_flashdata('errors', $errors);
+            $this->session->set_flashdata('input', $this->input->post());
+            redirect('/admin/user');
+        } else {
+
+            $nama = $this->input->post('nama');
+            $email = $this->input->post('email');
+            $level = $this->input->post('level_user');
+            // $level = $this->input->post('level');
+            date_default_timezone_set("ASIA/JAKARTA");
+            $data = [
+                'nama' => $nama,
+                'email' => $email,
+                'level_user' => $level,
+                'timestamp' => date('Y-m-d H:i:s')
+            ];
+
+            $id = $this->input->post('id_user');
+
+            $insert = $this->User_model->update($id, $data);
+
+            if ($insert) {
+                // echo "success";
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, Data berhasil di perbarui !</div>');
+                redirect('admin/user');
+            } else {
+
+                echo "error";
+            }
+        }
+    }
 
 
     public function delete($id)

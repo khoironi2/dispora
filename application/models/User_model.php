@@ -6,8 +6,8 @@ class User_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_user');
-        $level = array('admin');
-        $this->db->where_not_in('level_user', $level);
+        // $level = array('admin');
+        // $this->db->where_not_in('level_user', $level);
         $this->db->order_by('id_user', 'DESC');
         $result = $this->db->get();
 
