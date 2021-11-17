@@ -13,6 +13,10 @@ class Jenis_kegiatan_model extends CI_Model
 
         return $result->result_array();
     }
+    public function insert($table, $data)
+    {
+        return $this->db->insert($table, $data);
+    }
 
     public function update($id, $data)
     {

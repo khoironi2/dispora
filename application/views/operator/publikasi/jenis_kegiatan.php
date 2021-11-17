@@ -34,15 +34,15 @@
                         <tr>
                             <th>#</th>
                             <th></th>
-                            <th>Akses</th>
-                            <th>Nama</th>
-                            <th>Email</th>
+                            <th>Jenis Kegiatan</th>
+                            <th>Timestamp</th>
+                            <th>contoh</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $no = 1;
-                        foreach ($usernotadmin as $key) : ?>
+                        foreach ($jeniskegiatan as $key) : ?>
                             <tr>
                                 <td><?= $no++ ?></td>
                                 <td>
@@ -50,16 +50,18 @@
                                         <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
                                     </div>
                                 </td>
-                                <td><?= $key['level_user'] ?></td>
-                                <td><?= $key['nama'] ?></td>
-                                <td><?= $key['email'] ?></td>
+                                <td><?= $key['nama_jenis_kegiatan'] ?></td>
+                                <td><?= $key['timestamp'] ?></td>
                                 <td>
-                                    <a data-toggle="modal" data-target="#edit<?= $key['id_user'] ?>">
+
+                                </td>
+                                <td>
+                                    <a data-toggle="modal" data-target="#edit<?= $key['id_jenis_kegiatan'] ?>">
                                         <span style="font-size: 3em; color: red;">
                                             <i class="far fa-edit"></i>
                                         </span>
                                     </a>
-                                    <a data-toggle="modal" data-target="#delete<?= $key['id_user'] ?>">
+                                    <a data-toggle="modal" data-target="#delete<?= $key['id_jenis_kegiatan'] ?>">
                                         <span style="font-size: 3em; color: red;">
                                             <i class="far fa-trash-alt"></i>
                                         </span>
@@ -79,7 +81,7 @@
 
         </div>
     </div>
-    <p><?= $this->session->flashdata('message'); ?></p>
+
 </div>
 
 <!-- Button trigger modal-->
@@ -88,7 +90,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Isikan data untuk membuat akun</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Buat jenis Kegiatan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -101,34 +103,14 @@
                         <!--end::Title-->
                         <!--begin::Form group-->
                         <div class="form-group">
-                            <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Nama lengkap" name="nama" id="nama" autocomplete="off" />
-                        </div>
-                        <!--end::Form group-->
-                        <!--begin::Form group-->
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" id="registrer_email" autocomplete="off" />
-                        </div>
-                        <!--end::Form group-->
-                        <!--begin::Form group-->
-                        <div class="form-group">
-                            <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" id="register_password" autocomplete="off" />
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleSelectl">Hak Akses</label>
-                            <select name="level_user" class="form-control form-control-lg form-control-solid" id="level_user">
-                                <option value="">Pilih</option>
-                                <option value="pemuda">Pemuda</option>
-                                <option value="pimpinan">Pimpinan</option>
-                                <option value="operator">Operator</option>
-                                <option value="admin">Admin</option>
-                            </select>
+                            <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Nama Jenis Kegiatan" name="nama_jenis_kegiatan" id="nama_jenis_kegiatan" autocomplete="off" />
                         </div>
                         <!--end::Form group-->
 
                         <!--end::Form group-->
                         <!--begin::Form group-->
                         <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
-                            <button type="submit" class="btn btn-register btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                            <button type="submit" class="btn btn-save btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
                             <!-- <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button> -->
                         </div>
                         <!--end::Form group-->
@@ -140,13 +122,13 @@
     </div>
 </div>
 
-<?php foreach ($usernotadmin as $key) : ?>
+<?php foreach ($jeniskegiatan as $key) : ?>
     <!-- Modal edit-->
-    <div class="modal fade" id="edit<?= $key['id_user'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal fade" id="edit<?= $key['id_jenis_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update User <?= $key['nama'] ?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update <?= $key['nama_jenis_kegiatan'] ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -155,57 +137,39 @@
                     <div class="login-form login-signup">
                         <!--begin::Form-->
                         <div class="form" novalidate="novalidate" id="kt_login_signup_form">
-                            <form action="<?= base_url('admin/user/editData') ?>" method="POST">
+                            <form action="<?= base_url('operator/publikasi/jenis_kegiatan/editData') ?>" method="POST">
                                 <!--begin::Title-->
                                 <!--end::Title-->
                                 <!--begin::Form group-->
                                 <div class="form-group">
-                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Nama lengkap" name="nama" id="edit_nama" value="<?= $key['nama'] ?>" autocomplete="off" />
-                                    <input hidden class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" name="id_user" id="edit_id_user" value="<?= $key['id_user'] ?>" autocomplete="off" />
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="" name="nama_jenis_kegiatan" id="nama_jenis_kegiatan" value="<?= $key['nama_jenis_kegiatan'] ?>" autocomplete="off" />
+                                    <input hidden class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" name="id_jenis_kegiatan" id="edit_id_jenis_kegiatan" value="<?= $key['id_jenis_kegiatan'] ?>" autocomplete="off" />
                                 </div>
-                                <!--end::Form group-->
-                                <!--begin::Form group-->
-                                <div class="form-group">
-                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" value="<?= $key['email'] ?>" id="edit_email" autocomplete="off" />
-                                </div>
-                                <!--end::Form group-->
-                                <!--begin::Form group-->
-
-                                <div class="form-group">
-                                    <label for="exampleSelectl">Hak Akses</label>
-                                    <select name="level_user" class="form-control form-control-lg form-control-solid" id="edit_level_user">
-                                        <option value="<?= $key['level_user'] ?>"><?= $key['level_user'] ?></option>
-                                        <option value="">Pilih</option>
-                                        <option value="pemuda">Pemuda</option>
-                                        <option value="pimpinan">Pimpinan</option>
-                                        <option value="operator">Operator</option>
-                                        <option value="admin">Admin</option>
-                                    </select>
-                                </div>
-                                <!--end::Form group-->
-
-                                <!--end::Form group-->
-                                <!--begin::Form group-->
-                                <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
-                                    <button type="submit" class="btn btn-edit btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Apply</button>
-                                    <!-- <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button> -->
-                                </div>
-                                <!--end::Form group-->
-                            </form>
                         </div>
-                        <!--end::Form-->
+                        <!--end::Form group-->
+
+                        <!--end::Form group-->
+                        <!--begin::Form group-->
+                        <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
+                            <button type="submit" class="btn btn-edit btn-success font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Apply</button>
+                            <!-- <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button> -->
+                        </div>
+                        <!--end::Form group-->
+                        </form>
                     </div>
+                    <!--end::Form-->
                 </div>
             </div>
         </div>
     </div>
+    </div>
 <?php endforeach ?>
 
-<?php foreach ($usernotadmin as $key) : ?>
+<?php foreach ($jeniskegiatan as $key) : ?>
     <!-- Modal delete-->
-    <div class="modal fade" id="delete<?= $key['id_user'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal fade" id="delete<?= $key['id_jenis_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <form action="<?= base_url('admin/user/delete/' . $key['id_user']) ?>" method="POST">
+            <form action="<?= base_url('operator/publikasi/jenis_kegiatan/delete/' . $key['id_jenis_kegiatan']) ?>" method="POST">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-danger" id="exampleModalLabel"></h5>
@@ -214,7 +178,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-danger">
-                        <h5> Yakin ingin menghapus <?= $key['nama'] ?></h5>
+                        <h5> Yakin ingin menghapus <?= $key['nama_jenis_kegiatan'] ?></h5>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary font-weight-bold" data-dismiss="modal">Close</button>
@@ -234,43 +198,16 @@
 <script>
     $(document).ready(function() {
 
-        $(".btn-register").click(function() {
+        $(".btn-save").click(function() {
 
-            var nama = $("#nama").val();
-            var registrer_email = $("#registrer_email").val();
-            var register_password = $("#register_password").val();
-            var level_user = $("#level_user").val();
+            var nama_jenis_kegiatan = $("#nama_jenis_kegiatan").val();
 
-            if (nama.length == "") {
+            if (nama_jenis_kegiatan.length == "") {
 
                 Swal.fire({
                     type: 'warning',
                     title: 'Oops...',
-                    text: 'Nama Lengkap Wajib Diisi !'
-                });
-
-            } else if (registrer_email.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'email Wajib Diisi !'
-                });
-
-            } else if (register_password.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Password Wajib Diisi !'
-                });
-
-            } else if (level_user.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Hak Akses  Wajib Diisi !'
+                    text: 'jenis kegiatan Wajib Diisi !'
                 });
 
             } else {
@@ -278,13 +215,10 @@
                 //ajax
                 $.ajax({
 
-                    url: "<?php echo base_url() ?>admin/User/register",
+                    url: "<?php echo base_url() ?>operator/publikasi/jenis_kegiatan/save",
                     type: "POST",
                     data: {
-                        "nama": nama,
-                        "email": registrer_email,
-                        "password": register_password,
-                        "level_user": level_user
+                        "nama_jenis_kegiatan": nama_jenis_kegiatan
                     },
 
                     success: function(response) {
@@ -292,20 +226,17 @@
                         if (response == "success") {
                             Swal.fire({
                                     type: 'success',
-                                    title: 'Register Berhasil!',
+                                    title: 'Berhasil!',
                                     text: 'Thanks !',
                                     timer: 3000,
                                     showCancelButton: false,
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>admin/user";
+                                    window.location.href = "<?php echo base_url() ?>operator/publikasi/jenis_kegiatan";
                                 });
 
-                            $("#nama").val('');
-                            $("#email").val('');
-                            $("#password").val('');
-                            $("#level_user").val('');
+                            $("#nama_jenis_kegiatan").val('');
 
                         } else {
 

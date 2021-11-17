@@ -21,7 +21,7 @@ class Jenis_kegiatan extends CI_Controller
             'tab' => 'tab1',
             'page' => 'Data Jenis Kegiatan',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
-            'usernotadmin' => $this->User_model->getnotAdmin(),
+            'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
             'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template/operator/header', $data);
@@ -29,35 +29,26 @@ class Jenis_kegiatan extends CI_Controller
         $this->load->view('operator/publikasi/jenis_kegiatan', $data);
         $this->load->view('template/operator/footer', $data);
     }
-    public function register()
+    public function save()
     {
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('nama_jenis_kegiatan', 'nama_jenis_kegiatan', 'required');
 
         if ($this->form_validation->run() == FALSE) {
 
             $errors = $this->form_validation->error_array();
             $this->session->set_flashdata('errors', $errors);
             $this->session->set_flashdata('input', $this->input->post());
-            redirect('/sign');
+            redirect('operator/publikasi/jenis_kegiatan');
         } else {
 
-            $nama = $this->input->post('nama');
-            $email = $this->input->post('email');
-            $level = $this->input->post('level_user');
-            $password = $this->input->post('password');
-            $pass = password_hash($password, PASSWORD_DEFAULT);
-            // $level = $this->input->post('level');
-            date_default_timezone_set("ASIA/JAKARTA");
+            $nama_jenis_kegiatan = $this->input->post('nama_jenis_kegiatan');
             $data = [
-                'nama' => $nama,
-                'email' => $email,
-                'password' => $pass,
-                'level_user' => $level,
+                'nama_jenis_kegiatan' => $nama_jenis_kegiatan,
                 'timestamp' => date('Y-m-d H:i:s')
             ];
 
-            $insert = $this->User_model->register("tbl_user", $data);
+            $insert = $this->Jenis_kegiatan_model->insert("tbl_jenis_kegiatan", $data);
 
             if ($insert) {
                 echo "success";
@@ -72,7 +63,7 @@ class Jenis_kegiatan extends CI_Controller
     public function editData()
     {
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('nama_jenis_kegiatan', 'nama_jenis_kegiatan', 'required');
 
         if ($this->form_validation->run() == FALSE) {
 
@@ -82,26 +73,20 @@ class Jenis_kegiatan extends CI_Controller
             redirect('/admin/user');
         } else {
 
-            $nama = $this->input->post('nama');
-            $email = $this->input->post('email');
-            $level = $this->input->post('level_user');
-            // $level = $this->input->post('level');
-            date_default_timezone_set("ASIA/JAKARTA");
+            $nama_jenis_kegiatan = $this->input->post('nama_jenis_kegiatan');
             $data = [
-                'nama' => $nama,
-                'email' => $email,
-                'level_user' => $level,
+                'nama_jenis_kegiatan' => $nama_jenis_kegiatan,
                 'timestamp' => date('Y-m-d H:i:s')
             ];
 
-            $id = $this->input->post('id_user');
+            $id = $this->input->post('id_jenis_kegiatan');
 
-            $insert = $this->User_model->update($id, $data);
+            $insert = $this->Jenis_kegiatan_model->update($id, $data);
 
             if ($insert) {
                 // echo "success";
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, Data berhasil di perbarui !</div>');
-                redirect('admin/user');
+                redirect('operator/publikasi/jenis_kegiatan');
             } else {
 
                 echo "error";
@@ -112,8 +97,8 @@ class Jenis_kegiatan extends CI_Controller
 
     public function delete($id)
     {
-        $data['id_user'] = $this->User_model->delete($id);
+        $data['id_jenis_kegiatan'] = $this->Jenis_kegiatan_model->delete($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, Data berhasil di Hapus!</div>');
-        redirect('admin/user');
+        redirect('operator/publikasi/jenis_kegiatan');
     }
 }
