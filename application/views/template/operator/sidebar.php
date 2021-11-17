@@ -210,10 +210,10 @@
                                                                 <i class="menu-bullet menu-bullet-line">
                                                                     <span></span>
                                                                 </i>
-                                                                <span class="menu-text">Users</span>
-                                                                <span class="menu-label">
-                                                                    <span class="label label-rounded label-primary">6</span>
-                                                                </span>
+                                                                <span class="menu-text">Kegiatan</span>
+                                                                <!-- <span class="menu-label">
+                                                                    <span class="label label-rounded label-primary"></span>
+                                                                </span> -->
                                                                 <i class="menu-arrow"></i>
                                                             </a>
                                                             <div class="menu-submenu">

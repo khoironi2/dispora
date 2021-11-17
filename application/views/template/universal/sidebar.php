@@ -1400,7 +1400,7 @@
                             <!--end::Icon-->
                             <!--begin::Description-->
                             <?php foreach ($pengaturan as $key) : ?>
-                                <div class="m-0 text-dark-50 font-weight-bold font-size-lg"><?= $key['nama_aplikasi'] ?>
+                                <div class="m-0 text-dark-50 font-weight-bold font-size-lg"><?= $key['nama_aplikasi'] ?> - <span class="text-danger"><?= $page ?></span>
                                 </div>
                             <?php endforeach ?>
                             <!--end::Description-->

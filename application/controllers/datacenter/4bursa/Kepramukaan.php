@@ -9,7 +9,10 @@ class Kepramukaan extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab4',
-            'page' => 'Bursa Kepramukaan dan Kelembagaan Pemuda'
+            'page' => 'Bursa Kepramukaan dan Kelembagaan Pemuda',
+            'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
+            'bursakegiatan' => $this->Bursa_kegiatan_model->get(),
+            'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');

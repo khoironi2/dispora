@@ -33,31 +33,39 @@
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>Kegiatan</th>
+                            <th>Keterangan</th>
+                            <th>Capaian</th>
+                            <th>Periode</th>
                             <th></th>
-                            <th>Jenis Kegiatan</th>
-                            <th>Timestamp</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $no = 1;
-                        foreach ($jeniskegiatan as $key) : ?>
+                        foreach ($bursakegiatan as $key) : ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td>
-                                    <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                        <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                    </div>
-                                </td>
                                 <td><?= $key['nama_jenis_kegiatan'] ?></td>
-                                <td><?= $key['timestamp'] ?></td>
+                                <td><?= $key['keterangan'] ?></td>
+                                <td><?= $key['persentase_capaian'] ?> %</td>
+                                <td><?= $key['periode'] ?></td>
                                 <td>
-                                    <a data-toggle="modal" data-target="#edit<?= $key['id_jenis_kegiatan'] ?>">
+                                    <?php if ($key['status_selesai'] == 1) { ?>
+                                        <span class="badge rounded-pill bg-light-primary">On Going</span>
+                                    <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                        <span class="badge rounded-pill bg-light-info">Berjalan</span>
+                                    <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                        <span class="badge rounded-pill bg-light-success">Selesai</span>
+                                    <?php } ?>
+                                </td>
+                                <td>
+                                    <a data-toggle="modal" data-target="#edit<?= $key['id_bursa_kegiatan'] ?>">
                                         <span style="font-size: 3em; color: red;">
                                             <i class="far fa-edit"></i>
                                         </span>
                                     </a>
-                                    <a data-toggle="modal" data-target="#delete<?= $key['id_jenis_kegiatan'] ?>">
+                                    <a data-toggle="modal" data-target="#delete<?= $key['id_bursa_kegiatan'] ?>">
                                         <span style="font-size: 3em; color: red;">
                                             <i class="far fa-trash-alt"></i>
                                         </span>
@@ -86,7 +94,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Buat jenis Kegiatan</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Buat Bursa Kegiatan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -97,17 +105,33 @@
                     <div class="form" novalidate="novalidate" id="kt_login_signup_form">
                         <!--begin::Title-->
                         <!--end::Title-->
+                        <div class="form-group">
+                            <label for="exampleSelectl">Jenis Program Kegiatan</label>
+                            <select name="id_jenis" class="form-control form-control-lg form-control-solid" id="id_jenis">
+                                <option value="">Pilih</option>
+                                <?php foreach ($jeniskegiatan as $key) : ?>
+                                    <option value="<?= $key['id_jenis_kegiatan'] ?>"><?= $key['nama_jenis_kegiatan'] ?></option>
+                                <?php endforeach ?>
+
+                            </select>
+                        </div>
                         <!--begin::Form group-->
                         <div class="form-group">
-                            <label for="exampleSelectl">Kegiatan</label>
-                            <select name="nama_jenis_kegiatan" class="form-control form-control-lg form-control-solid" id="nama_jenis_kegiatan">
+                            <label for="exampleSelectl">Informasi Kegiatan</label>
+                            <textarea name="keterangan" class="form-control form-control-lg form-control-solid" id="keterangan"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleSelectl">Periode</label>
+                            <select name="periode" class="form-control form-control-lg form-control-solid" id="periode">
                                 <option value="">Pilih</option>
-                                <option value="PEMUDA PELOPOR">PEMUDA PELOPOR</option>
-                                <option value="PASKIBRAKA">PASKIBRAKA</option>
-                                <option value="PERTUKARAN PELAJAR ANTAR NEGARA">PERTUKARAN PELAJAR ANTAR NEGARA</option>
-                                <option value="LOMBA BARIS BERBARIS">LOMBA BARIS BERBARIS</option>
-                                <option value="LOMBA TATA UPACARA BENDERA">LOMBA TATA UPACARA BENDERA</option>
-                                <option value="DUTA PANCASILA">DUTA PANCASILA</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
                             </select>
                         </div>
                         <!--end::Form group-->
@@ -127,13 +151,13 @@
     </div>
 </div>
 
-<?php foreach ($jeniskegiatan as $key) : ?>
+<?php foreach ($bursakegiatan as $key) : ?>
     <!-- Modal edit-->
-    <div class="modal fade" id="edit<?= $key['id_jenis_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal fade" id="edit<?= $key['id_bursa_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update <?= $key['nama_jenis_kegiatan'] ?></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update Bursa Kegiatan <?= $key['nama_jenis_kegiatan'] ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -142,28 +166,81 @@
                     <div class="login-form login-signup">
                         <!--begin::Form-->
                         <div class="form" novalidate="novalidate" id="kt_login_signup_form">
-                            <form action="<?= base_url('operator/publikasi/jenis_kegiatan/editData') ?>" method="POST">
+                            <form action="<?= base_url('operator/publikasi/bursa_kegiatan/editData') ?>" method="POST">
                                 <!--begin::Title-->
                                 <!--end::Title-->
+                                <input type="text" hidden name="id_bursa_kegiatan" id="id_bursa_kegiatan" value="<?= $key['id_bursa_kegiatan'] ?>">
                                 <!--begin::Form group-->
                                 <div class="form-group">
-                                    <!-- <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="" name="nama_jenis_kegiatan" id="nama_jenis_kegiatan" value="<?= $key['nama_jenis_kegiatan'] ?>" autocomplete="off" /> -->
-                                    <input hidden class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" name="id_jenis_kegiatan" id="edit_id_jenis_kegiatan" value="<?= $key['id_jenis_kegiatan'] ?>" autocomplete="off" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleSelectl">Kegiatan</label>
-                                    <select name="nama_jenis_kegiatan" class="form-control form-control-lg form-control-solid" id="nama_jenis_kegiatan">
-
-                                        <option value="<?= $key['nama_jenis_kegiatan'] ?>"><?= $key['nama_jenis_kegiatan'] ?></option>
+                                    <label for="exampleSelectl">Jenis Program Kegiatan</label>
+                                    <select name="id_jenis" class="form-control form-control-lg form-control-solid" id="id_jenis">
+                                        <option value="<?= $key['id_jenis'] ?>"><?= $key['nama_jenis_kegiatan'] ?></option>
                                         <option value="">Pilih</option>
-                                        <option value="PEMUDA PELOPOR">PEMUDA PELOPOR</option>
-                                        <option value="PASKIBRAKA">PASKIBRAKA</option>
-                                        <option value="PERTUKARAN PELAJAR ANTAR NEGARA">PERTUKARAN PELAJAR ANTAR NEGARA</option>
-                                        <option value="LOMBA BARIS BERBARIS">LOMBA BARIS BERBARIS</option>
-                                        <option value="LOMBA TATA UPACARA BENDERA">LOMBA TATA UPACARA BENDERA</option>
-                                        <option value="DUTA PANCASILA">DUTA PANCASILA</option>
+                                        <?php foreach ($jeniskegiatan as $jenis) : ?>
+                                            <option value="<?= $jenis['id_jenis_kegiatan'] ?>"><?= $jenis['nama_jenis_kegiatan'] ?></option>
+                                        <?php endforeach ?>
+
                                     </select>
                                 </div>
+                                <!--begin::Form group-->
+                                <div class="form-group">
+                                    <label for="exampleSelectl">Informasi Kegiatan</label>
+                                    <textarea name="keterangan" class="form-control form-control-lg form-control-solid" id="keterangan"><?= $key['keterangan'] ?></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelectl">Periode</label>
+                                    <select name="periode" class="form-control form-control-lg form-control-solid" id="periode">
+                                        <option value="<?= $key['periode'] ?>"><?= $key['periode'] ?></option>
+                                        <option value="">Pilih</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleSelectl">Capaian</label>
+                                    <select name="persentase_capaian" class="form-control form-control-lg form-control-solid" id="persentase_capaian">
+                                        <option value="<?= $key['persentase_capaian'] ?>"><?= $key['persentase_capaian'] ?> %</option>
+                                        <option value="">Pilih</option>
+                                        <option value="10">10 %</option>
+                                        <option value="20">20 %</option>
+                                        <option value="30">30 %</option>
+                                        <option value="40">40 %</option>
+                                        <option value="50">50 %</option>
+                                        <option value="60">60 %</option>
+                                        <option value="70">70 %</option>
+                                        <option value="80">80 %</option>
+                                        <option value="90">90 %</option>
+                                        <option value="100">100 %</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleSelectl">Status</label>
+                                    <select name="status_selesai" class="form-control form-control-lg form-control-solid" id="status_selesai">
+
+                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                            <option value="1">On Going</option>
+                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                            <option value="2">Berjalan</option>
+                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                            <option value="3">Selesai</option>
+                                        <?php } ?>
+                                        <option value="">Pilih</option>
+                                        <option value="1">On Going</option>
+                                        <option value="2">Berjalan</option>
+                                        <option value="3">Selesai</option>
+                                    </select>
+                                </div>
+                                <!--end::Form group-->
+
+                                <!--end::Form group-->
+                                <!--begin::Form group-->
+
                         </div>
                         <!--end::Form group-->
 
@@ -184,11 +261,11 @@
     </div>
 <?php endforeach ?>
 
-<?php foreach ($jeniskegiatan as $key) : ?>
+<?php foreach ($bursakegiatan as $key) : ?>
     <!-- Modal delete-->
-    <div class="modal fade" id="delete<?= $key['id_jenis_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal fade" id="delete<?= $key['id_bursa_kegiatan'] ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <form action="<?= base_url('operator/publikasi/jenis_kegiatan/delete/' . $key['id_jenis_kegiatan']) ?>" method="POST">
+            <form action="<?= base_url('operator/publikasi/bursa_kegiatan/delete/' . $key['id_bursa_kegiatan']) ?>" method="POST">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-danger" id="exampleModalLabel"></h5>
@@ -197,7 +274,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-danger">
-                        <h5> Yakin ingin menghapus <?= $key['nama_jenis_kegiatan'] ?></h5>
+                        <h5> Yakin ingin menghapus <span class="text-dark"> <?= $key['keterangan'] ?></span></h5>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary font-weight-bold" data-dismiss="modal">Close</button>
@@ -219,9 +296,11 @@
 
         $(".btn-save").click(function() {
 
-            var nama_jenis_kegiatan = $("#nama_jenis_kegiatan").val();
+            var id_jenis = $("#id_jenis").val();
+            var keterangan = $("#keterangan").val();
+            var periode = $("#periode").val();
 
-            if (nama_jenis_kegiatan.length == "") {
+            if (id_jenis.length == "") {
 
                 Swal.fire({
                     type: 'warning',
@@ -229,15 +308,33 @@
                     text: 'jenis kegiatan Wajib Diisi !'
                 });
 
+            } else if (keterangan.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'keterangan Wajib Diisi !'
+                });
+
+            } else if (periode.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'periode Wajib Diisi !'
+                });
+
             } else {
 
                 //ajax
                 $.ajax({
 
-                    url: "<?php echo base_url() ?>operator/publikasi/jenis_kegiatan/save",
+                    url: "<?php echo base_url() ?>operator/publikasi/bursa_kegiatan/save",
                     type: "POST",
                     data: {
-                        "nama_jenis_kegiatan": nama_jenis_kegiatan
+                        "id_jenis": id_jenis,
+                        "keterangan": keterangan,
+                        "periode": periode
                     },
 
                     success: function(response) {
@@ -252,10 +349,12 @@
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>operator/publikasi/jenis_kegiatan";
+                                    window.location.href = "<?php echo base_url() ?>operator/publikasi/bursa_kegiatan";
                                 });
 
-                            $("#nama_jenis_kegiatan").val('');
+                            $("#id_jenis").val('');
+                            $("#keterangan").val('');
+                            $("#periode").val('');
 
                         } else {
 

@@ -9,7 +9,10 @@ class Psarpraskwu extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab4',
-            'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda'
+            'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
+            'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
+            'bursakegiatan' => $this->Bursa_kegiatan_model->get(),
+            'pengaturan' => $this->Pengaturan_model->get()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');

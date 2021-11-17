@@ -15,25 +15,22 @@
                         <div class="card-toolbar">
                             <ul class="nav nav-bold nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_7_1">Kemah Bakti Pramuka</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_7_1">PASKIBRAKA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_2">PKK</a>
+                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_2">PEMUDA PELOPOR</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_3">KNPI</a>
+                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_3">PAPN</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_4">LDK</a>
+                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_4">LOMBA BB</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_5">Revitalisasi</a>
+                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_5">LOMBA TUB</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_6">Evaluasi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_7">Perijinan Organisasi</a>
+                                    <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_6">DUTA PANCASILA</a>
                                 </li>
                             </ul>
                         </div>
@@ -41,145 +38,359 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="kt_tab_pane_7_1" role="tabpanel" aria-labelledby="kt_tab_pane_7_1">
-                                <div class="card card-custom">
-                                    <div class="card-header flex-wrap py-5">
-                                        <div class="card-title">
-                                            <h3 class="card-label"><?= $page ?>
-                                                <!-- <span class="d-block text-muted pt-2 font-size-sm">extended pagination options</span> -->
-                                            </h3>
-                                        </div>
-                                        <div class="card-toolbar">
-                                            <!--begin::Dropdown-->
-                                            <div class="dropdown dropdown-inline mr-2">
-                                                <button type="button" class="btn btn-light-primary font-weight-bolder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="svg-icon svg-icon-md">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Design/PenAndRuller.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" fill="#000000" opacity="0.3" />
-                                                                <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>Export</button>
-                                                <!--begin::Dropdown Menu-->
-                                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                    <!--begin::Navigation-->
-                                                    <ul class="navi flex-column navi-hover py-2">
-                                                        <li class="navi-header font-weight-bolder text-uppercase font-size-sm text-primary pb-2">Choose an option:</li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-icon">
-                                                                    <i class="la la-print"></i>
-                                                                </span>
-                                                                <span class="navi-text">Print</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-icon">
-                                                                    <i class="la la-copy"></i>
-                                                                </span>
-                                                                <span class="navi-text">Copy</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-icon">
-                                                                    <i class="la la-file-excel-o"></i>
-                                                                </span>
-                                                                <span class="navi-text">Excel</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-icon">
-                                                                    <i class="la la-file-text-o"></i>
-                                                                </span>
-                                                                <span class="navi-text">CSV</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="navi-item">
-                                                            <a href="#" class="navi-link">
-                                                                <span class="navi-icon">
-                                                                    <i class="la la-file-pdf-o"></i>
-                                                                </span>
-                                                                <span class="navi-text">PDF</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--end::Navigation-->
-                                                </div>
-                                                <!--end::Dropdown Menu-->
-                                            </div>
-                                            <!--end::Dropdown-->
-                                            <!--begin::Button-->
-                                            <a href="#" class="btn btn-primary font-weight-bolder">
-                                                <span class="svg-icon svg-icon-md">
-                                                    <!--begin::Svg Icon | path:/keen/theme/demo5/dist/assets/media/svg/icons/Design/Flatten.svg-->
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24" />
-                                                            <circle fill="#000000" cx="9" cy="15" r="6" />
-                                                            <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
-                                                        </g>
-                                                    </svg>
-                                                    <!--end::Svg Icon-->
-                                                </span>New Record</a>
-                                            <!--end::Button-->
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!--begin: Datatable-->
-                                        <table class="table table-separate table-head-custom table-checkable" id="myTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>Record ID</th>
-                                                    <th></th>
-                                                    <th>Nama</th>
-                                                    <th>Asal Sekolah</th>
-                                                    <th>Alamat</th>
-                                                    <th>Kabupaten/Kota</th>
-                                                    <th>Periode</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <th>
-                                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                                        </div>
-                                                    </th>
-                                                    <td>Dinda Yurike Candini</td>
-                                                    <td>Universitas Pendidikan Indonesia</td>
-                                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                                    <td>Kabupaten Kuningan</td>
-                                                    <td>2021</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <th>
-                                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                                        </div>
-                                                    </th>
-                                                    <td>Dinda Yurike Candini</td>
-                                                    <td>Universitas Islam Bandung</td>
-                                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                                    <td>Kabupaten Kuningan</td>
-                                                    <td>2021</td>
-                                                </tr>
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursapaskibraka as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
 
-                                            </tbody>
-                                        </table>
-                                        <!--end: Datatable-->
-                                    </div>
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="kt_tab_pane_7_2" role="tabpanel" aria-labelledby="kt_tab_pane_7_2">Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                            <div class="tab-pane fade" id="kt_tab_pane_7_3" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">Aldus PageMaker including versions lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            <div class="tab-pane fade" id="kt_tab_pane_7_2" role="tabpanel" aria-labelledby="kt_tab_pane_7_2">
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursapemudapelopor as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
+
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="kt_tab_pane_7_3" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursapapn as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
+
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="kt_tab_pane_7_4" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursalbb as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
+
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="kt_tab_pane_7_5" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursaltub as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
+
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="kt_tab_pane_7_6" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">
+                                <div class="row pt-5 bg-light-primary">
+                                    <?php $no = 1;
+                                    foreach ($bursadp as $key) : ?>
+                                        <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
+                                            <!--begin::Card-->
+                                            <div class="card card-custom gutter-b card-stretch">
+                                                <!--begin::Body-->
+                                                <div class="card-body pt-4">
+                                                    <!--begin::Toolbar-->
+
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::User-->
+                                                    <div class="d-flex align-items-end py-2">
+                                                        <!--begin::Pic-->
+                                                        <div class="d-flex align-items-center">
+                                                            <!--begin::Pic-->
+
+                                                            <div class="d-flex flex-shrink-0 mr-5">
+                                                                <div class="symbol symbol-lg-75 symbol-circle symbol-light-primary">
+                                                                    <span class="symbol-label font-size-h3 font-weight-boldest"><?= substr($key['nama_jenis_kegiatan'], 0, 1); ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Pic-->
+                                                            <!--begin::Title-->
+                                                            <div class="d-flex flex-column">
+                                                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0"><?= $key['nama_jenis_kegiatan'] ?></a>
+                                                                <span class="text-muted font-weight-bold"><?= $key['periode'] ?></span>
+                                                            </div>
+                                                            <!--end::Title-->
+                                                        </div>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                    <!--end::User-->
+                                                    <!--begin::Desc-->
+                                                    <p class="py-2"><?= $key['keterangan'] ?>.</p>
+                                                    <!--end::Desc-->
+                                                    <!--begin::Contacts-->
+
+                                                    <!--end::Contacts-->
+                                                    <!--begin::Actions-->
+                                                    <div class="pt-2">
+                                                        <?php if ($key['status_selesai'] == 1) { ?>
+                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                        <?php } elseif ($key['status_selesai'] == 2) { ?>
+                                                            <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
+                                                        <?php } elseif ($key['status_selesai'] == 3) { ?>
+                                                            <a href="#" class="btn btn-light-success font-weight-bolder mr-2">SELESAI</a>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!--end::Actions-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

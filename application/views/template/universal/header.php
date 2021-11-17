@@ -77,5 +77,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
+    <style>
+        a.tutup:hover {
+            cursor: not-allowed
+        }
+    </style>
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/buttons.bootstrap4.min.css">
 </head>
 <!--end::Head-->
