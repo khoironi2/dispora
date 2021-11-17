@@ -118,7 +118,7 @@
                                         <!--begin::Input-->
                                         <div class="form-group">
 
-                                            <form action="<?= base_url('admin/Account/updateAva'); ?>" method="POST" enctype="multipart/form-data">
+                                            <form action="<?= base_url('operator/Account/updateAva'); ?>" method="POST" enctype="multipart/form-data">
 
                                                 <div class="row">
                                                     <div class="col">
@@ -145,7 +145,7 @@
                                                 <span class="form-text text-muted">Allowed file types: png, jpg, jpeg.</span>
                                             </form>
                                         </div>
-                                        <form action="<?= base_url('admin/account/update1'); ?>" method="POST">
+                                        <form action="<?= base_url('operator/account/update1'); ?>" method="POST">
                                             <div class="form-group">
                                                 <label>Nama</label>
                                                 <input type="text" class="form-control form-control-solid form-control-lg" name="nama" placeholder="First Name" value="<?= $user['nama'] ?>" />
@@ -193,31 +193,31 @@
                                 <!--begin: Wizard Step 2-->
                                 <div class="pb-5" data-wizard-type="step-content">
                                     <h4 class="mb-10 font-weight-bold text-dark">Atur Lokasi Anda Saat Ini</h4>
-                                    <form action="<?= base_url('admin/account/lokasi'); ?>" method="POST">
-                                        <?php foreach ($UserWilayah as $wil) : ?>
+                                    <form action="<?= base_url('operator/account/lokasi'); ?>" method="POST">
 
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <!--begin::Input-->
-                                                    <div class="form-group">
-                                                        <label>Alamat Sesuai KTP</label>
-                                                        <!-- <input type="text" class="form-control form-control-solid form-control-lg" name="address1" placeholder="Address Line 1" value="Address Line 1" /> -->
-                                                        <textarea name="alamat_ktp" id="alamat_ktp" cols="30" rows="3" class="form-control form-control-solid form-control-lg"><?= $user['alamat_ktp'] ?></textarea>
-                                                        <span class="form-text text-muted">Sesuai Alamat di KTP.</span>
-                                                    </div>
-                                                    <!--end::Input-->
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <!--begin::Input-->
+                                                <div class="form-group">
+                                                    <label>Alamat Sesuai KTP</label>
+                                                    <!-- <input type="text" class="form-control form-control-solid form-control-lg" name="address1" placeholder="Address Line 1" value="Address Line 1" /> -->
+                                                    <textarea name="alamat_ktp" id="alamat_ktp" cols="30" rows="3" class="form-control form-control-solid form-control-lg"><?= $user['alamat_ktp'] ?></textarea>
+                                                    <span class="form-text text-muted">Sesuai Alamat di KTP.</span>
                                                 </div>
-                                                <div class="col-xl-6">
-                                                    <!--begin::Input-->
-                                                    <div class="form-group">
-                                                        <label>Alamat Domisili</label>
-                                                        <!-- <input type="text" class="form-control form-control-solid form-control-lg" name="address1" placeholder="Address Line 1" value="Address Line 1" /> -->
-                                                        <textarea name="alamat_domisili" id="alamat_domisili" cols="30" rows="3" class="form-control form-control-solid form-control-lg"><?= $user['alamat_domisili'] ?></textarea>
-                                                        <span class="form-text text-muted">Kosongkan Jika Sama Dengan Alamat KTP</span>
-                                                    </div>
-                                                    <!--end::Input-->
-                                                </div>
+                                                <!--end::Input-->
                                             </div>
+                                            <div class="col-xl-6">
+                                                <!--begin::Input-->
+                                                <div class="form-group">
+                                                    <label>Alamat Domisili</label>
+                                                    <!-- <input type="text" class="form-control form-control-solid form-control-lg" name="address1" placeholder="Address Line 1" value="Address Line 1" /> -->
+                                                    <textarea name="alamat_domisili" id="alamat_domisili" cols="30" rows="3" class="form-control form-control-solid form-control-lg"><?= $user['alamat_domisili'] ?></textarea>
+                                                    <span class="form-text text-muted">Kosongkan Jika Sama Dengan Alamat KTP</span>
+                                                </div>
+                                                <!--end::Input-->
+                                            </div>
+                                        </div>
+                                        <?php foreach ($UserWilayah as $wil) : ?>
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <!--begin::Input-->
@@ -284,7 +284,7 @@
                                 <!--begin: Wizard Step 3-->
                                 <div class="pb-5" data-wizard-type="step-content">
                                     <h4 class="mb-10 font-weight-bold text-dark">Atur Social media</h4>
-                                    <form action="<?= base_url('admin/account/socmed'); ?>" method="POST">
+                                    <form action="<?= base_url('operator/account/socmed'); ?>" method="POST">
                                         <!--begin::Select-->
                                         <div class="form-group">
                                             <label>Facebook</label>
@@ -318,7 +318,7 @@
                                 <!--begin: Wizard Step 4-->
                                 <div class="pb-5" data-wizard-type="step-content">
                                     <h4 class="mb-10 font-weight-bold text-dark">Akun tahun <?= $user['periode_register'] ?> </h4>
-                                    <form action="<?= base_url('admin/account/Updatepasword'); ?>" method="POST">
+                                    <form action="<?= base_url('operator/account/Updatepasword'); ?>" method="POST">
                                         <div class="row">
                                             <div class="form-group">
                                                 <label>Password</label>

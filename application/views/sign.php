@@ -309,7 +309,7 @@
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>operator";
+                                    window.location.href = "<?php echo base_url() ?>operator/dashboard";
                                 });
 
                         } else {
