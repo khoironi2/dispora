@@ -57,7 +57,7 @@
                                 <td><?= $key['institusi_asal']  ?></td>
                                 <td><?= $key['alamat_ktp']  ?></td>
                                 <td><?= $key['kabupaten']  ?></td>
-                                <td><?= $key['periode_bursa'] ?></td>
+                                <td><?= $key['periode_pemuda_pelopor'] ?></td>
                                 <td>
                                     <?php if ($key['status_lulus'] == 1) { ?>
                                         <span class="badge rounded-pill bg-light-primary">Perlu Validasi</span>
@@ -67,9 +67,9 @@
                                 </td>
                                 <td>
                                     <?php if ($key['status_lulus'] == 1) { ?>
-                                        <a href="<?= base_url('operator/publikasi/berjalan/paskibraka/setuju/' . $key['id_pendaftar_kegiatan_paskibraka']) ?>"><span class="badge rounded-pill bg-light-success">SETUJUI</span></a>
+                                        <a href="<?= base_url('operator/publikasi/berjalan/pemuda_pelopor/setuju/' . $key['id_pendaftar_pemuda_pelopor']) ?>"><span class="badge rounded-pill bg-light-success">SETUJUI</span></a>
                                     <?php } elseif ($key['status_lulus'] == 2) { ?>
-                                        <a href="<?= base_url('operator/publikasi/berjalan/paskibraka/batalkan/' . $key['id_pendaftar_kegiatan_paskibraka']) ?>"><span class="badge rounded-pill bg-light-danger">BATALKAN</span></a>
+                                        <a href="<?= base_url('operator/publikasi/berjalan/pemuda_pelopor/batalkan/' . $key['id_pendaftar_pemuda_pelopor']) ?>"><span class="badge rounded-pill bg-light-danger">BATALKAN</span></a>
                                     <?php } ?>
                                 </td>
                             </tr>

@@ -287,7 +287,7 @@
             </a>
             <!--end:Item-->
             <!--begin::Item-->
-            <a href="custom/apps/user/profile-2.html" class="navi-item">
+            <a href="<?= base_url('pemuda/prestasi') ?>" class="navi-item">
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
@@ -305,8 +305,7 @@
                         </div>
                     </div>
                     <div class="navi-text">
-                        <div class="font-weight-bold">My Events</div>
-                        <div class="text-muted">Logs and notifications</div>
+                        <div class="font-weight-bold">Prestasi</div>
                     </div>
                 </div>
             </a>

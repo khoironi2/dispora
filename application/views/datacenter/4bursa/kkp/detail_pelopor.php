@@ -207,7 +207,7 @@
                 Swal.fire({
                     type: 'warning',
                     title: 'Oops...',
-                    text: 'Prestasi anda masih kosong silahkan perbarui pada menu Account -> Prestasi !'
+                    text: 'Prestasi anda masih kosong silahkan perbarui pada menu Prestasi !'
                 });
 
             } else if (tingkat_prestasi.length == "") {
@@ -215,7 +215,7 @@
                 Swal.fire({
                     type: 'warning',
                     title: 'Oops...',
-                    text: 'Tingkat Prestasi anda masih kosong silahkan perbarui pada menu Account -> Prestasi !'
+                    text: 'Tingkat Prestasi anda masih kosong silahkan perbarui pada menu Prestasi !'
                 });
 
             } else {

@@ -1419,5 +1419,6 @@
                             <!--end::Description-->
                         </div>
                     </div>
+                    <p><?= $this->session->flashdata('message'); ?></p>
                 </div>
                 <!--end::Subheader-->
