@@ -40,7 +40,7 @@
                             <div class="tab-pane fade show active" id="kt_tab_pane_7_1" role="tabpanel" aria-labelledby="kt_tab_pane_7_1">
                                 <div class="row pt-5 bg-light-primary">
                                     <?php $no = 1;
-                                    foreach ($bursapaskibraka as $key) : ?>
+                                    foreach ($getpaskibdepan as $key) : ?>
                                         <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
                                             <!--begin::Card-->
                                             <div class="card card-custom gutter-b card-stretch">
@@ -75,12 +75,15 @@
                                                     <p class="py-2"><?= $key['keterangan'] ?>.</p>
                                                     <!--end::Desc-->
                                                     <!--begin::Contacts-->
-
                                                     <!--end::Contacts-->
                                                     <!--begin::Actions-->
                                                     <div class="pt-2">
                                                         <?php if ($key['status_selesai'] == 1) { ?>
-                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php if (!$this->session->userdata('email')) : ?>
+                                                                <a href="#" onclick="return confirm('Maaf anda belum login');" class="btn btn-primary font-weight-bolder mr-2"><span>DAFTAR</span></a>
+                                                            <?php else : ?>
+                                                                <a href="<?= base_url('datacenter/4bursa/kkp/paskib/' . $key['id_bursa']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php endif; ?>
                                                         <?php } elseif ($key['status_selesai'] == 2) { ?>
                                                             <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
                                                         <?php } elseif ($key['status_selesai'] == 3) { ?>
@@ -410,3 +413,126 @@
 <!--end::Entry-->
 </div>
 <!--end::Content-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $(".btn-paskib").click(function() {
+
+            var paskib_nama = $("#paskib_nama").val();
+            var paskib_institusi_asal = $("#paskib_institusi_asal").val();
+            var paskib_alamat_ktp = $("#paskib_alamat_ktp").val();
+            var paskib_alamat_domisili = $("#paskib_alamat_domisili").val();
+            var paskib_kabupaten = $("#paskib_kabupaten").val();
+            var periode = $("#periode").val();
+            var id_bursa_kegiatan = $("#id_bursa_kegiatan").val();
+
+            if (paskib_nama.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Nama masih kosong silahkan perbarui pada menu Account !'
+                });
+
+            } else if (paskib_institusi_asal.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Institusi masih kosong silahkan perbarui pada menu Account !'
+                });
+
+            } else if (paskib_alamat_ktp.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Alamat KTP masih kosong silahkan perbarui pada menu Account !'
+                });
+
+            } else if (paskib_alamat_domisili.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Alamat Domisili masih kosong silahkan perbarui pada menu Account !'
+                });
+
+            } else if (paskib_kabupaten.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Kabupaten / Kota masih kosong silahkan perbarui pada menu Account !'
+                });
+
+            } else {
+
+                //ajax
+                $.ajax({
+
+                    url: "<?php echo base_url() ?>datacenter/4bursa/kkp/daftarpaskibraka",
+                    type: "POST",
+                    data: {
+                        "periode": periode,
+                        "id_bursa_kegiatan": id_bursa_kegiatan
+                    },
+
+                    success: function(response) {
+
+                        if (response == "success") {
+                            Swal.fire({
+                                    type: 'success',
+                                    title: 'Register Berhasil!',
+                                    text: 'Thanks !',
+                                    timer: 3000,
+                                    showCancelButton: false,
+                                    showConfirmButton: false
+                                })
+                                .then(function() {
+                                    window.location.href = "<?php echo base_url() ?>datacenter/4bursa/kkp";
+                                });
+
+                            $("#id_bursa_kegiatan").val('');
+                            $("#paskib_nama").val('');
+                            $("#paskib_institusi_asal").val('');
+                            $("#paskib_alamat_ktp").val('');
+                            $("#paskib_alamat_domisili").val('');
+                            $("#paskib_kabupaten").val('');
+
+                        } else {
+
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Pendaftaran Gagal!',
+                                text: 'silahkan coba lagi!'
+                            });
+
+                        }
+
+                        console.log(response);
+
+                    },
+
+                    error: function(response) {
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Opps!',
+                            text: 'server error!'
+                        });
+                    }
+
+                })
+
+            }
+
+        });
+
+    });
+</script>

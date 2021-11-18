@@ -32,6 +32,7 @@ class User_model extends CI_Model
         return $result->result_array();
     }
 
+
     public function cek_login($email)
     {
 

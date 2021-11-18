@@ -200,7 +200,7 @@
         <!--begin::Header-->
         <div class="d-flex align-items-center mt-5">
             <div class="symbol symbol-100 mr-5">
-                <div class="symbol-label" style="background-image:url('<?= base_url('assets/') ?>theme/demo5/dist/assets/media/users/150-6.jpg')"></div>
+                <div class="symbol-label" style="background-image:url(<?= base_url('assets/img/account/' . $user['foto_user']) ?>)"></div>
                 <i class="symbol-badge bg-success"></i>
             </div>
             <div class="d-flex flex-column">
@@ -1531,8 +1531,61 @@
     });
 </script>
 
+<script src="<?= base_url('assets/') ?>js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/dataTables.responsive.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/responsive.bootstrap4.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/dataTables.buttons.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/buttons.bootstrap4.min.js"></script>
+<script src="<?= base_url('assets/') ?>jsjszip.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/pdfmake.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/vfs_fonts.js"></script>
+<script src="<?= base_url('assets/') ?>js/buttons.html5.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/buttons.print.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/buttons.colVis.min.js"></script>
+<script>
+    $(function() {
+        $("#example1").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+<script src="<?= base_url('assets/') ?>theme/demo5/dist/assets/js/pages/features/file-upload/image-input1036.js?v=2.1.1"></script>
 
 <script src="<?= base_url('assets/') ?>theme/demo5/dist/assets/js/pages/custom/wizard/wizard-21036.js?v=2.1.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.0.0/js/bootstrap-colorpicker.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#provinsi").change(function() {
+            var url = "<?php echo site_url('pemuda/account/kabupaten'); ?>/" + $(this).val();
+            $('#kabupaten').load(url);
+            return false;
+        });
+        $("#kabupaten").change(function() {
+            var url = "<?php echo site_url('pemuda/account/kecamatan'); ?>/" + $(this).val();
+            $('#kecamatan').load(url);
+            return false;
+        })
+        $("#kecamatan").change(function() {
+            var url = "<?php echo site_url('pemuda/account/kelurahan'); ?>/" + $(this).val();
+            $('#kelurahan').load(url);
+            return false;
+        })
+    });
+</script>
 </body>
 <!--end::Body-->
 

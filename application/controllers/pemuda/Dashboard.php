@@ -6,9 +6,7 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // $this->cek_status();
         $this->CI = &get_instance();
-        // $this->load->library('session');
         if ($this->CI->session->userdata['level_user'] != 'pemuda') {
             redirect();
         }

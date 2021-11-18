@@ -174,14 +174,24 @@
                             </a>
                             <!--end::Quick Panel-->
                             <!--begin::User-->
-                            <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" id="kt_quick_user_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="<?= $user['nama'] ?>">
-                                <div class="symbol symbol-30 bg-gray-100">
-                                    <div class="symbol-label">
-                                        <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo5/dist/assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" />
+                            <?php if ($this->session->userdata('email')) : ?>
+                                <a href="#" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" id="kt_quick_user_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="<?= $user['nama'] ?>">
+                                    <div class="symbol symbol-30 bg-gray-100">
+                                        <div class="symbol-label">
+                                            <img alt="<?= $user['nama'] ?>" src="<?= base_url('assets/img/account/' . $user['foto_user']) ?>" class="h-75 align-self-end" />
+                                        </div>
+                                        <i class="symbol-badge bg-success"></i>
                                     </div>
-                                    <i class="symbol-badge bg-success"></i>
-                                </div>
-                            </a>
+                                </a>
+                            <?php else : ?>
+                                <a href="<?= base_url('sign') ?>" class="btn btn-icon btn-icon-white btn-hover-transparent-white w-40px h-40px" title="User Profile">
+                                    <div class="symbol symbol-30 bg-gray-100">
+                                        <div class="symbol-label">
+                                            <img alt="ava" src="<?= base_url('assets/theme/demo5/dist/assets/media/users/blank.png') ?>" class="h-75 align-self-end" />
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php endif; ?>
                             <!--end::User-->
                         </div>
                         <!--end::Footer-->
