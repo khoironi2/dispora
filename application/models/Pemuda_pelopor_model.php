@@ -71,7 +71,7 @@ class Pemuda_pelopor_model extends CI_Model
         $this->db->where('tbl_user.id_user', $this->session->userdata('id_user'));
         $this->db->where('tbl_bursa_kegiatan.id_bursa_kegiatan', $id);
         $this->db->where('jenis.nama_jenis_kegiatan', 'PEMUDA PELOPOR');
-        $this->db->group_by('z.id_pendaftar_pemuda_pelopor');
+        $this->db->group_by('tbl_pendaftar_pemuda_pelopor.id_pendaftar_pemuda_pelopor');
         $result = $this->db->get();
 
         return $result->row_array();
