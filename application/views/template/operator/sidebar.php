@@ -275,7 +275,7 @@
                                                                 <i class="menu-bullet menu-bullet-line">
                                                                     <span></span>
                                                                 </i>
-                                                                <span class="menu-text">Profile</span>
+                                                                <span class="menu-text">Program Berjalan</span>
                                                                 <i class="menu-arrow"></i>
                                                             </a>
                                                             <div class="menu-submenu">
@@ -286,18 +286,18 @@
                                                                             <i class="menu-bullet menu-bullet-dot">
                                                                                 <span></span>
                                                                             </i>
-                                                                            <span class="menu-text">Profile 1</span>
+                                                                            <span class="menu-text">PROGRAM BERJALAN KEPELOPORAN - KEPEMIMPINAN SDP</span>
                                                                             <i class="menu-arrow"></i>
                                                                         </a>
                                                                         <div class="menu-submenu">
                                                                             <i class="menu-arrow"></i>
                                                                             <ul class="menu-subnav">
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="custom/apps/profile/profile-1/overview.html" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/paskibraka') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Overview</span>
+                                                                                        <span class="menu-text">Paskibraka</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
