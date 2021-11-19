@@ -224,7 +224,7 @@
                 //ajax
                 $.ajax({
 
-                    url: "<?php echo base_url() ?>datacenter/4bursa/kkp/daftarpelopor",
+                    url: "<?php echo base_url() ?>datacenter/4bursa/kkp/daftarpapn",
                     type: "POST",
                     data: {
                         "periode": periode,
@@ -248,7 +248,7 @@
                                     showConfirmButton: false
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url('datacenter/4bursa/kkp/pelopor/' . $getBursaID['id_bursa_kegiatan']) ?>";
+                                    window.location.href = "<?php echo base_url('datacenter/4bursa/kkp/papn/' . $getBursaID['id_bursa_kegiatan']) ?>";
                                 });
 
                             $("#id_bursa_kegiatan").val('');
