@@ -165,17 +165,9 @@ class Kkp extends CI_Controller
             'bursadp' => $this->Bursa_kegiatan_model->getdp(),
             'pengaturan' => $this->Pengaturan_model->get()
         ];
-        $url = "https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json";
-        $get_url = file_get_contents($url);
-        $datanegara = json_decode($get_url);
-        print_r($datanegara);
-
-        $data_array = array(
-            'datalist' => $datanegara
-        );
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
-        $this->load->view('datacenter/4bursa/kkp/detail_papn', $data, $data_array);
+        $this->load->view('datacenter/4bursa/kkp/detail_papn', $data);
         $this->load->view('template/universal/footer', $data);
     }
 

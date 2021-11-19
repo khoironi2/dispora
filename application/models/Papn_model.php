@@ -33,7 +33,7 @@ class Papn_model extends CI_Model
         tbl_bursa_kegiatan.id_bursa_kegiatan as id_bursa,
         tbl_user.nama as user,
         kabupaten.nama as kabupaten,
-        tbl_pendaftar_pertukaran_pelajar_antar_negara.periode as periode_pemuda_pelopor
+        tbl_pendaftar_pertukaran_pelajar_antar_negara.periode as periode_papn
         ');
         $this->db->from('tbl_pendaftar_pertukaran_pelajar_antar_negara');
         $this->db->join('tbl_user', 'tbl_user.id_user=tbl_pendaftar_pertukaran_pelajar_antar_negara.id_user_pemuda', 'left');

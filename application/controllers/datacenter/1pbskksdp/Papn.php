@@ -9,7 +9,10 @@ class Papn extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Data Pertukaran Pelajar Antar Negara'
+            'page' => 'Data Pertukaran Pelajar Antar Negara',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Papn_model->getpublik(),
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');

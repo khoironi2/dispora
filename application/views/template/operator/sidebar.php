@@ -309,11 +309,11 @@
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="custom/apps/profile/profile-1/account-information.html" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/papn') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Account Information</span>
+                                                                                        <span class="menu-text">PAPN</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
