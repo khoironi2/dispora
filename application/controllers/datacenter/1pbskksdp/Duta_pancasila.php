@@ -9,7 +9,10 @@ class Duta_pancasila extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Data Duta Pancasila'
+            'page' => 'Data Duta Pancasila',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Duta_pancasila_model->getpublik(),
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');

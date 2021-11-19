@@ -317,19 +317,27 @@
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="custom/apps/profile/profile-1/change-password.html" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/lbb') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Change Password</span>
+                                                                                        <span class="menu-text">Lomba Baris Berbaris</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="custom/apps/profile/profile-1/email-settings.html" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/ltub') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Email Settings</span>
+                                                                                        <span class="menu-text">Lomba Tata Upacara Bendera</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/duta_pancasila') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Duta Pancasila</span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>

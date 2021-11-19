@@ -10,7 +10,8 @@
                 <div class="card card-custom">
                     <div class="card-header flex-wrap py-5">
                         <div class="card-title">
-                            <h3 class="card-label"><?= $page; ?>
+                            <h3 class="card-label">
+                                <?= $page; ?>
                                 <!-- <span class="d-block text-muted pt-2 font-size-sm">extended pagination options</span> -->
                             </h3>
                         </div>
@@ -21,29 +22,15 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th></th>
-                                    <th>Nama</th>
-                                    <th>Asal Sekolah</th>
-                                    <th>Alamat</th>
-                                    <th>Kabupaten/Kota</th>
-                                    <th>Periode</th>
+                                    <th>Nama Anggota</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1;
-                                foreach ($getpublik as $key) : ?>
+                                foreach ($kelompok as $key) : ?>
                                     <tr>
                                         <td><?= $no++; ?></td>
-                                        <th>
-                                            <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                                <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
-                                            </div>
-                                        </th>
-                                        <td><?= $key['user']  ?></td>
-                                        <td><?= $key['institusi_asal']  ?></td>
-                                        <td><?= $key['alamat_ktp']  ?></td>
-                                        <td><?= $key['kabupaten']  ?></td>
-                                        <td><?= $key['periode_duta_pancasila'] ?></td>
+                                        <td><?= $key['nama_anggota']  ?></td>
                                     </tr>
                                 <?php endforeach ?>
 

@@ -268,7 +268,11 @@
                                                     <!--begin::Actions-->
                                                     <div class="pt-2">
                                                         <?php if ($key['status_selesai'] == 1) { ?>
-                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php if (!$this->session->userdata('email')) : ?>
+                                                                <a href="#" onclick="return confirm('Maaf anda belum login');" class="btn btn-primary font-weight-bolder mr-2"><span>DAFTAR</span></a>
+                                                            <?php else : ?>
+                                                                <a href="<?= base_url('datacenter/4bursa/kkp/lbb/' . $key['id_bursa_kegiatan']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php endif; ?>
                                                         <?php } elseif ($key['status_selesai'] == 2) { ?>
                                                             <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
                                                         <?php } elseif ($key['status_selesai'] == 3) { ?>
@@ -327,7 +331,11 @@
                                                     <!--begin::Actions-->
                                                     <div class="pt-2">
                                                         <?php if ($key['status_selesai'] == 1) { ?>
-                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php if (!$this->session->userdata('email')) : ?>
+                                                                <a href="#" onclick="return confirm('Maaf anda belum login');" class="btn btn-primary font-weight-bolder mr-2"><span>DAFTAR</span></a>
+                                                            <?php else : ?>
+                                                                <a href="<?= base_url('datacenter/4bursa/kkp/ltub/' . $key['id_bursa_kegiatan']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php endif; ?>
                                                         <?php } elseif ($key['status_selesai'] == 2) { ?>
                                                             <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
                                                         <?php } elseif ($key['status_selesai'] == 3) { ?>
@@ -386,7 +394,11 @@
                                                     <!--begin::Actions-->
                                                     <div class="pt-2">
                                                         <?php if ($key['status_selesai'] == 1) { ?>
-                                                            <a href="#" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php if (!$this->session->userdata('email')) : ?>
+                                                                <a href="#" onclick="return confirm('Maaf anda belum login');" class="btn btn-primary font-weight-bolder mr-2"><span>DAFTAR</span></a>
+                                                            <?php else : ?>
+                                                                <a href="<?= base_url('datacenter/4bursa/kkp/duta_pancasila/' . $key['id_bursa_kegiatan']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                            <?php endif; ?>
                                                         <?php } elseif ($key['status_selesai'] == 2) { ?>
                                                             <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>
                                                         <?php } elseif ($key['status_selesai'] == 3) { ?>
