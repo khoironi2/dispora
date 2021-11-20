@@ -1585,6 +1585,8 @@
     });
 </script>
 
+<script src="<?= base_url('assets/') ?>theme/demo5/dist/assets/js/pages/features/forms/widgets/bootstrap-datetimepicker1036.js?v=2.1.1"></script>
+
 </body>
 <!--end::Body-->
 

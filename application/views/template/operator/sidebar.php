@@ -142,44 +142,6 @@
                                             </li>
                                             <li class="menu-item mb-3">
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Pengaturan Tampilan') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('operator/pengaturan') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <rect x="0" y="0" width="24" height="24" />
-                                                                <path d="M3.5,3 L5,3 L5,19.5 C5,20.3284271 4.32842712,21 3.5,21 L3.5,21 C2.67157288,21 2,20.3284271 2,19.5 L2,4.5 C2,3.67157288 2.67157288,3 3.5,3 Z" fill="#000000" />
-                                                                <path d="M6.99987583,2.99995344 L19.754647,2.99999303 C20.3069317,2.99999474 20.7546456,3.44771138 20.7546439,3.99999613 C20.7546431,4.24703684 20.6631995,4.48533385 20.497938,4.66895776 L17.5,8 L20.4979317,11.3310353 C20.8673908,11.7415453 20.8341123,12.3738351 20.4236023,12.7432941 C20.2399776,12.9085564 20.0016794,13 19.7546376,13 L6.99987583,13 L6.99987583,2.99995344 Z" fill="#000000" opacity="0.3" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Pengaturan Tampilan">Pengaturan Tampilan</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-item <?php if ($page == 'Manajemen Akses User') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('operator/user') ?>" class="menu-link">
-                                                    <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                                                            </g>
-                                                        </svg>
-                                                        <!--end::Svg Icon-->
-                                                    </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Manajemen Akses User">Manajemen User</span>
-                                                </a>
-                                            </li>
 
                                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                                 <a href="javascript:;" class="menu-link menu-toggle">
@@ -383,6 +345,26 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                            </li>
+
+                                            <li class="menu-item <?php if ($page == 'Data Kerjasama Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda DISPORA Banten') {
+                                                                        echo 'menu-item-active';
+                                                                    } else {
+                                                                    }; ?>" aria-haspopup="true">
+                                                <a href="<?= base_url('operator/kerjasama') ?>" class="menu-link">
+                                                    <span class="svg-icon menu-icon">
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <polygon points="0 0 24 0 24 24 0 24" />
+                                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Kerjasama Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda DISPORA Banten">DATA KERJASAMA SEKSI KEPELOPORAN KSDP</span>
+                                                </a>
                                             </li>
 
 
