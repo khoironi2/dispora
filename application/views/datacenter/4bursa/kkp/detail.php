@@ -208,6 +208,7 @@
                                     title: 'Register Berhasil!',
                                     text: 'Thanks !',
                                     timer: 3000,
+                                    icon: "success",
                                     showCancelButton: false,
                                     showConfirmButton: false
                                 })

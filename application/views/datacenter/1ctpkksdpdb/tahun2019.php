@@ -98,48 +98,26 @@
                     </div>
                     <div class="card-body">
                         <!--begin: Datatable-->
-                        <table class="table table-separate table-head-custom table-checkable" id="myTable">
-                            <thead>
-                                <tr>
-                                    <th>Record ID</th>
-                                    <th></th>
-                                    <th>Nama</th>
-                                    <th>Asal Sekolah</th>
-                                    <th>Alamat</th>
-                                    <th>Kabupaten/Kota</th>
-                                    <th>Periode</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <th>
-                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                        </div>
-                                    </th>
-                                    <td>Dinda Yurike Candini</td>
-                                    <td>Universitas Pendidikan Indonesia</td>
-                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                    <td>Kabupaten Kuningan</td>
-                                    <td>2021</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <th>
-                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                        </div>
-                                    </th>
-                                    <td>Dinda Yurike Candini</td>
-                                    <td>Universitas Islam Bandung</td>
-                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                    <td>Kabupaten Kuningan</td>
-                                    <td>2021</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
+                        <div class="col-lg">
+                            <!--begin::Card-->
+                            <div class="card card-custom gutter-b">
+                                <!--begin::Header-->
+                                <div class="card-header h-auto">
+                                    <!--begin::Title-->
+                                    <div class="card-title py-5">
+                                        <h3 class="card-label">DATA CAPAIAN TARGET PROGRAM KEPELOPORAN - KEPEMIMPINAN DAN SUMBER DAYA PEMUDA DISPORA BANTEN</h3>
+                                    </div>
+                                    <!--end::Title-->
+                                </div>
+                                <!--end::Header-->
+                                <div class="card-body">
+                                    <!--begin::Chart-->
+                                    <div id="graph"></div>
+                                    <!--end::Chart-->
+                                </div>
+                            </div>
+                            <!--end::Card-->
+                        </div>
                         <!--end: Datatable-->
                     </div>
                 </div>
@@ -158,3 +136,19 @@
 <!--end::Entry-->
 </div>
 <!--end::Content-->
+
+
+
+<script src="<?= base_url('assets/') ?>js/jquery.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/raphael-min.js"></script>
+<script src="<?= base_url('assets/') ?>js/morris.min.js"></script>
+
+<script>
+    Morris.Bar({
+        element: 'graph',
+        data: <?php echo $babi; ?>,
+        xkey: 'nama_jenis_kegiatan',
+        ykeys: ['jumlah'],
+        labels: ['Tercapai']
+    });
+</script>

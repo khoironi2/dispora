@@ -264,7 +264,10 @@
                                     text: 'Anda akan di arahkan dalam 3 Detik',
                                     timer: 3000,
                                     showCancelButton: false,
-                                    showConfirmButton: false
+                                    showConfirmButton: false,
+                                    onOpen: function() {
+                                        Swal.showLoading()
+                                    }
                                 })
                                 .then(function() {
                                     window.location.href = "<?php echo base_url() ?>pemuda/dashboard";
@@ -278,7 +281,10 @@
                                     text: 'Anda akan di arahkan dalam 3 Detik',
                                     timer: 3000,
                                     showCancelButton: false,
-                                    showConfirmButton: false
+                                    showConfirmButton: false,
+                                    onOpen: function() {
+                                        Swal.showLoading()
+                                    }
                                 })
                                 .then(function() {
                                     window.location.href = "<?php echo base_url() ?>admin/pengaturan";
@@ -292,7 +298,10 @@
                                     text: 'Anda akan di arahkan dalam 3 Detik',
                                     timer: 3000,
                                     showCancelButton: false,
-                                    showConfirmButton: false
+                                    showConfirmButton: false,
+                                    onOpen: function() {
+                                        Swal.showLoading()
+                                    }
                                 })
                                 .then(function() {
                                     window.location.href = "<?php echo base_url() ?>pimpinan";
@@ -306,7 +315,10 @@
                                     text: 'Anda akan di arahkan dalam 3 Detik',
                                     timer: 3000,
                                     showCancelButton: false,
-                                    showConfirmButton: false
+                                    showConfirmButton: false,
+                                    onOpen: function() {
+                                        Swal.showLoading()
+                                    }
                                 })
                                 .then(function() {
                                     window.location.href = "<?php echo base_url() ?>operator/dashboard";
