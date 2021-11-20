@@ -11,6 +11,18 @@ class Wilayah_model extends CI_Model
 
         return $result->result_array();
     }
+    public function get_kabupaten()
+    {
+        $this->db->select('*,
+        a.nama as kabupaten');
+        $this->db->from('kabupaten as a');
+        $this->db->join('provinsi as b', 'b.id_prov=a.id_prov', 'left');
+        $this->db->where('b.nama', 'BANTEN');
+        $this->db->order_by('a.nama', 'ASC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
     public function UserWilayah()
     {
         $this->db->select('*,

@@ -21,17 +21,23 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th></th>
                                     <th>Nama</th>
-                                    <th>Jumlah Pemuda</th>
+                                    <th>Institusi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1;
-                                foreach ($get_sumberdaya_pemuda as $key) : ?>
+                                foreach ($get_ID_kab as $key) : ?>
                                     <tr>
                                         <td><?= $no++; ?></td>
-                                        <td><a href="<?= base_url('datacenter/1psdpb/psdpbanten/kabupaten/' . $key['id_kab']) ?>"><?= $key['kabupaten']  ?></a></td>
-                                        <td><?= $key['jumlah']  ?></td>
+                                        <td>
+                                            <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto']) ?>" />
+                                            </div>
+                                        </td>
+                                        <td><?= $key['user']  ?></td>
+                                        <td><?= $key['sekolah']  ?></td>
                                     </tr>
                                 <?php endforeach ?>
 

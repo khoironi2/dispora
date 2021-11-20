@@ -12,6 +12,7 @@ class Capaian_target_kepeloporan_model extends CI_Model
         $this->db->from('tbl_bursa_kegiatan as a');
         $this->db->join('tbl_jenis_kegiatan as b', 'b.id_jenis_kegiatan=a.id_jenis');
         $this->db->where('a.periode', '2019');
+        $this->db->where('b.seksi_kegiatan', '1');
         $this->db->group_by('b.nama_jenis_kegiatan');
         $result = $this->db->get();
 
@@ -26,6 +27,7 @@ class Capaian_target_kepeloporan_model extends CI_Model
         $this->db->from('tbl_bursa_kegiatan as a');
         $this->db->join('tbl_jenis_kegiatan as b', 'b.id_jenis_kegiatan=a.id_jenis');
         $this->db->where('a.periode', '2020');
+        $this->db->where('b.seksi_kegiatan', '1');
         $this->db->group_by('b.nama_jenis_kegiatan');
         $result = $this->db->get();
 
@@ -40,6 +42,7 @@ class Capaian_target_kepeloporan_model extends CI_Model
         $this->db->from('tbl_bursa_kegiatan as a');
         $this->db->join('tbl_jenis_kegiatan as b', 'b.id_jenis_kegiatan=a.id_jenis');
         $this->db->where('a.periode', '2021');
+        $this->db->where('b.seksi_kegiatan', '1');
         $this->db->group_by('b.nama_jenis_kegiatan');
         $result = $this->db->get();
 
