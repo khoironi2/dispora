@@ -215,7 +215,7 @@
                                     <div id="kt_aside_menu" class="aside-menu min-h-lg-800px" data-menu-vertical="1" data-menu-scroll="1">
                                         <!--begin::Menu Nav-->
                                         <ul class="menu-nav">
-                                            <li class="menu-item <?php if ($page == 'Dashboard') {
+                                            <li class="menu-item <?php if ($page == 'Aktivitas') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
@@ -231,7 +231,7 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Dashboard">Dashboard</span>
+                                                    <span class="menu-text text-uppercase" data-toggle="tooltip" data-placement="right" data-boundary="window" title="Aktivitas">Aktivitas</span>
                                                 </a>
                                             </li>
                                             <li class="menu-item mb-3">

@@ -17,9 +17,10 @@ class Dashboard extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Dashboard',
+            'page' => 'Aktivitas',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
-            'pengaturan' => $this->Pengaturan_model->get()
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'paskibraka' => $this->History_kegiatan_user_model->paskibraka()
         ];
         $this->load->view('template/pemuda/header', $data);
         $this->load->view('template/pemuda/sidebar');

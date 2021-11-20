@@ -289,7 +289,7 @@
                             <div class="form-group">
                                 <label for="exampleSelectl">Lembaga Mitra</label>
                                 <input value="<?= $key['lembaga_mitra'] ?>" class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Mitra" name="lembaga_mitra" id="lembaga_mitra" autocomplete="off" />
-                                <input value="<?= $key['id_kerjasama_kk'] ?>" class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Mitra" name="id_kerjasama_kk" id="id_kerjasama_kk" autocomplete="off" />
+                                <input hidden value="<?= $key['id_kerjasama_kk'] ?>" class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Mitra" name="id_kerjasama_kk" id="id_kerjasama_kk" autocomplete="off" />
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -432,7 +432,7 @@
                             <!--end::Form group-->
                             <!--begin::Form group-->
                             <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
-                                <button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                                <button type="submit" class="btn btn-success font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Save</button>
                                 <!-- <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button> -->
                             </div>
                             <!--end::Form group-->

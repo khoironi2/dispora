@@ -14,6 +14,30 @@ class Kerjasama_kepeloporan_model extends CI_Model
 
         return $result->result_array();
     }
+    public function get_internal()
+    {
+        $this->db->select('*,a.status_aktif as aktif,
+        b.status_aktif as status_aktif_user');
+        $this->db->from('tbl_kerjasama_kepeloporan_kepemimpinan as a');
+        $this->db->join('tbl_user as b', 'b.id_user=a.created_by');
+        $this->db->where('a.status_kerjasama', 'Internal');
+        $this->db->order_by('a.id_kerjasama_kk', 'DESC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
+    public function get_eksternal()
+    {
+        $this->db->select('*,a.status_aktif as aktif,
+        b.status_aktif as status_aktif_user');
+        $this->db->from('tbl_kerjasama_kepeloporan_kepemimpinan as a');
+        $this->db->join('tbl_user as b', 'b.id_user=a.created_by');
+        $this->db->where('a.status_kerjasama', 'Eksternal');
+        $this->db->order_by('a.id_kerjasama_kk', 'DESC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
 
     public function insert($table, $data)
     {

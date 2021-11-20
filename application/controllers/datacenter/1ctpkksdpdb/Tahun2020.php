@@ -17,7 +17,7 @@ class Tahun2020 extends CI_Controller
         ];
 
         $get2020 = $this->Capaian_target_kepeloporan_model->get2020();
-        $data['babi'] = json_encode($get2020);
+        $data['capaian'] = json_encode($get2020);
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
         $this->load->view('datacenter/1ctpkksdpdb/tahun2020', $data);
