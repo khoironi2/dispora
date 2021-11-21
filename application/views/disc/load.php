@@ -2,11 +2,12 @@
     <div class="timeline timeline-3">
         <div class="timeline-items">
             <?php if ($key['id_user_diskusi'] == $user['id_user']) { ?>
-                <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
-                    <div class="timeline-item">
-                        <div class="timeline-media">
-                            <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
-                        </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-media">
+                        <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
+                    </div>
+                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
                         <div class="timeline-content mb-3">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <div class="mr-2">
@@ -43,15 +44,16 @@
                                 <?= $key['topik'] ?>
                             </p>
                         </div>
-                    </div>
+                    </a>
+                </div>
 
-                </a>
+
             <?php } else { ?>
-                <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
-                    <div class="timeline-item">
-                        <div class="timeline-media">
-                            <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-media">
+                        <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
+                    </div>
+                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
                         <div class="timeline-content mb-3">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <div class="mr-2">
@@ -88,9 +90,8 @@
                                 <?= $key['topik'] ?>
                             </p>
                         </div>
-                    </div>
-
-                </a>
+                    </a>
+                </div>
             <?php } ?>
 
         </div>
