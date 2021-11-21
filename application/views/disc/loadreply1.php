@@ -85,7 +85,7 @@
                                         <?php } ?>
                                     </div>
                                 </div>
-                                <p class="p-0">
+                                <p>
                                     <?= $reply1['reply_1'] ?>
                                 </p>
                             </div>
