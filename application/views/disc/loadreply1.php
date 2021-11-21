@@ -58,7 +58,7 @@
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="mr-2">
                                         <a href="#" class="text-dark-75 text-hover-primary font-weight-bold"><?= $getID['nama'] ?></a>
-                                        <span class="text-muted ml-2">
+                                        <span class="text-muted">
                                             <?php
                                             $waktu_awal        = strtotime($reply1['waktu']);
                                             $waktu_akhir    = strtotime(date("Y-m-d H:i:s"));
