@@ -2075,7 +2075,7 @@
         setTimeout(function() {
             update();
             selesai();
-        }, 400);
+        }, 4000);
     }
 
     function update() {
@@ -2087,79 +2087,15 @@
                 $("#live_data").html(data);
             }
         });
-    }
-</script>
 
-<script>
-    $(document).ready(function() {
-
-        $(".btn-kirim").click(function() {
-
-            var topik = $("#topik_status").val();
-
-            if (topik.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Status kosong !'
-                });
-
-            } else {
-
-                //ajax
-                $.ajax({
-
-                    url: "<?= base_url('disc/beranda') ?>",
-                    type: "POST",
-                    data: {
-                        "topik": topik
-                    },
-
-                    success: function(response) {
-
-                        if (response == "success") {
-                            Swal.fire({
-                                    type: 'success',
-                                    title: 'Terikirim !',
-                                    text: 'Thanks !',
-                                    timer: 3000,
-                                    showCancelButton: false,
-                                    showConfirmButton: false
-                                })
-                                .then(function() {
-                                    window.location.href = "<?= base_url('disc/beranda') ?>";
-                                });
-
-                            $("#topik").val('');
-
-                        } else {
-
-                            Swal.fire({
-                                type: 'error',
-                                title: ' Gagal!',
-                                text: 'silahkan coba lagi!'
-                            });
-
-                        }
-
-                        console.log(response);
-
-                    },
-
-                    error: function(response) {
-                        Swal.fire({
-                            type: 'error',
-                            title: 'Opps!',
-                            text: 'server error!'
-                        });
-                    }
-
-                })
-
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/loadprimary') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_babi").html(data);
             }
-
         });
 
-    });
+    }
 </script>

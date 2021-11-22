@@ -67,6 +67,20 @@ class Beranda extends CI_Controller
         $this->load->view('disc/load', $data);
         // echo json_encode($data);
     }
+
+    function loadprimary()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get()
+        ];
+        $this->load->view('disc/loadprimary', $data);
+        // echo json_encode($data);
+    }
     public function edit($id)
     {
         $data = [
