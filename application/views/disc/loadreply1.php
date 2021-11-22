@@ -12,7 +12,7 @@
             <div class="message-inner">
                 <div class="message-body">
                     <div class="message-content">
-                        <div class="message-text bg-success">
+                        <div class="message-text bg-danger">
                             <span class="small text-muted"><?= $reply1['nama'] ?></span>
                             <p>
                                 <?= $reply1['reply_1'] ?>
