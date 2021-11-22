@@ -2075,7 +2075,7 @@
         setTimeout(function() {
             update();
             selesai();
-        }, 4000);
+        }, 400);
     }
 
     function update() {
