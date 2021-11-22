@@ -84,9 +84,9 @@
             <!-- Chat: Header -->
 
             <!-- Chat: Content -->
-            <div class="chat-body hide-scrollbar mb-5 flex-1 h-100">
+            <div class="chat-body hide-scrollbar flex-1 h-100">
                 <div class="chat-body-inner">
-                    <div class="py-6 py-lg-12">
+                    <div class="py-6 mb-7 py-lg-12">
 
 
 
