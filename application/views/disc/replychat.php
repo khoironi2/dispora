@@ -275,7 +275,7 @@
         setTimeout(function() {
             update();
             selesai();
-        }, 300);
+        }, 900);
     }
 
     function update() {
@@ -377,7 +377,7 @@
         setTimeout(function() {
             yang();
             seperti();
-        }, 400);
+        }, 900);
     }
 
     function yang() {
