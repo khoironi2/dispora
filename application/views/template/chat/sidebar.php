@@ -996,7 +996,7 @@
                     <div class="container py-8">
                         <!-- Title -->
                         <div class="mb-8">
-                            <h2 class="fw-bold m-0"><?= $page; ?></h2>
+                            <h2 class="fw-bold m-0"><?= $pengaturan['nama_aplikasi_forum']; ?></h2>
                         </div>
 
                         <!-- Search -->
