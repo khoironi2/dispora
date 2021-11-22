@@ -373,12 +373,12 @@
         seperti();
     });
 
-    function seperti() {
-        setTimeout(function() {
-            yang();
-            seperti();
-        }, 900);
-    }
+    // function seperti() {
+    //     setTimeout(function() {
+    //         yang();
+    //         seperti();
+    //     }, 900);
+    // }
 
     function yang() {
         $.ajax({
