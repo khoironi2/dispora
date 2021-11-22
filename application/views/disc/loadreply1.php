@@ -4,7 +4,7 @@
 <?php foreach ($getReply1 as $reply1) : ?>
 
     <?php if ($reply1['id_user_reply_1_diskusi'] == $user['id_user']) { ?>
-        <div class="message message-out bg-dark">
+        <div class="message message-out">
             <a href="#" data-bs-toggle="modal" data-bs-target="#modal-profile" class="avatar avatar-responsive">
                 <img class="avatar-img" src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="">
             </a>
@@ -12,7 +12,7 @@
             <div class="message-inner">
                 <div class="message-body">
                     <div class="message-content">
-                        <div class="message-text">
+                        <div class="message-text bg-success">
                             <span class="small text-muted"><?= $reply1['nama'] ?></span>
                             <p>
                                 <?= $reply1['reply_1'] ?>
