@@ -370,17 +370,17 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        selesai();
+        seperti();
     });
 
-    function selesai() {
+    function seperti() {
         setTimeout(function() {
-            update();
-            selesai();
+            yang();
+            seperti();
         }, 400);
     }
 
-    function update() {
+    function yang() {
         $.ajax({
             type: 'POST',
             url: "<?= base_url('disc/beranda/load') ?>",
