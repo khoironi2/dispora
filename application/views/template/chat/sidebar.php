@@ -2064,7 +2064,7 @@
     </div>
 </aside>
 
-
+<script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
