@@ -1022,60 +1022,11 @@
                         <!-- Chats -->
                         <div class="card-list">
                             <!-- Card -->
+                            <div id="live_data">
 
+                            </div>
                             <!-- Card -->
-                            <?php foreach ($get as $key) : ?>
 
-                                <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>" class="card border-0 text-reset">
-                                    <div class="card-body">
-                                        <div class="row gx-5">
-                                            <div class="col-auto">
-                                                <div class="avatar avatar-online">
-                                                    <img src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" alt="#" class="avatar-img">
-                                                </div>
-                                            </div>
-
-                                            <div class="col">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <h5 class="me-auto mb-0"><?= $key['nama'] ?></h5>
-                                                    <span class="text-muted extra-small ms-2">
-                                                        <?php
-                                                        $waktu_awal        = strtotime($key['waktu']);
-                                                        $waktu_akhir    = strtotime(date("Y-m-d H:i:s"));
-                                                        $diff    = $waktu_akhir - $waktu_awal;
-                                                        $menit    = $diff / 60;
-                                                        $jam    = floor($diff / (60 * 60));
-                                                        $hari = floor($diff / (3600 * 24));
-                                                        if ($diff < 60) {
-                                                            echo number_format($diff, 0, ",", ".") . ' detik yang lalu';
-                                                        } elseif ($diff > 60 && $diff <= 3600) {
-                                                            echo  floor($menit) . ' menit yang lalu';
-                                                        } elseif ($diff > 3600 && $diff <= 86400) {
-                                                            echo floor($jam) .  ' jam yang lalu ';
-                                                        } elseif ($diff > 86400) {
-                                                            echo floor($hari) . 'hari yang lalu';
-                                                        }
-
-                                                        ?>
-
-                                                    </span>
-                                                </div>
-
-                                                <div class="d-flex align-items-center">
-                                                    <div class="line-clamp me-auto">
-                                                        <?= $key['topik'] ?>
-                                                    </div>
-
-                                                    <div class="badge badge-circle bg-primary ms-5">
-                                                        <span>3</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- .card-body -->
-                                </a>
-
-                            <?php endforeach ?>
 
                             <!-- Card -->
                         </div>
@@ -2112,3 +2063,103 @@
         </div>
     </div>
 </aside>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        selesai();
+    });
+
+    function selesai() {
+        setTimeout(function() {
+            update();
+            selesai();
+        }, 4000);
+    }
+
+    function update() {
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/load') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_data").html(data);
+            }
+        });
+    }
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $(".btn-kirim").click(function() {
+
+            var topik = $("#topik_status").val();
+
+            if (topik.length == "") {
+
+                Swal.fire({
+                    type: 'warning',
+                    title: 'Oops...',
+                    text: 'Status kosong !'
+                });
+
+            } else {
+
+                //ajax
+                $.ajax({
+
+                    url: "<?= base_url('disc/beranda') ?>",
+                    type: "POST",
+                    data: {
+                        "topik": topik
+                    },
+
+                    success: function(response) {
+
+                        if (response == "success") {
+                            Swal.fire({
+                                    type: 'success',
+                                    title: 'Terikirim !',
+                                    text: 'Thanks !',
+                                    timer: 3000,
+                                    showCancelButton: false,
+                                    showConfirmButton: false
+                                })
+                                .then(function() {
+                                    window.location.href = "<?= base_url('disc/beranda') ?>";
+                                });
+
+                            $("#topik").val('');
+
+                        } else {
+
+                            Swal.fire({
+                                type: 'error',
+                                title: ' Gagal!',
+                                text: 'silahkan coba lagi!'
+                            });
+
+                        }
+
+                        console.log(response);
+
+                    },
+
+                    error: function(response) {
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Opps!',
+                            text: 'server error!'
+                        });
+                    }
+
+                })
+
+            }
+
+        });
+
+    });
+</script>

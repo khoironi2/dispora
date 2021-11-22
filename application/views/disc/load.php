@@ -1,102 +1,52 @@
 <?php foreach ($get as $key) : ?>
-    <div class="timeline timeline-3">
-        <div class="timeline-items">
-            <?php if ($key['id_user_diskusi'] == $user['id_user']) { ?>
 
-                <div class="timeline-item">
-                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
-                        <div class="timeline-media">
-                            <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
-                        </div>
-                    </a>
-                    <div class="timeline-content mb-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="mr-2">
-                                <a href="#" class="text-dark-75 text-hover-primary font-weight-bold"><?= $key['nama'] ?></a>
-                                <span class="text-muted ml-2">
-                                    <?php
-                                    $waktu_awal        = strtotime($key['waktu']);
-                                    $waktu_akhir    = strtotime(date("Y-m-d H:i:s"));
-                                    $diff    = $waktu_akhir - $waktu_awal;
-                                    $menit    = $diff / 60;
-                                    $jam    = floor($diff / (60 * 60));
-                                    $hari = floor($diff / (3600 * 24));
-                                    if ($diff < 60) {
-                                        echo number_format($diff, 0, ",", ".") . ' detik yang lalu';
-                                    } elseif ($diff > 60 && $diff <= 3600) {
-                                        echo  floor($menit) . ' menit yang lalu';
-                                    } elseif ($diff > 3600 && $diff <= 86400) {
-                                        echo floor($jam) .  ' jam yang lalu ';
-                                    } elseif ($diff > 86400) {
-                                        echo floor($hari) . 'hari yang lalu';
-                                    }
-
-                                    ?>
-                                </span>
-                                <?php if ($key['id_user_diskusi'] == $user['id_user']) { ?>
-                                    <a href="<?= base_url('disc/beranda/delete/' . $key['id_diskusi']) ?>"><span class="label label-light-danger font-weight-bolder label-inline ml-2">Hapus</span></a>
-                                    <a href="<?= base_url('disc/beranda/edit/' . $key['id_diskusi']) ?>"><span class="label label-light-success font-weight-bolder label-inline ml-2">Edit</span></a>
-                                <?php } else { ?>
-                                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>"><span class="label label-light-primary font-weight-bolder label-inline ml-2">Balas</span></a>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <p class="p-0">
-                            <?= $key['topik'] ?>
-                        </p>
+    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>" class="card border-0 text-reset">
+        <div class="card-body">
+            <div class="row gx-5">
+                <div class="col-auto">
+                    <div class="avatar avatar-online">
+                        <img src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" alt="#" class="avatar-img">
                     </div>
-
                 </div>
 
+                <div class="col">
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="me-auto mb-0"><?= $key['nama'] ?></h5>
+                        <span class="text-muted extra-small ms-2">
+                            <?php
+                            $waktu_awal        = strtotime($key['waktu']);
+                            $waktu_akhir    = strtotime(date("Y-m-d H:i:s"));
+                            $diff    = $waktu_akhir - $waktu_awal;
+                            $menit    = $diff / 60;
+                            $jam    = floor($diff / (60 * 60));
+                            $hari = floor($diff / (3600 * 24));
+                            if ($diff < 60) {
+                                echo number_format($diff, 0, ",", ".") . ' detik yang lalu';
+                            } elseif ($diff > 60 && $diff <= 3600) {
+                                echo  floor($menit) . ' menit yang lalu';
+                            } elseif ($diff > 3600 && $diff <= 86400) {
+                                echo floor($jam) .  ' jam yang lalu ';
+                            } elseif ($diff > 86400) {
+                                echo floor($hari) . 'hari yang lalu';
+                            }
 
-            <?php } else { ?>
-                <div class="timeline-item">
-                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>">
-                        <div class="timeline-media">
-                            <img alt="Pic" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
-                        </div>
-                    </a>
-                    <div class="timeline-content mb-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="mr-2">
-                                <a href="#" class="text-dark-75 text-hover-primary font-weight-bold"><?= $key['nama'] ?></a>
-                                <span class="text-muted ml-2">
-                                    <?php
-                                    $waktu_awal        = strtotime($key['waktu']);
-                                    $waktu_akhir    = strtotime(date("Y-m-d H:i:s"));
-                                    $diff    = $waktu_akhir - $waktu_awal;
-                                    $menit    = $diff / 60;
-                                    $jam    = floor($diff / (60 * 60));
-                                    $hari = floor($diff / (3600 * 24));
-                                    if ($diff < 60) {
-                                        echo number_format($diff, 0, ",", ".") . ' detik yang lalu';
-                                    } elseif ($diff > 60 && $diff <= 3600) {
-                                        echo  floor($menit) . ' menit yang lalu';
-                                    } elseif ($diff > 3600 && $diff <= 86400) {
-                                        echo floor($jam) .  ' jam yang lalu ';
-                                    } elseif ($diff > 86400) {
-                                        echo floor($hari) . 'hari yang lalu';
-                                    }
+                            ?>
 
-                                    ?>
-                                </span>
-                                <?php if ($key['id_user_diskusi'] == $user['id_user']) { ?>
-                                    <a href="<?= base_url('disc/beranda/delete/' . $key['id_diskusi']) ?>"><span class="label label-light-danger font-weight-bolder label-inline ml-2">Hapus</span></a>
-                                    <a href="<?= base_url('disc/beranda/edit/' . $key['id_diskusi']) ?>"><span class="label label-light-success font-weight-bolder label-inline ml-2">Edit</span></a>
-                                <?php } else { ?>
-                                    <a href="<?= base_url('disc/beranda/reply1/' . $key['id_diskusi']) ?>"><span class="label label-light-primary font-weight-bolder label-inline ml-2">Balas</span></a>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <p class="p-0">
-                            <?= $key['topik'] ?>
-                        </p>
+                        </span>
                     </div>
 
-                </div>
-            <?php } ?>
+                    <div class="d-flex align-items-center">
+                        <div class="line-clamp me-auto">
+                            <?= $key['topik'] ?>
+                        </div>
 
-        </div>
-    </div>
+                        <div class="badge badge-circle bg-primary ms-5">
+                            <span>3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .card-body -->
+    </a>
 
 <?php endforeach ?>
