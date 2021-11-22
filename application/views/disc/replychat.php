@@ -280,11 +280,20 @@
 
     function update() {
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: "<?= base_url('disc/beranda/Loadreply1/' . $getID['id_diskusi']) ?>",
             cache: false,
             success: function(data) {
                 $("#live_reply1").html(data);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: "<?= base_url('disc/beranda/load') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_data").html(data);
             }
         });
     }
@@ -367,32 +376,7 @@
     });
 </script>
 
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        seperti();
-    });
-
-    // function seperti() {
-    //     setTimeout(function() {
-    //         yang();
-    //         seperti();
-    //     }, 900);
-    // }
-
-    function yang() {
-        $.ajax({
-            type: 'POST',
-            url: "<?= base_url('disc/beranda/load') ?>",
-            cache: false,
-            success: function(data) {
-                $("#live_data").html(data);
-            }
-        });
-    }
-</script>
-
-<script>
+<!-- <script>
     $(document).ready(function() {
 
         $(".btn-kirim").click(function() {
@@ -464,4 +448,4 @@
         });
 
     });
-</script>
+</script> -->
