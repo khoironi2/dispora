@@ -511,6 +511,7 @@
 <!-- Scripts -->
 <script src="<?= base_url('assets/chat/') ?>/js/vendor.js"></script>
 <script src="<?= base_url('assets/chat/') ?>/js/template.js"></script>
+<script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
 
 
