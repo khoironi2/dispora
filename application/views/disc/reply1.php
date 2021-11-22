@@ -40,6 +40,9 @@
                                             <button type="submit" class="btn btn-komen btn-primary btn-md text-uppercase font-weight-bold chat-send py-2 px-6">Kirim</button>
                                         </div>
                                     </div>
+
+                                    <textarea name="reply_1" id="reply_1" cols="30" rows="10"></textarea>
+                                    <button type="submit" class="btn btn-komen btn-primary btn-md text-uppercase font-weight-bold chat-send py-2 px-6">Kirim</button>
                                 </div>
                             </div>
                         </div>
@@ -63,6 +66,8 @@
 <!--end::Content-->
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
 <script type="text/javascript">
     $(document).ready(function() {
         selesai();

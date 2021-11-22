@@ -29,10 +29,11 @@ class Beranda extends CI_Controller
 
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('template/pemuda/header', $data);
-            $this->load->view('template/pemuda/sidebar');
-            $this->load->view('disc/beranda', $data);
-            $this->load->view('template/pemuda/footer', $data);
+            $this->load->view('template/chat/header', $data);
+            $this->load->view('template/chat/asside', $data);
+            $this->load->view('template/chat/sidebar', $data);
+            $this->load->view('disc/chat', $data);
+            $this->load->view('template/chat/footer', $data);
         } else {
             date_default_timezone_set("ASIA/JAKARTA");
             $data = [
@@ -164,10 +165,11 @@ class Beranda extends CI_Controller
 
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('template/pemuda/header', $data);
-            $this->load->view('template/pemuda/sidebar');
-            $this->load->view('disc/reply1', $data);
-            $this->load->view('template/pemuda/footer', $data);
+            $this->load->view('template/chat/header', $data);
+            $this->load->view('template/chat/asside', $data);
+            $this->load->view('template/chat/sidebar', $data);
+            $this->load->view('disc/replychat', $data);
+            $this->load->view('template/chat/footer', $data);
         } else {
             date_default_timezone_set("ASIA/JAKARTA");
             $data = [
