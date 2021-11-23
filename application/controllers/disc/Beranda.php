@@ -219,7 +219,7 @@ class Beranda extends CI_Controller
             $this->load->view('template/chat/asside', $data);
             $this->load->view('template/chat/sidebar', $data);
             $this->load->view('disc/replychat', $data);
-            $this->load->view('template/chat/footer_kedua', $data);
+            $this->load->view('template/chat/footer', $data);
         } else {
             date_default_timezone_set("ASIA/JAKARTA");
             $data = [

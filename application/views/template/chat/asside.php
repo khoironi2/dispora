@@ -3,7 +3,7 @@
     <!-- Navigation -->
     <nav class="navigation d-flex flex-column text-center navbar navbar-light hide-scrollbar">
         <!-- Brand -->
-        <a href="index-2.html" title="Messenger" class="d-none d-xl-block mb-6">
+        <a href="<?= base_url('disc/beranda') ?>" title="Messenger" class="d-none d-xl-block mb-6">
             <?php foreach ($pengaturan as $key) : ?>
                 <div class="avatar  d-none d-xl-inline-block">
                     <img class="avatar-img" src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" alt="">
@@ -27,8 +27,8 @@
             </li>
 
             <!-- New chat -->
-            <!-- <li class="nav-item">
-                <a class="nav-link py-0 py-lg-8" id="tab-create-chat" href="#tab-content-create-chat" title="Create chat" data-bs-toggle="tab" role="tab">
+            <li class="nav-item">
+                <a href="<?= base_url('disc/beranda') ?>" class="nav-link py-0 py-lg-8" href="#tab-content-create-chat" title="Create status" role="tab">
                     <div class="icon icon-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3">
                             <path d="M12 20h9"></path>
@@ -36,7 +36,7 @@
                         </svg>
                     </div>
                 </a>
-            </li> -->
+            </li>
 
             <!-- Friends -->
             <li class="nav-item">

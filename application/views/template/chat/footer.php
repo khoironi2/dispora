@@ -542,6 +542,10 @@
 
 
 
+<!--end::Global Config-->
+<!--begin::Global Theme Bundle(used by all pages)-->
+<script src="<?= base_url('assets/') ?>theme/demo5/dist/assets/plugins/global/plugins.bundle1036.js?v=2.1.1"></script>
+
 
 
 

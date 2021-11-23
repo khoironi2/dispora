@@ -93,7 +93,7 @@
                 <div class="chat-body-inner">
                     <div class="py-6 py-lg-12">
 
-                        <div id="live_babi"></div>
+                        <div id="live_ya"></div>
 
 
                     </div>
@@ -121,7 +121,7 @@
 
                         <div class="col">
                             <div class="input-group">
-                                <textarea data-emojiable="true" type="text" data-emoji-input="unicode" name="topik_status" id="topik_status" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
+                                <textarea onclick="submitForm()" data-emojiable="true" type="text" data-emoji-input="unicode" name="topik_status" id="topik_status" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
                                 <a href="#" class="input-group-text text-body pe-0" data-emoji-btn="">
                                     <span class="icon icon-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
@@ -158,27 +158,38 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        pendo();
+        loaddata();
     });
 
-    function pendo() {
+    function loaddata() {
         setTimeout(function() {
-            babi();
-            pendo();
-        }, 4000);
+            oke();
+            loaddata();
+        }, 1000);
     }
 
-    function babi() {
+    function oke() {
 
         $.ajax({
             type: 'POST',
             url: "<?= base_url('disc/beranda/loadprimary') ?>",
             cache: false,
             success: function(data) {
-                $("#live_babi").html(data);
+                $("#live_ya").html(data);
             }
         });
 
+    }
+
+    function submitForm() {
+        // Get the first form with the name
+        // Usually the form name is not repeated
+        // but duplicate names are possible in HTML
+        // Therefore to work around the issue, enforce the correct index
+        var frm = document.getElementsByName('contact-form')[0];
+        frm.submit(); // Submit the form
+        frm.reset(); // Reset all form data
+        return false; // Prevent page refresh
     }
 </script>
 
@@ -192,11 +203,7 @@
 
             if (topik.length == "") {
 
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Status kosong !'
-                });
+
 
             } else {
 
@@ -212,26 +219,14 @@
                     success: function(response) {
 
                         if (response == "success") {
-                            Swal.fire({
-                                    type: 'success',
-                                    title: 'Terikirim !',
-                                    text: 'Thanks !',
-                                    timer: 3000,
-                                    showCancelButton: false,
-                                    showConfirmButton: false
-                                })
-                                .then(function() {
-                                    window.location.href = "<?= base_url('disc/beranda') ?>";
-                                });
 
-                            $("#topik").val('');
+                            $("#topik_status").val('');
 
                         } else {
 
                             Swal.fire({
                                 type: 'error',
                                 title: ' Gagal!',
-                                text: 'silahkan coba lagi!'
                             });
 
                         }
@@ -243,7 +238,6 @@
                     error: function(response) {
                         Swal.fire({
                             type: 'error',
-                            title: 'Opps!',
                             text: 'server error!'
                         });
                     }

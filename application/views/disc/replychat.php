@@ -63,13 +63,12 @@
 
                                     <div class="col-auto">
                                         <div class="avatar-group">
-                                            <a href="#" class="avatar avatar-sm" data-bs-toggle="modal" data-bs-target="#modal-user-profile">
-                                                <img class="avatar-img" src="<?= base_url('assets/chat/') ?>/img/avatars/2.jpg" alt="#">
-                                            </a>
+                                            <!-- <?php foreach ($getReply1 as $reply1) : ?>
+                                                <a href="#" class="avatar avatar-sm" data-bs-toggle="modal" data-bs-target="#modal-user-profile">
+                                                    <img class="avatar-img" src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="#">
+                                                </a>
 
-                                            <a href="#" class="avatar avatar-sm" data-bs-toggle="modal" data-bs-target="#modal-profile">
-                                                <img class="avatar-img" src="<?= base_url('assets/chat/') ?>/img/avatars/1.jpg" alt="#">
-                                            </a>
+                                            <?php endforeach ?> -->
                                         </div>
                                     </div>
                                 </div>
@@ -285,7 +284,7 @@
         setTimeout(function() {
             update();
             selesai();
-        }, 900);
+        }, 700);
     }
 
     function update() {
@@ -336,11 +335,6 @@
 
             if (reply_1.length == "") {
 
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'komentar kosong !'
-                });
 
             } else {
 
@@ -357,20 +351,9 @@
                     success: function(response) {
 
                         if (response == "success") {
-                            Swal.fire({
-                                    type: 'success',
-                                    title: 'Terikirim !',
-                                    text: 'Thanks !',
-                                    timer: 3000,
-                                    showCancelButton: false,
-                                    showConfirmButton: false
-                                })
-                                .then(function() {
-                                    window.location.href = "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>";
-                                });
 
+                            // window.location.href = "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>";
                             $("#reply_1").val('');
-                            $("#id_diskusi").val('');
 
                         } else {
 

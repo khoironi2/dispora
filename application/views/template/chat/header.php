@@ -29,6 +29,8 @@
     <!-- Begin emoji-picker Stylesheets -->
     <link href="<?= base_url('assets/') ?>lib/css/emoji.css" rel="stylesheet">
 
+    <link href="<?= base_url('assets/') ?>theme/demo5/dist/assets/plugins/global/plugins.bundle1036.css?v=2.1.1" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
