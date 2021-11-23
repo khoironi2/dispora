@@ -321,7 +321,7 @@
                 //ajax
                 $.ajax({
 
-                    url: "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>",
+                    url: "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>/",
                     type: "POST",
                     data: {
                         "reply_1": reply_1,
