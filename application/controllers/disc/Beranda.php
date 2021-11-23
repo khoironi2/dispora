@@ -71,6 +71,51 @@ class Beranda extends CI_Controller
         // echo json_encode($data);
     }
 
+    function load_in_reply()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get()
+        ];
+        $this->load->view('disc/load', $data);
+        // echo json_encode($data);
+    }
+
+    function loadfriend_in_reply()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get(),
+            'getO' => $this->User_model->getAll()
+        ];
+        $this->load->view('disc/friend', $data);
+        // echo json_encode($data);
+    }
+
+    function loadnotifikasi_in_reply()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get(),
+            'getO' => $this->User_model->getAll(),
+            'notif' => $this->Notifikasi_forum_model->get()
+        ];
+        $this->load->view('disc/notifikasi', $data);
+        // echo json_encode($data);
+    }
+
     function loadfriend()
     {
         $data = [
@@ -217,7 +262,7 @@ class Beranda extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/chat/header', $data);
             $this->load->view('template/chat/asside', $data);
-            $this->load->view('template/chat/sidebar', $data);
+            $this->load->view('template/chat/sidebar_reply', $data);
             $this->load->view('disc/replychat', $data);
             $this->load->view('template/chat/footer', $data);
         } else {
