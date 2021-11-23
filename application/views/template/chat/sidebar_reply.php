@@ -50,7 +50,7 @@
                             </div> -->
                         </div>
 
-                        <div id="live_friend_in_reply"></div>
+                        <div id="live_reply1"></div>
 
 
 
@@ -93,7 +93,7 @@
                         <!-- Chats -->
                         <div class="card-list">
                             <!-- Card -->
-                            <div id="live_data_in_reply">
+                            <div id="live_data">
 
                             </div>
                             <!-- Card -->
@@ -123,7 +123,7 @@
 
 
                         <!-- Previous -->
-                        <div id="notifikasi_in_reply"></div>
+                        <div id="notifikasi"></div>
                         <!-- Card -->
                     </div>
                 </div>
@@ -137,7 +137,7 @@
 
 <script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function() {
         selesai();
     });
@@ -178,4 +178,4 @@
         });
 
     }
-</script>
+</script> -->

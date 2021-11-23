@@ -302,6 +302,33 @@
             }
         });
 
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/load') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_data").html(data);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/loadfriend') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_friend").html(data);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/loadnotifikasi') ?>",
+            cache: false,
+            success: function(data) {
+                $("#notifikasi").html(data);
+            }
+        });
+
     }
 </script>
 
