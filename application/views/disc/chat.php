@@ -23,24 +23,26 @@
                     <div class="col-8 col-xl-12">
                         <div class="row align-items-center text-center text-xl-start">
                             <!-- Title -->
-                            <div class="col-12 col-xl-6">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-online d-none d-xl-inline-block">
-                                            <img class="avatar-img" src="<?= base_url('assets/chat/') ?>/img/avatars/2.jpg" alt="">
+                            <?php foreach ($pengaturan as $key) : ?>
+                                <div class="col-12 col-xl-6">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-auto">
+                                            <div class="avatar d-none d-xl-inline-block">
+                                                <img class="avatar-img" src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col overflow-hidden">
+                                            <h5 class="text-truncate"><?= $key['nama_aplikasi_forum'] ?></h5>
+                                            <p class="text-truncate">Bersama menyatukan<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span></p>
                                         </div>
                                     </div>
-
-                                    <div class="col overflow-hidden">
-                                        <h5 class="text-truncate">Ollie Chandler</h5>
-                                        <p class="text-truncate">is typing<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span></p>
-                                    </div>
                                 </div>
-                            </div>
+                            <?php endforeach ?>
                             <!-- Title -->
 
                             <!-- Toolbar -->
-                            <div class="col-xl-6 d-none d-xl-block">
+                            <!-- <div class="col-xl-6 d-none d-xl-block">
                                 <div class="row align-items-center justify-content-end gx-6">
                                     <div class="col-auto">
                                         <a href="#" class="icon icon-lg text-muted" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more">
@@ -64,7 +66,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- Toolbar -->
                         </div>
                     </div>
@@ -119,7 +121,7 @@
 
                         <div class="col">
                             <div class="input-group">
-                                <textarea name="topik_status" id="topik_status" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="" data-autosize="true"></textarea>
+                                <textarea data-emojiable="true" type="text" data-emoji-input="unicode" name="topik_status" id="topik_status" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
                                 <a href="#" class="input-group-text text-body pe-0" data-emoji-btn="">
                                     <span class="icon icon-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
@@ -153,7 +155,6 @@
 <!-- Chat -->
 
 <!-- Chat: Info -->
-<script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {

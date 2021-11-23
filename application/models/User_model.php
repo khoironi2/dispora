@@ -2,6 +2,26 @@
 
 class User_model extends CI_Model
 {
+
+    public function getIsLogin()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->order_by('id_user', 'DESC');
+        $result = $this->db->get();
+
+        return $result->row_array();
+    }
+
+    public function getAll()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->order_by('time_login_user', 'DESC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
     public function getnotAdmin()
     {
         $this->db->select('*');

@@ -87,7 +87,10 @@ class Sign extends CI_Controller
                     $this->session->set_userdata('foto_user', $cek_login->foto_user);
                     date_default_timezone_set("ASIA/JAKARTA");
                     //$email = $this->session->userdata('email');
-                    $data = array('time_login_user' => date('Y-m-d H:i:s'));
+                    $data = array(
+                        'status_aktif' => '1',
+                        'time_login_user' => date('Y-m-d H:i:s')
+                    );
                     $this->User_model->logout($data, $email);
                     switch ($cek_login->level_user) {
                         case 'pemuda':
@@ -124,7 +127,10 @@ class Sign extends CI_Controller
     {
         date_default_timezone_set("ASIA/JAKARTA");
         $email = $this->session->userdata('email');
-        $data = array('time_logout_user' => date('Y-m-d H:i:s'));
+        $data = array(
+            'status_aktif' => '2',
+            'time_logout_user' => date('Y-m-d H:i:s')
+        );
 
         $this->User_model->logout($data, $email);
         $this->session->sess_destroy();

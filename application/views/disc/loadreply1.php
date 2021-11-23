@@ -5,9 +5,16 @@
 
     <?php if ($reply1['id_user_reply_1_diskusi'] == $user['id_user']) { ?>
         <div class="message message-out">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-profile" class="avatar avatar-responsive">
-                <img class="avatar-img" src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="">
-            </a>
+            <?php if ($reply1['status_aktif'] == 1) { ?>
+                <div class="avatar avatar-online">
+                    <img src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="#" class="avatar-img">
+                </div>
+            <?php } elseif ($reply1['status_aktif'] == 2) { ?>
+                <div class="avatar">
+                    <img src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="#" class="avatar-img">
+                </div>
+            <?php } ?>
+
 
             <div class="message-inner">
                 <div class="message-body">
@@ -101,9 +108,16 @@
         </div>
     <?php } else { ?>
         <div class="message">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-profile" class="avatar avatar-responsive">
-                <img class="avatar-img" src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="">
-            </a>
+
+            <?php if ($reply1['status_aktif'] == 1) { ?>
+                <div class="avatar avatar-online">
+                    <img src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="#" class="avatar-img">
+                </div>
+            <?php } elseif ($reply1['status_aktif'] == 2) { ?>
+                <div class="avatar">
+                    <img src="<?= base_url('assets/img/account/' . $reply1['foto_user']) ?>" alt="#" class="avatar-img">
+                </div>
+            <?php } ?>
 
             <div class="message-inner">
                 <div class="message-body">

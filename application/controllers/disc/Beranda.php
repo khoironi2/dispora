@@ -6,6 +6,7 @@ class Beranda extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        // require_once('assets/Emoji.php');
         $this->CI = &get_instance();
         if ($this->CI->session->userdata['email'] == NULL) {
             redirect();
@@ -21,7 +22,9 @@ class Beranda extends CI_Controller
             'page' => 'Forum Diskusi & Komunitas Sosial',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'pengaturan' => $this->Pengaturan_model->get(),
-            'get' => $this->Beranda_model->get()
+            'get' => $this->Beranda_model->get(),
+            'getO' => $this->User_model->getAll(),
+            'notif' => $this->Notifikasi_forum_model->get()
         ];
 
 
@@ -65,6 +68,37 @@ class Beranda extends CI_Controller
             'get' => $this->Beranda_model->get()
         ];
         $this->load->view('disc/load', $data);
+        // echo json_encode($data);
+    }
+
+    function loadfriend()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get(),
+            'getO' => $this->User_model->getAll()
+        ];
+        $this->load->view('disc/friend', $data);
+        // echo json_encode($data);
+    }
+
+    function loadnotifikasi()
+    {
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab1',
+            'page' => 'Forum Diskusi & Komunitas Sosial',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Beranda_model->get(),
+            'getO' => $this->User_model->getAll(),
+            'notif' => $this->Notifikasi_forum_model->get()
+        ];
+        $this->load->view('disc/notifikasi', $data);
         // echo json_encode($data);
     }
 
@@ -171,7 +205,9 @@ class Beranda extends CI_Controller
             'pengaturan' => $this->Pengaturan_model->get(),
             'get' => $this->Beranda_model->get(),
             'getID' => $this->Beranda_model->getID($id),
-            'getReply1' => $this->Beranda_model->getReply1($id)
+            'getReply1' => $this->Beranda_model->getReply1($id),
+            'getO' => $this->User_model->getAll(),
+            'notif' => $this->Notifikasi_forum_model->get()
         ];
 
 
@@ -183,7 +219,7 @@ class Beranda extends CI_Controller
             $this->load->view('template/chat/asside', $data);
             $this->load->view('template/chat/sidebar', $data);
             $this->load->view('disc/replychat', $data);
-            $this->load->view('template/chat/footer', $data);
+            $this->load->view('template/chat/footer_kedua', $data);
         } else {
             date_default_timezone_set("ASIA/JAKARTA");
             $data = [

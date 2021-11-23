@@ -4,9 +4,16 @@
         <div class="card-body">
             <div class="row gx-5">
                 <div class="col-auto">
-                    <div class="avatar avatar-online">
-                        <img src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" alt="#" class="avatar-img">
-                    </div>
+                    <?php if ($key['status_aktif'] == 1) { ?>
+                        <div class="avatar avatar-online">
+                            <img src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" alt="#" class="avatar-img">
+                        </div>
+                    <?php } elseif ($key['status_aktif'] == 2) { ?>
+                        <div class="avatar">
+                            <img src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" alt="#" class="avatar-img">
+                        </div>
+                    <?php } ?>
+
                 </div>
 
                 <div class="col">
@@ -41,7 +48,16 @@
                         </div>
 
                         <div class="badge badge-circle bg-primary ms-5">
-                            <span>3</span>
+                            <span>
+                                <?php
+
+                                $query = $this->db->get_where(
+                                    'tbl_reply_diskusi_1',
+                                    ['id_reply_1_diskusi' => $key['id_diskusi']]
+                                )->num_rows();
+                                echo $query
+                                ?>
+                            </span>
                         </div>
                     </div>
                 </div>

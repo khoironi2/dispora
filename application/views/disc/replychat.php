@@ -22,16 +22,28 @@
                             <!-- Title -->
                             <div class="col-12 col-xl-6">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col-auto">
-                                        <div class="avatar avatar-online d-none d-xl-inline-block">
-                                            <img class="avatar-img" src="<?= base_url('assets/chat/') ?>/img/avatars/2.jpg" alt="">
+                                    <?php if ($getID['status_aktif'] == 1) { ?>
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-online d-none d-xl-inline-block">
+                                                <img class="avatar-img" src="<?= base_url('assets/img/account/' . $getID['foto_user']) ?>" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="col overflow-hidden">
+                                            <h5 class="text-truncate"><?= $getID['nama'] ?></h5>
+                                            <p class="text-truncate">Online<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span></p>
+                                        </div>
+                                    <?php } elseif ($getID['status_aktif'] == 2) { ?>
+                                        <div class="col-auto">
+                                            <div class="avatar  d-none d-xl-inline-block">
+                                                <img class="avatar-img" src="<?= base_url('assets/img/account/' . $getID['foto_user']) ?>" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col overflow-hidden">
+                                            <h5 class="text-truncate"><?= $getID['nama'] ?></h5>
+                                            <p class="text-truncate">Offline<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span></p>
+                                        </div>
+                                    <?php }  ?>
 
-                                    <div class="col overflow-hidden">
-                                        <h5 class="text-truncate"><?= $getID['nama'] ?></h5>
-                                        <p class="text-truncate">is typing<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span></p>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Title -->
@@ -217,7 +229,7 @@
                 <!-- Chat: Files -->
 
                 <!-- Chat: Form -->
-                <div class="chat-form rounded-pill bg-dark">
+                <div class="chat-form rounded-pill bg-dark" data-emoji-form="">
                     <div class="row align-items-center gx-0">
                         <div class="col-auto">
                             <a href="#" class="btn btn-icon btn-link text-body rounded-circle" id="dz-btn">
@@ -229,10 +241,9 @@
 
                         <div class="col">
                             <div class="input-group">
-                                <!-- <input type="text" name="reply_1" id="reply_1" placeholder="Type a message" class="form-control px-0" data-emoji-input=""> -->
-                                <textarea name="reply_1" id="reply_1" class="form-control px-0" placeholder="Type a message" rows="1" data-emoji-input=""></textarea>
                                 <input hidden type="text" name="id_diskusi" id="id_diskusi" value="<?= $getID['id_diskusi'] ?>">
-                                <a class="input-group-text text-body pe-0" data-emoji-btn="">
+                                <textarea data-emojiable="true" type="text" data-emoji-input="unicode" name="reply_1" id="reply_1" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
+                                <a href="#" class="input-group-text text-body pe-0" data-emoji-btn="">
                                     <span class="icon icon-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
                                             <circle cx="12" cy="12" r="10"></circle>
@@ -246,7 +257,7 @@
                         </div>
 
                         <div class="col-auto">
-                            <button type="submit" class="btn btn-komen btn-icon btn-primary rounded-circle ms-5">
+                            <button class="btn btn-komen btn-icon btn-primary rounded-circle ms-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
                                     <line x1="22" y1="2" x2="11" y2="13"></line>
                                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -257,6 +268,7 @@
                 </div>
                 <!-- Chat: Form -->
             </div>
+
             <!-- Chat: Footer -->
         </div>
 
@@ -292,6 +304,23 @@
             cache: false,
             success: function(data) {
                 $("#live_data").html(data);
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/loadfriend') ?>",
+            cache: false,
+            success: function(data) {
+                $("#live_friend").html(data);
+            }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: "<?= base_url('disc/beranda/loadnotifikasi') ?>",
+            cache: false,
+            success: function(data) {
+                $("#notifikasi").html(data);
             }
         });
     }
@@ -374,76 +403,27 @@
     });
 </script>
 
-<!-- <script>
-    $(document).ready(function() {
+<link href="<?= base_url('assets/') ?>lib/css/emoji.css" rel="stylesheet">
+<!-- <script src="<?= base_url('assets/') ?>lib/js/jquery-1.11.3.min.js"></script> -->
 
-        $(".btn-kirim").click(function() {
+<!-- Begin emoji-picker JavaScript -->
+<!-- <script src="<?= base_url('assets/') ?>/lib/js/config.js"></script> -->
+<!-- <script src="<?= base_url('assets/') ?>lib/js/util.js"></script> -->
+<script src="<?= base_url('assets/') ?>lib/js/jquery.emojiarea.js"></script>
+<script src="<?= base_url('assets/') ?>lib/js/emoji-picker.js"></script>
+<!-- End emoji-picker JavaScript -->
 
-            var topik = $("#topik_status").val();
-
-            if (topik.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Status kosong !'
-                });
-
-            } else {
-
-                //ajax
-                $.ajax({
-
-                    url: "<?= base_url('disc/beranda') ?>",
-                    type: "POST",
-                    data: {
-                        "topik": topik
-                    },
-
-                    success: function(response) {
-
-                        if (response == "success") {
-                            Swal.fire({
-                                    type: 'success',
-                                    title: 'Terikirim !',
-                                    text: 'Thanks !',
-                                    timer: 3000,
-                                    showCancelButton: false,
-                                    showConfirmButton: false
-                                })
-                                .then(function() {
-                                    window.location.href = "<?= base_url('disc/beranda') ?>";
-                                });
-
-                            $("#topik").val('');
-
-                        } else {
-
-                            Swal.fire({
-                                type: 'error',
-                                title: ' Gagal!',
-                                text: 'silahkan coba lagi!'
-                            });
-
-                        }
-
-                        console.log(response);
-
-                    },
-
-                    error: function(response) {
-                        Swal.fire({
-                            type: 'error',
-                            title: 'Opps!',
-                            text: 'server error!'
-                        });
-                    }
-
-                })
-
-            }
-
+<script>
+    $(function() {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+            emojiable_selector: '[data-emojiable=true]',
+            assetsPath: '<?= base_url('assets') ?>lib/img/',
+            popupButtonClasses: 'fa fa-smile-o'
         });
-
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+        // It can be called as many times as necessary; previously converted input fields will not be converted again
+        window.emojiPicker.discover();
     });
-</script> -->
+</script>

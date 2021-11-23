@@ -19,9 +19,15 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/chat/') ?>/css/template.bundle.css">
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
+
+
+    <!-- <link rel="stylesheet" href="<?= base_url('assets/') ?>lib/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>lib/css/font-awesome.min.css">
+
+    <!-- Begin emoji-picker Stylesheets -->
+    <link href="<?= base_url('assets/') ?>lib/css/emoji.css" rel="stylesheet">
 
 </head>
 
