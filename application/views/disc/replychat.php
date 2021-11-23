@@ -289,7 +289,7 @@
         setTimeout(function() {
             update();
             selesai();
-        }, 700);
+        }, 3000);
     }
 
     function update() {
