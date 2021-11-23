@@ -246,7 +246,7 @@
                         <div class="col">
                             <div class="input-group">
                                 <input hidden type="text" name="id_diskusi" id="id_diskusi" value="<?= $getID['id_diskusi'] ?>">
-                                <textarea data-emojiable="true" type="text" data-emoji-input="unicode" name="reply_1" id="reply_1" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
+                                <textarea data-emojiable="true" type="text" data-emoji-input="unicode" name="balasan_reply_1" id="balasan_reply_1" class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="true" data-autosize="true"></textarea>
                                 <a href="#" class="input-group-text text-body pe-0" data-emoji-btn="">
                                     <span class="icon icon-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
@@ -310,7 +310,7 @@
 
         $(".btn-komen").click(function() {
 
-            var reply_1 = $("#reply_1").val();
+            var reply_1 = $("#balasan_reply_1").val();
             var id_diskusi = $("#id_diskusi").val();;
 
             if (reply_1.length == "") {
@@ -332,15 +332,13 @@
 
                         if (response == "success") {
 
-                            // window.location.href = "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>";
-                            $("reply_1").val('');
+                            $("#balasan_reply_1").val('');
 
                         } else {
 
                             Swal.fire({
                                 type: 'error',
                                 title: ' Gagal!',
-                                text: 'silahkan coba lagi!'
                             });
 
                         }
