@@ -14,7 +14,7 @@
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link href="<?= base_url('assets/chat/') ?>/css/css2.css" rel="stylesheet">
+    <link href="<?= base_url('assets/chat/') ?>css/css2.css" rel="stylesheet">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/chat/') ?>css/template.bundle.css">
