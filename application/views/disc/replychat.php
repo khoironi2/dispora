@@ -280,12 +280,12 @@
         selesai();
     });
 
-    function selesai() {
-        setTimeout(function() {
-            update();
-            selesai();
-        }, 700);
-    }
+    // function selesai() {
+    //     setTimeout(function() {
+    //         update();
+    //         selesai();
+    //     }, 700);
+    // }
 
     function update() {
         $.ajax({

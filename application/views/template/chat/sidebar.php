@@ -142,12 +142,12 @@
         selesai();
     });
 
-    function selesai() {
-        setTimeout(function() {
-            update();
-            selesai();
-        }, 4000);
-    }
+    // function selesai() {
+    //     setTimeout(function() {
+    //         update();
+    //         selesai();
+    //     }, 4000);
+    // }
 
     function update() {
         $.ajax({

@@ -161,12 +161,12 @@
         loaddata();
     });
 
-    function loaddata() {
-        setTimeout(function() {
-            oke();
-            loaddata();
-        }, 1000);
-    }
+    // function loaddata() {
+    //     setTimeout(function() {
+    //         oke();
+    //         loaddata();
+    //     }, 1000);
+    // }
 
     function oke() {
 
