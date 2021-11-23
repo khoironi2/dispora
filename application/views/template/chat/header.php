@@ -14,12 +14,12 @@
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700" rel="stylesheet">
+    <link href="<?= base_url('assets/chat/') ?>/css/css2.css" rel="stylesheet">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets/chat/') ?>/css/template.bundle.css">
+    <link rel="stylesheet" href="<?= base_url('assets/chat/') ?>css/template.bundle.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="<?= base_url('assets/chat/') ?>css/css.css" />
     <!--end::Fonts-->
 
 
