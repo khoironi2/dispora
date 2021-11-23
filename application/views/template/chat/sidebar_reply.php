@@ -50,7 +50,7 @@
                             </div> -->
                         </div>
 
-                        <div id="live_reply1"></div>
+                        <div id="live_friend"></div>
 
 
 
