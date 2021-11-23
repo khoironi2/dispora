@@ -137,17 +137,17 @@
 
 <script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function() {
         selesai();
     });
 
-    // function selesai() {
-    //     setTimeout(function() {
-    //         update();
-    //         selesai();
-    //     }, 4000);
-    // }
+    function selesai() {
+        setTimeout(function() {
+            update();
+            selesai();
+        }, 4000);
+    }
 
     function update() {
         $.ajax({
@@ -187,4 +187,4 @@
         });
 
     }
-</script>
+</script> -->
