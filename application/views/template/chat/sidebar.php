@@ -137,7 +137,7 @@
 
 <script src="<?= base_url('assets/chat/') ?>/js/jquery-3.5.1.js"></script>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function() {
         selesai();
     });
@@ -161,15 +161,6 @@
 
         $.ajax({
             type: 'POST',
-            url: "<?= base_url('disc/beranda/loadprimary') ?>",
-            cache: false,
-            success: function(data) {
-                $("#live_babi").html(data);
-            }
-        });
-
-        $.ajax({
-            type: 'POST',
             url: "<?= base_url('disc/beranda/loadfriend') ?>",
             cache: false,
             success: function(data) {
@@ -187,4 +178,4 @@
         });
 
     }
-</script> -->
+</script>
