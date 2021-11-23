@@ -333,7 +333,7 @@
                         if (response == "success") {
 
                             // window.location.href = "<?php echo base_url('disc/beranda/reply1/' . $getID['id_diskusi']) ?>";
-                            $("#reply_1").val('');
+                            $("reply_1").val('');
 
                         } else {
 
