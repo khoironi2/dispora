@@ -143,6 +143,9 @@
                                             <li class="menu-item mb-3">
                                             </li>
 
+
+
+
                                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                                 <a href="javascript:;" class="menu-link menu-toggle">
                                                     <span class="svg-icon menu-icon">
@@ -197,41 +200,41 @@
                                                                             <span class="menu-text">Jenis Kegiatan</span>
                                                                         </a>
                                                                     </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/user/list-columns-1.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">List - Columns 1</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/user/list-columns-2.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">List - Columns 2</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/user/add-user.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">Add User</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/user/edit-user.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">Edit User</span>
-                                                                        </a>
-                                                                    </li>
+
                                                                 </ul>
                                                             </div>
                                                         </li>
+
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+
+                                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                <a href="javascript:;" class="menu-link menu-toggle">
+                                                    <span class="svg-icon menu-icon">
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24" />
+                                                                <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+                                                                <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
+                                                            </g>
+                                                        </svg>
+                                                        <!--end::Svg Icon-->
+                                                    </span>
+                                                    <span class="menu-text">Kepeloporan & Kepemimpinan</span>
+                                                    <i class="menu-arrow"></i>
+                                                </a>
+                                                <div class="menu-submenu">
+                                                    <i class="menu-arrow"></i>
+                                                    <ul class="menu-subnav">
+                                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                            <span class="menu-link">
+                                                                <span class="menu-text">Applications</span>
+                                                            </span>
+                                                        </li>
+
                                                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                                             <a href="javascript:;" class="menu-link menu-toggle">
                                                                 <i class="menu-bullet menu-bullet-line">
@@ -240,90 +243,7 @@
                                                                 <span class="menu-text">Program Berjalan</span>
                                                                 <i class="menu-arrow"></i>
                                                             </a>
-                                                            <div class="menu-submenu">
-                                                                <i class="menu-arrow"></i>
-                                                                <ul class="menu-subnav">
-                                                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                                                        <a href="javascript:;" class="menu-link menu-toggle">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">Kepeloporan & Kepemimpinan</span>
-                                                                            <i class="menu-arrow"></i>
-                                                                        </a>
-                                                                        <div class="menu-submenu">
-                                                                            <i class="menu-arrow"></i>
-                                                                            <ul class="menu-subnav">
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/paskibraka') ?>" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">Paskibraka</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/pemuda_pelopor') ?>" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">Pemuda Pelopor</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/papn') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">PAPN</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/lbb') ?>" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">Lomba Baris Berbaris</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/ltub') ?>" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">Lomba Tata Upacara Bendera</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/duta_pancasila') ?>" class="menu-link">
-                                                                                        <i class="menu-bullet menu-bullet-line">
-                                                                                            <span></span>
-                                                                                        </i>
-                                                                                        <span class="menu-text">Duta Pancasila</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <!-- break -->
 
-                                                            <div class="menu-submenu">
-                                                                <i class="menu-arrow"></i>
-                                                                <ul class="menu-subnav">
-                                                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                                                        <a href="javascript:;" class="menu-link menu-toggle">
-                                                                            <!-- <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i> -->
-                                                                            <span class="menu-text"></span>
-                                                                            <!-- <i class="menu-arrow"></i> -->
-                                                                        </a>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
                                                             <!-- break -->
                                                             <div class="menu-submenu">
                                                                 <i class="menu-arrow"></i>
@@ -379,39 +299,122 @@
                                                             </div>
                                                         </li>
                                                         <li class="menu-item" aria-haspopup="true">
-                                                            <a href="custom/apps/inbox.html" class="menu-link">
+                                                            <a href="<?= base_url('operator/kerjasama') ?>" class="menu-link">
                                                                 <i class="menu-bullet menu-bullet-line">
                                                                     <span></span>
                                                                 </i>
-                                                                <span class="menu-text">Inbox</span>
-                                                                <span class="menu-label">
-                                                                    <span class="label label-danger label-inline">new</span>
-                                                                </span>
+                                                                <span class="menu-text">Data Kerjasama</span>
+
                                                             </a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </li>
 
-                                            <li class="menu-item <?php if ($page == 'Data Kerjasama Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda DISPORA Banten') {
-                                                                        echo 'menu-item-active';
-                                                                    } else {
-                                                                    }; ?>" aria-haspopup="true">
-                                                <a href="<?= base_url('operator/kerjasama') ?>" class="menu-link">
+
+                                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                <a href="javascript:;" class="menu-link menu-toggle">
                                                     <span class="svg-icon menu-icon">
-                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Home/Library.svg-->
+                                                        <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                <polygon points="0 0 24 0 24 24 0 24" />
-                                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                                                <rect x="0" y="0" width="24" height="24" />
+                                                                <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+                                                                <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
                                                             </g>
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Kerjasama Seksi Kepeloporan, Kepemimpinan dan Sumber Daya Pemuda DISPORA Banten">DATA KERJASAMA SEKSI KEPELOPORAN KSDP</span>
+                                                    <span class="menu-text">Sarpras Kewirausahaan</span>
+                                                    <i class="menu-arrow"></i>
                                                 </a>
+                                                <div class="menu-submenu">
+                                                    <i class="menu-arrow"></i>
+                                                    <ul class="menu-subnav">
+                                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                                            <span class="menu-link">
+                                                                <span class="menu-text">Applications</span>
+                                                            </span>
+                                                        </li>
+
+                                                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                            <a href="javascript:;" class="menu-link menu-toggle">
+                                                                <i class="menu-bullet menu-bullet-line">
+                                                                    <span></span>
+                                                                </i>
+                                                                <span class="menu-text">Program Berjalan</span>
+                                                                <i class="menu-arrow"></i>
+                                                            </a>
+
+
+                                                            <!-- break -->
+                                                            <div class="menu-submenu">
+                                                                <i class="menu-arrow"></i>
+                                                                <ul class="menu-subnav">
+                                                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i>
+                                                                            <span class="menu-text">Sarpras & Kewirausahaan</span>
+                                                                            <i class="menu-arrow"></i>
+                                                                        </a>
+                                                                        <div class="menu-submenu">
+                                                                            <i class="menu-arrow"></i>
+                                                                            <ul class="menu-subnav">
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/kewirausahaan') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Seleksi Kewirausahaan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/gelar_karya') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Gelar Karya</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/pelatihan_keterampilan') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Pelatihan Keterampilan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/apresiasi_penghargaan') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Apresiasi & Penghargaan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-item" aria-haspopup="true">
+                                                            <a href="<?= base_url('operator/daya_dukung_sarpras') ?>" class="menu-link">
+                                                                <i class="menu-bullet menu-bullet-line">
+                                                                    <span></span>
+                                                                </i>
+                                                                <span class="menu-text">Daya Dukung Sarpras</span>
+
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
+
+
 
 
                                         </ul>
