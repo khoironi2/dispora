@@ -23,16 +23,15 @@
                                     <th>#</th>
                                     <th></th>
                                     <th>Nama</th>
-                                    <th>Nama Usaha</th>
+                                    <th>Prestasi</th>
                                     <th>Asal Sekolah</th>
                                     <th>Alamat</th>
                                     <th>Kabupaten/Kota</th>
-                                    <th>Periode</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1;
-                                foreach ($getpublik as $key) : ?>
+                                foreach ($getall as $key) : ?>
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <th>
@@ -40,12 +39,11 @@
                                                 <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
                                             </div>
                                         </th>
-                                        <td><?= $key['user']  ?></td>
-                                        <td><?= $key['nama_usaha']  ?></td>
+                                        <td><a href="<?= base_url('datacenter/2ppbb/profil_pemuda_berprestasi_banten/detail/' . $key['id_user']) ?>">Prestasi <?= $key['user']  ?></a></td>
+                                        <td><?= $key['nama_prestasi']  ?></td>
                                         <td><?= $key['institusi_asal']  ?></td>
                                         <td><?= $key['alamat_ktp']  ?></td>
                                         <td><?= $key['kabupaten']  ?></td>
-                                        <td><?= $key['periode_usaha'] ?></td>
                                     </tr>
                                 <?php endforeach ?>
 

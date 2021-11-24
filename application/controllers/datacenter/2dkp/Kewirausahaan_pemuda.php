@@ -9,7 +9,11 @@ class Kewirausahaan_pemuda extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab2',
-            'page' => 'Data Kewirausahaan Pemuda'
+            'page' => 'Data Kewirausahaan Pemuda',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Seleksi_kewirausahaan_muda_pemula_model->getpublik()
+
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
