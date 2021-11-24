@@ -168,7 +168,7 @@
                             <div class="tab-pane fade" id="kt_tab_pane_7_3" role="tabpanel" aria-labelledby="kt_tab_pane_7_3">
                                 <div class="row pt-5 bg-light-primary">
                                     <?php $no = 1;
-                                    foreach ($pelatihanketerampilan as $key) : ?>
+                                    foreach ($getknpi as $key) : ?>
                                         <div class="col-xxl-3 col-xl-6 col-md-6 col-sm-6">
                                             <!--begin::Card-->
                                             <div class="card card-custom gutter-b card-stretch">
@@ -211,7 +211,7 @@
                                                             <?php if (!$this->session->userdata('email')) : ?>
                                                                 <a href="#" onclick="return confirm('Maaf anda belum login');" class="btn btn-primary font-weight-bolder mr-2"><span>DAFTAR</span></a>
                                                             <?php else : ?>
-                                                                <a href="<?= base_url('datacenter/4bursa/Psarpraskwu/pelatihan_keterampilan/' . $key['id_bursa_kegiatan']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
+                                                                <a href="<?= base_url('datacenter/4bursa/kepramukaan/knpi/' . $key['id_bursa_kegiatan']) ?>" class="btn btn-primary font-weight-bolder mr-2">DAFTAR</a>
                                                             <?php endif; ?>
                                                         <?php } elseif ($key['status_selesai'] == 2) { ?>
                                                             <a class="tutup" href="#" class="btn btn-light-info font-weight-bolder mr-2">BERJALAN</a>

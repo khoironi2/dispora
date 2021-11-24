@@ -9,7 +9,10 @@ class Knpi_organisasi_kepemudaan_lainnya extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab3',
-            'page' => 'Data KNPI dan Ornasisai Kepemudaan Lainnya'
+            'page' => 'Data KNPI dan Ornasisai Kepemudaan Lainnya',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Knpi_model->getpublik()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
