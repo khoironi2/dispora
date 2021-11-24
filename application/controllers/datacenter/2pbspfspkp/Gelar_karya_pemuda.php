@@ -11,7 +11,8 @@ class Gelar_karya_pemuda extends CI_Controller
             'tab' => 'tab2',
             'page' => 'Data Gelar Karya Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
-            'pengaturan' => $this->Pengaturan_model->get()
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Gelar_karya_pemuda_model->getpublik(),
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
