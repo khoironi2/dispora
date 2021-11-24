@@ -587,7 +587,7 @@
                                                     <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Gelar Karya Pemuda">Data Gelar Karya Pemuda</span>
                                                 </a>
                                             </li>
-                                            <li class="menu-item <?php if ($page == 'Data Pelatihan Keterampilan Pemuda') {
+                                            <li class="menu-item <?php if ($page == 'Data Peserta Pelatihan Keterampilan Pemuda') {
                                                                         echo 'menu-item-active';
                                                                     } else {
                                                                     }; ?>" aria-haspopup="true">
@@ -605,7 +605,7 @@
                                                         </svg>
                                                         <!--end::Svg Icon-->
                                                     </span>
-                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Pelatihan Keterampilan Pemuda">Data Pelatihan Keterampilan Pemuda</span>
+                                                    <span class="menu-text" data-toggle="tooltip" data-placement="right" title="Data Peserta Pelatihan Keterampilan Pemuda">Data Pelatihan Keterampilan Pemuda</span>
                                                 </a>
                                             </li>
                                             <li class="menu-item <?php if ($page == 'Data Apresiasi keterampilan Pemuda') {

@@ -9,9 +9,10 @@ class Pelatihan_keterampilan_pemuda extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab2',
-            'page' => 'Data Pelatihan Keterampilan Pemuda',
+            'page' => 'Data Peserta Pelatihan Keterampilan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
-            'pengaturan' => $this->Pengaturan_model->get()
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Pelatihan_keterampilan_model->getpublik()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
