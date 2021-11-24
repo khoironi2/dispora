@@ -410,6 +410,15 @@
 
                                                             </a>
                                                         </li>
+                                                        <li class="menu-item" aria-haspopup="true">
+                                                            <a href="<?= base_url('operator/proposal_sarpras') ?>" class="menu-link">
+                                                                <i class="menu-bullet menu-bullet-line">
+                                                                    <span></span>
+                                                                </i>
+                                                                <span class="menu-text">Proposal Kegiatan</span>
+
+                                                            </a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </li>

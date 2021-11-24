@@ -9,7 +9,10 @@ class Proposal_sarpras_kegiatan_kewirausahaan_pemuda extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab2',
-            'page' => 'Data Proposal Sarana Prasarana dan Kegiatan Kewirausahaan Pemuda'
+            'page' => 'Data Proposal Sarana Prasarana dan Kegiatan Kewirausahaan Pemuda',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'get' => $this->Proposal_sarpras_model->get()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
