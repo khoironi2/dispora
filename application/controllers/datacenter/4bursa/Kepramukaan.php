@@ -14,7 +14,8 @@ class Kepramukaan extends CI_Controller
             'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
             'bursakegiatan' => $this->Bursa_kegiatan_model->get(),
             'pengaturan' => $this->Pengaturan_model->get(),
-            'getbursa' => $this->Kemah_bakti_pramuka_model->getbursa()
+            'getbursa' => $this->Kemah_bakti_pramuka_model->getbursa(),
+            'getketerampilan' => $this->Pelatihan_keterampilan_kepramukaan_model->getbursa()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');
@@ -92,6 +93,65 @@ class Kepramukaan extends CI_Controller
         ];
 
         $insert = $this->Kemah_bakti_pramuka_model->insert("tbl_pendaftar_kemah_bakti_pramuka", $data);
+
+        if ($insert) {
+            echo "success";
+            // $this->session->set_flashdata('success_login', 'Sukses, Anda telah terdaftar.');
+            // redirect('datacenter/4bursa/kkp');
+        } else {
+
+            echo "error";
+        }
+    }
+
+
+    public function keterampilan_kepramukaan($id)
+    {
+
+
+        $data = [
+            'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
+            'tab' => 'tab4',
+            'page' => 'Bursa Kepramukaan dan Kelembagaan Pemuda',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'userWilayah' => $this->Wilayah_model->UserWilayah(),
+            'MyRegister' => $this->Paskibraka_model->MyRegister(),
+            'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
+            'bursakegiatan' => $this->Bursa_kegiatan_model->get(),
+            'getBursaID' => $this->Pelatihan_keterampilan_kepramukaan_model->getbursaByID($id),
+            'getMy' => $this->Pelatihan_keterampilan_kepramukaan_model->getMy($id),
+
+            'totalPendaftarPaskib' => $this->Bursa_kegiatan_model->totalPendaftarPaskib(),
+            'bursapaskibraka' => $this->Bursa_kegiatan_model->getpaskibraka(),
+            'bursapemudapelopor' => $this->Bursa_kegiatan_model->getpemudapelopor(),
+            'bursapapn' => $this->Bursa_kegiatan_model->getpapn(),
+            'bursalbb' => $this->Bursa_kegiatan_model->getlbb(),
+            'bursaltub' => $this->Bursa_kegiatan_model->getltub(),
+            'bursadp' => $this->Bursa_kegiatan_model->getdp(),
+            'pengaturan' => $this->Pengaturan_model->get()
+        ];
+        $this->load->view('template/universal/header', $data);
+        $this->load->view('template/universal/sidebar');
+        $this->load->view('datacenter/4bursa/pramuka/detail_keterampilan_kepramukaan', $data);
+        $this->load->view('template/universal/footer', $data);
+    }
+
+
+    public function daftarketerampilan_kepramukaan()
+    {
+        // $id_bursa_kegiatan = $this->input->post('id_bursa_kegiatan');
+        $periode = $this->input->post('periode');
+        date_default_timezone_set("ASIA/JAKARTA");
+        $data = [
+            'id_bursa_kegiatan' =>  $this->input->post('id_bursa_kegiatan'),
+            'kwarda' =>  $this->input->post('kwarda'),
+            'id_user_pemuda' => $this->session->userdata('id_user'),
+            'periode' => $periode,
+            'status_lulus' => '1',
+            'timestamp' => date('Y-m-d H:i:s')
+        ];
+
+        $insert = $this->Pelatihan_keterampilan_kepramukaan_model->insert("tbl_pendaftar_pelatihan_keterampilan_kepramukaan", $data);
 
         if ($insert) {
             echo "success";
