@@ -108,6 +108,17 @@
                                 <option value="LOMBA BARIS BERBARIS">LOMBA BARIS BERBARIS</option>
                                 <option value="LOMBA TATA UPACARA BENDERA">LOMBA TATA UPACARA BENDERA</option>
                                 <option value="DUTA PANCASILA">DUTA PANCASILA</option>
+                                <option value="SELEKSI KEWIRAUSAHAAN MUDA PEMULA">SELEKSI KEWIRAUSAHAAN MUDA PEMULA</option>
+                                <option value="GELAR KARYA PEMUDA">GELAR KARYA PEMUDA</option>
+                                <option value="PELATIHAN KETERAMPILAN PEMUDA">PELATIHAN KETERAMPILAN PEMUDA</option>
+                                <option value="APRESIASI DAN PENGHARGAAN">APRESIASI DAN PENGHARGAAN</option>
+                                <option value="KEMAH BHAKTI PRAMUKA">KEMAH BHAKTI PRAMUKA</option>
+                                <option value="PELATIHAN KETERAMPILAN KEPRAMUKAAN">PELATIHAN KETERAMPILAN KEPRAMUKAAN</option>
+                                <option value="KNPI DAN ORGANISASI KEPEMUDAAN LAINNYA">KNPI DAN ORGANISASI KEPEMUDAAN LAINNYA</option>
+                                <option value="LATIKAN DASAR KEPEMIMPINAN">LATIKAN DASAR KEPEMIMPINAN</option>
+                                <option value="REVITALISASI KEPEMUDAAN">REVITALISASI KEPEMUDAAN</option>
+                                <option value="EVALUASI KEPEMUDAAN">EVALUASI KEPEMUDAAN</option>
+                                <option value="PERIJINAN ORGANISASI KEPEMUDAAN">PERIJINAN ORGANISASI KEPEMUDAAN</option>
                             </select>
                         </div>
                         <!--end::Form group-->

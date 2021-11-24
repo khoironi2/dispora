@@ -248,7 +248,7 @@
                                                                             <i class="menu-bullet menu-bullet-dot">
                                                                                 <span></span>
                                                                             </i>
-                                                                            <span class="menu-text">PROGRAM BERJALAN KEPELOPORAN - KEPEMIMPINAN SDP</span>
+                                                                            <span class="menu-text">Kepeloporan & Kepemimpinan</span>
                                                                             <i class="menu-arrow"></i>
                                                                         </a>
                                                                         <div class="menu-submenu">
@@ -305,30 +305,76 @@
                                                                             </ul>
                                                                         </div>
                                                                     </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/profile/profile-2.html" class="menu-link">
+                                                                </ul>
+                                                            </div>
+                                                            <!-- break -->
+
+                                                            <div class="menu-submenu">
+                                                                <i class="menu-arrow"></i>
+                                                                <ul class="menu-subnav">
+                                                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                                        <a href="javascript:;" class="menu-link menu-toggle">
+                                                                            <!-- <i class="menu-bullet menu-bullet-dot">
+                                                                                <span></span>
+                                                                            </i> -->
+                                                                            <span class="menu-text"></span>
+                                                                            <!-- <i class="menu-arrow"></i> -->
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                            <!-- break -->
+                                                            <div class="menu-submenu">
+                                                                <i class="menu-arrow"></i>
+                                                                <ul class="menu-subnav">
+                                                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                                                        <a href="javascript:;" class="menu-link menu-toggle">
                                                                             <i class="menu-bullet menu-bullet-dot">
                                                                                 <span></span>
                                                                             </i>
-                                                                            <span class="menu-text">Profile 2</span>
+                                                                            <span class="menu-text">Sarpras & Kewirausahaan</span>
+                                                                            <i class="menu-arrow"></i>
                                                                         </a>
+                                                                        <div class="menu-submenu">
+                                                                            <i class="menu-arrow"></i>
+                                                                            <ul class="menu-subnav">
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/kewirausahaan') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Seleksi Kewirausahaan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/gelar_karya') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Gelar Karya</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/pelatihan_keterampilan') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Pelatihan Keterampilan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/apresiasi_penghargaan') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Apresiasi & Penghargaan</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
                                                                     </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/profile/profile-3.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">Profile 3</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="menu-item" aria-haspopup="true">
-                                                                        <a href="custom/apps/profile/profile-4.html" class="menu-link">
-                                                                            <i class="menu-bullet menu-bullet-dot">
-                                                                                <span></span>
-                                                                            </i>
-                                                                            <span class="menu-text">Profile 4</span>
-                                                                        </a>
-                                                                    </li>
+
                                                                 </ul>
                                                             </div>
                                                         </li>

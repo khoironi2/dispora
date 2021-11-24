@@ -135,6 +135,20 @@ class Bursa_kegiatan_model extends CI_Model
 
         return $result->result_array();
     }
+
+
+
+    public function getkwup()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bursa_kegiatan');
+        $this->db->join('tbl_jenis_kegiatan as jenis', 'jenis.id_jenis_kegiatan=tbl_bursa_kegiatan.id_jenis', 'left');
+        $this->db->where('jenis.nama_jenis_kegiatan', 'SELEKSI KEWIRAUSAHAAN MUDA PEMULA');
+        $this->db->order_by('id_bursa_kegiatan', 'DESC');
+        $result = $this->db->get();
+
+        return $result->result_array();
+    }
     public function insert($table, $data)
     {
         return $this->db->insert($table, $data);
