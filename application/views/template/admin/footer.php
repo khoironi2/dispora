@@ -12,11 +12,7 @@
         <?php endforeach ?>
         <!--end::Copyright-->
         <!--begin::Nav-->
-        <div class="nav nav-dark order-1 order-md-2">
-            <a href="http://keenthemes.com/keen" target="_blank" class="nav-link pr-3 pl-0">About</a>
-            <a href="http://keenthemes.com/keen" target="_blank" class="nav-link px-3">Team</a>
-            <a href="http://keenthemes.com/keen" target="_blank" class="nav-link pl-3 pr-0">Contact</a>
-        </div>
+
         <!--end::Nav-->
     </div>
     <!--end::Container-->
