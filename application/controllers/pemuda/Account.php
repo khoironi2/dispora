@@ -26,7 +26,7 @@ class Account extends CI_Controller
             'UserWilayah' => $this->User_model->getWilayah()
         ];
         $this->load->view('template/pemuda/header', $data);
-        $this->load->view('template/pemuda/sidebar');
+        $this->load->view('template/universal/sidebar');
         $this->load->view('pemuda/account', $data);
         $this->load->view('template/pemuda/footer', $data);
     }
