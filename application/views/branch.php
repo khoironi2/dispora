@@ -51,7 +51,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    DATACENTER</a>
+                                    DATA CENTER</a>
                             </div>
                         </div>
                     </div>
