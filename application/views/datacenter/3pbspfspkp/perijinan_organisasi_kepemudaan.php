@@ -97,50 +97,45 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <!--begin: Datatable-->
-                        <table class="table table-separate table-head-custom table-checkable" id="myTable">
+                        <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Record ID</th>
+                                    <th>#</th>
                                     <th></th>
-                                    <th>Nama</th>
-                                    <th>Asal Sekolah</th>
+                                    <th>Pengusul</th>
+                                    <th>Ketua</th>
+                                    <th>Nama Organisasi</th>
                                     <th>Alamat</th>
-                                    <th>Kabupaten/Kota</th>
-                                    <th>Periode</th>
+                                    <th>Kabupaten</th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <th>
-                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                        </div>
-                                    </th>
-                                    <td>Dinda Yurike Candini</td>
-                                    <td>Universitas Pendidikan Indonesia</td>
-                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                    <td>Kabupaten Kuningan</td>
-                                    <td>2021</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <th>
-                                        <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                            <img class="symbol-label" src="../../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
-                                        </div>
-                                    </th>
-                                    <td>Dinda Yurike Candini</td>
-                                    <td>Universitas Islam Bandung</td>
-                                    <td>Jalan Raya Caracas Rt 17 Rw 06 Desa Caracas Kecamatan Cilimus Kabupaten Kuningan</td>
-                                    <td>Kabupaten Kuningan</td>
-                                    <td>2021</td>
-                                </tr>
+                                <?php $no = 1;
+                                foreach ($getpublik as $key) : ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <th>
+                                            <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
+                                            </div>
+                                        </th>
+                                        <td><?= $key['user']  ?></td>
+                                        <td><?= $key['nama_ketua']  ?></td>
+                                        <td><?= $key['nama_organisasi']  ?></td>
+                                        <td><?= $key['alamat']  ?></td>
+                                        <td><?= $key['kabupaten']  ?></td>
+
+
+
+
+
+                                    </tr>
+                                <?php endforeach ?>
 
                             </tbody>
+
                         </table>
-                        <!--end: Datatable-->
                     </div>
                 </div>
                 <!--end::Stats Widget 10-->

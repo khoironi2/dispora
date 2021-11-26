@@ -9,7 +9,10 @@ class Ldk extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab3',
-            'page' => 'Data Latikan Dasar Kepemimpinan'
+            'page' => 'Data Latikan Dasar Kepemimpinan',
+            'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
+            'pengaturan' => $this->Pengaturan_model->get(),
+            'getpublik' => $this->Ldk_model->getpublik()
         ];
         $this->load->view('template/universal/header', $data);
         $this->load->view('template/universal/sidebar');

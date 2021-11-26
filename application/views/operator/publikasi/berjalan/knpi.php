@@ -35,6 +35,7 @@
                             <th>#</th>
                             <th></th>
                             <th>Ketua</th>
+                            <th>Nama Komite</th>
 
                             <th>Asal Sekolah</th>
                             <th>Alamat</th>
@@ -55,6 +56,7 @@
                                     </div>
                                 </th>
                                 <td><?= $key['user']  ?></td>
+                                <td><?= $key['nama_komite']  ?></td>
 
                                 <td><?= $key['institusi_asal']  ?></td>
                                 <td><?= $key['alamat_ktp']  ?></td>
