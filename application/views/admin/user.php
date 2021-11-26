@@ -48,7 +48,7 @@
                                 <td>
                                     <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
                                         <?php if ($key['foto_user'] == NULL) { ?>
-                                            <img class="symbol-label" src="../assets/theme/demo5/dis t/assets/media/stock-600x400/img-12.jpg" />
+                                            <img class="symbol-label" src="<?= base_url('assets/img/account/logo.png') ?>" />
                                         <?php } else { ?>
                                             <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
                                         <?php } ?>

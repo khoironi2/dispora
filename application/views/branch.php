@@ -51,7 +51,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    KUNJUNGI PUSAT DATA</a>
+                                    DATACENTER</a>
                             </div>
                         </div>
                     </div>
