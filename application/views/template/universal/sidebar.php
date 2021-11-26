@@ -36,7 +36,7 @@
                         <!--begin::Brand-->
                         <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-5 py-lg-12">
                             <!--begin::Logo-->
-                            <a href="<?= base_url('datacenter/universal') ?>">
+                            <a href="<?= base_url() ?>">
                                 <img alt="Logo" src="<?= base_url('assets/img/logo/' . $key['logo_aplikasi']) ?>" class="max-h-40px" />
                             </a>
                             <!--end::Logo-->
