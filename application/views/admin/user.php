@@ -47,7 +47,7 @@
                                 <td><?= $no++ ?></td>
                                 <td>
                                     <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                        <img class="symbol-label" src="../assets/theme/demo5/dist/assets/media/stock-600x400/img-12.jpg" />
+                                        <img class="symbol-label" src="<?= base_url('assets/img/account/' . $key['foto_user']) ?>" />
                                     </div>
                                 </td>
                                 <td><?= $key['level_user'] ?></td>
