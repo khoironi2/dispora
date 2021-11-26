@@ -8,7 +8,7 @@ class Psarpraskwu extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab4',
+            'tab' => 'tab1',
             'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
@@ -29,7 +29,7 @@ class Psarpraskwu extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab4',
+            'tab' => 'tab1',
             'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'userWilayah' => $this->Wilayah_model->UserWilayah(),
@@ -84,7 +84,7 @@ class Psarpraskwu extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab4',
+            'tab' => 'tab1',
             'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'userWilayah' => $this->Wilayah_model->UserWilayah(),
@@ -140,7 +140,7 @@ class Psarpraskwu extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab4',
+            'tab' => 'tab1',
             'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'userWilayah' => $this->Wilayah_model->UserWilayah(),
@@ -193,7 +193,7 @@ class Psarpraskwu extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab4',
+            'tab' => 'tab1',
             'page' => 'Bursa Penghargaan Fasilitasi Sarana Prasarana dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'userWilayah' => $this->Wilayah_model->UserWilayah(),

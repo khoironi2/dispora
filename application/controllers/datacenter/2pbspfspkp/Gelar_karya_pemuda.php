@@ -8,7 +8,7 @@ class Gelar_karya_pemuda extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab2',
+            'tab' => 'tab1',
             'page' => 'Data Gelar Karya Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'pengaturan' => $this->Pengaturan_model->get(),

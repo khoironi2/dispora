@@ -304,7 +304,7 @@
                                     }
                                 })
                                 .then(function() {
-                                    window.location.href = "<?php echo base_url() ?>pimpinan";
+                                    window.location.href = "<?php echo base_url() ?>pimpinan/dashboard";
                                 });
 
                         } else if (response == "operator") {

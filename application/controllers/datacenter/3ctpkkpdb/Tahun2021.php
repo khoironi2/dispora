@@ -8,7 +8,7 @@ class Tahun2021 extends CI_Controller
     {
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
-            'tab' => 'tab3',
+            'tab' => 'tab1',
             'page' => 'Data Capaian target Kepramukaan dan Kelembagaan Pemuda Dispora Banten Tahun 2021',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'pengaturan' => $this->Pengaturan_model->get(),
