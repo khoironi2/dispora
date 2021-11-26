@@ -27,7 +27,7 @@ class Prestasi extends CI_Controller
             'getBySes' => $this->Prestasi_model->getBySes()
         ];
         $this->load->view('template/pemuda/header', $data);
-        $this->load->view('template/pemuda/sidebar');
+        $this->load->view('template/universal/sidebar');
         $this->load->view('pemuda/prestasi', $data);
         $this->load->view('template/pemuda/footer', $data);
     }
