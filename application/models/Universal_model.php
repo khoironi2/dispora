@@ -13,26 +13,116 @@ class Universal_model extends CI_Model
         return $result->num_rows();
     }
 
-    public function getAll()
+    public function getlakilaki()
     {
         $this->db->select('*');
         $this->db->from('tbl_user');
-        $this->db->order_by('time_login_user', 'DESC');
+        $this->db->where('level_user', 'Pemuda');
+        $this->db->where('jenis_kelamin', 'Laki-Laki');
         $result = $this->db->get();
 
-        return $result->result_array();
+        return $result->num_rows();
     }
-    public function getnotAdmin()
+
+    public function getperempuan()
     {
         $this->db->select('*');
         $this->db->from('tbl_user');
-        // $level = array('admin');
-        // $this->db->where_not_in('level_user', $level);
-        $this->db->order_by('id_user', 'DESC');
+        $this->db->where('level_user', 'Pemuda');
+        $this->db->where('jenis_kelamin', 'Perempuan');
         $result = $this->db->get();
 
-        return $result->result_array();
+        return $result->num_rows();
     }
+    public function getu20kebawah()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->where('level_user', 'Pemuda');
+        $this->db->where('usia <', '20');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+    public function getu20keatas()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->where('level_user', 'Pemuda');
+        $this->db->where('usia >', '20');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+
+    public function totalbalasan()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_reply_diskusi_1 as a');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+    public function totaldiskusi()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_diskusi as a');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+
+    public function getuseronline()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->where('status_aktif', '1');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+
+    public function getbursatotal()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bursa_kegiatan');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+    public function getkepeloporan()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bursa_kegiatan');
+        $this->db->join('tbl_jenis_kegiatan as jenis', 'jenis.id_jenis_kegiatan=tbl_bursa_kegiatan.id_jenis', 'left');
+        $this->db->where('jenis.seksi_kegiatan', '1');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+    public function getkwu()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bursa_kegiatan');
+        $this->db->join('tbl_jenis_kegiatan as jenis', 'jenis.id_jenis_kegiatan=tbl_bursa_kegiatan.id_jenis', 'left');
+        $this->db->where('jenis.seksi_kegiatan', '2');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+
+    public function getkepramukaan()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bursa_kegiatan');
+        $this->db->join('tbl_jenis_kegiatan as jenis', 'jenis.id_jenis_kegiatan=tbl_bursa_kegiatan.id_jenis', 'left');
+        $this->db->where('jenis.seksi_kegiatan', '3');
+        $result = $this->db->get();
+
+        return $result->num_rows();
+    }
+
+
     public function getWilayah()
     {
         $this->db->select('*,

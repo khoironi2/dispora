@@ -96,6 +96,8 @@ class Account extends CI_Controller
     {
         $data = array(
             'nama' => $this->input->post('nama'),
+            'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+            'usia' => $this->input->post('usia'),
             'institusi_asal' => $this->input->post('institusi_asal'),
             'telpon' => $this->input->post('telpon'),
             'email' => $this->input->post('email'),

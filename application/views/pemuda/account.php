@@ -151,6 +151,20 @@
                                                 <input type="text" class="form-control form-control-solid form-control-lg" name="nama" placeholder="First Name" value="<?= $user['nama'] ?>" />
                                                 <span class="form-text text-muted">Silakan masukkan nama lengkap anda.</span>
                                             </div>
+                                            <div class="form-group">
+                                                <label>Jenis Kelamin</label>
+                                                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control form-control-solid form-control-lg">
+                                                    <option value="<?= $user['jenis_kelamin'] ?>"><?= $user['jenis_kelamin'] ?></option>
+                                                    <option value="Laki-Laki">Laki-Laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                </select>
+                                                <span class="form-text text-muted">Silakahkan pilih jenis kelamin anda.</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Usia</label>
+                                                <input type="text" class="form-control form-control-solid form-control-lg" name="usia" placeholder="usia" value="<?= $user['usia'] ?>" />
+                                                <span class="form-text text-muted">Silakahkan pilih jenis kelamin anda.</span>
+                                            </div>
                                             <!--end::Input-->
                                             <!--begin::Input-->
                                             <div class="form-group">
