@@ -47,7 +47,7 @@
                             <!--begin::Nav-->
                             <ul class="nav flex-column" role="tablist">
 
-                                <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Seksi Kepeloporan Kepemimpinan dan Sumber Daya Pemuda">
+                                <!-- <li class="nav-item mb-3" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Seksi Kepeloporan Kepemimpinan dan Sumber Daya Pemuda">
                                     <a href="#" class="nav-link btn btn-icon btn-icon-white btn-hover-transparent-white <?php if ($tab == 'tab1') {
                                                                                                                             echo 'active';
                                                                                                                         } else {
@@ -64,7 +64,7 @@
 
                                         </span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <!--end::Item-->
                                 <!--begin::Item-->
 

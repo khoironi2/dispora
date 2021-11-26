@@ -28,7 +28,7 @@ class Dashboard extends CI_Controller
             'duta_pancasila' => $this->History_kegiatan_user_model->duta_pancasila(),
         ];
         $this->load->view('template/pemuda/header', $data);
-        $this->load->view('template/pemuda/sidebar');
+        $this->load->view('template/universal/sidebar');
         $this->load->view('pemuda/dashboard', $data);
         $this->load->view('template/pemuda/footer', $data);
     }
