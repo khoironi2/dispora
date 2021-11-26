@@ -538,20 +538,30 @@
                                                             </div>
                                                         </li>
                                                         <li class="menu-item" aria-haspopup="true">
-                                                            <a href="<?= base_url('operator/daya_dukung_sarpras') ?>" class="menu-link">
+                                                            <a href="<?= base_url('operator/program_pembinaan_kepramukaan') ?>" class="menu-link">
                                                                 <i class="menu-bullet menu-bullet-line">
                                                                     <span></span>
                                                                 </i>
-                                                                <span class="menu-text">Daya Dukung Sarpras</span>
+                                                                <span class="menu-text">Data Program Pembinaan Kepramukaan</span>
 
                                                             </a>
                                                         </li>
                                                         <li class="menu-item" aria-haspopup="true">
-                                                            <a href="<?= base_url('operator/proposal_sarpras') ?>" class="menu-link">
+                                                            <a href="<?= base_url('operator/program_pembinaan_keorganisasian_pemuda') ?>" class="menu-link">
                                                                 <i class="menu-bullet menu-bullet-line">
                                                                     <span></span>
                                                                 </i>
-                                                                <span class="menu-text">Proposal Kegiatan</span>
+                                                                <span class="menu-text">Program Pembinaan Keorganisasian Pemuda</span>
+
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="menu-item" aria-haspopup="true">
+                                                            <a href="<?= base_url('operator/kreatifitas_kelembagaan_pemuda') ?>" class="menu-link">
+                                                                <i class="menu-bullet menu-bullet-line">
+                                                                    <span></span>
+                                                                </i>
+                                                                <span class="menu-text">Kreatifitas Kelembagaan Pemuda</span>
 
                                                             </a>
                                                         </li>
