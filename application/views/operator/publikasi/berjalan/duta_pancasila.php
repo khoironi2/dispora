@@ -35,7 +35,7 @@
                             <th>#</th>
                             <th></th>
                             <th>Nama</th>
-                            <th>Penempatan</th>
+
                             <th>Asal Sekolah</th>
                             <th>Alamat</th>
                             <th>Kabupaten/Kota</th>
@@ -55,12 +55,7 @@
                                     </div>
                                 </th>
                                 <td><?= $key['user']  ?></td>
-                                <td><?php if (empty($key['penempatan'])) { ?>
-                                        <span class="text-danger"> belum penempatan</span>
-                                    <?php } else { ?>
-                                        <?= $key['penempatan'] ?>
-                                    <?php } ?>
-                                </td>
+
                                 <td><?= $key['institusi_asal']  ?></td>
                                 <td><?= $key['alamat_ktp']  ?></td>
                                 <td><?= $key['kabupaten']  ?></td>
