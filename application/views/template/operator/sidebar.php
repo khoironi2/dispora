@@ -243,35 +243,53 @@
                                                                             <i class="menu-arrow"></i>
                                                                             <ul class="menu-subnav">
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/kewirausahaan') ?>" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/paskibraka') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Seleksi Kewirausahaan</span>
+                                                                                        <span class="menu-text">Paskibraka</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/gelar_karya') ?>" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/pemuda_pelopor') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Gelar Karya</span>
+                                                                                        <span class="menu-text">Pemuda Pelopor</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/pelatihan_keterampilan') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/papn') ?>" title="Pertukaran Pelajar Antra Negara" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Pelatihan Keterampilan</span>
+                                                                                        <span class="menu-text">Pertukaran Pelajar Antar Negara</span>
                                                                                     </a>
                                                                                 </li>
                                                                                 <li class="menu-item" aria-haspopup="true">
-                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/apresiasi_penghargaan') ?>" class="menu-link">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/lbb') ?>" class="menu-link">
                                                                                         <i class="menu-bullet menu-bullet-line">
                                                                                             <span></span>
                                                                                         </i>
-                                                                                        <span class="menu-text">Apresiasi & Penghargaan</span>
+                                                                                        <span class="menu-text">Lomba Baris Berbaris</span>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/ltub') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Lomba Tata Upacara Bendera</span>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="menu-item" aria-haspopup="true">
+                                                                                    <a href="<?= base_url('operator/publikasi/berjalan/duta_pancasila') ?>" class="menu-link">
+                                                                                        <i class="menu-bullet menu-bullet-line">
+                                                                                            <span></span>
+                                                                                        </i>
+                                                                                        <span class="menu-text">Duta Pancasila</span>
                                                                                     </a>
                                                                                 </li>
                                                                             </ul>
