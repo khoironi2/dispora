@@ -236,7 +236,7 @@
                                                                             <i class="menu-bullet menu-bullet-dot">
                                                                                 <span></span>
                                                                             </i>
-                                                                            <span class="menu-text">Sarpras & Kewirausahaan</span>
+                                                                            <span class="menu-text">Kepeloporan & Kepemimpinan</span>
                                                                             <i class="menu-arrow"></i>
                                                                         </a>
                                                                         <div class="menu-submenu">
