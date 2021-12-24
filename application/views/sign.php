@@ -140,7 +140,7 @@
                         $('#email_result').html('<font color="red">Email sudah digunakan</font>');
                         $(".kode").hide();
                     } else {
-                        $('#email_result').html('tersedia');
+                        $('#email_result').html('Email tersedia');
                         $(".kode").show();
                     }
                 }

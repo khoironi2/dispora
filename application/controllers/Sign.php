@@ -55,7 +55,7 @@ class Sign extends CI_Controller
             ];
 
             $insert = $this->User_model->register("tbl_user", $data);
-
+            $this->sendEmailTo($email, $nama);
             if ($insert) {
                 echo "success";
                 // $this->session->set_flashdata('success_login', 'Sukses, Anda telah terdaftar.');
@@ -66,6 +66,50 @@ class Sign extends CI_Controller
             }
         }
     }
+
+    function sendEmailTo($email,  $nama)
+    {
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'akbarainovationcenter@gmail.com',
+            'smtp_pass' => 'betaancor',
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1'
+        );
+
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+        $message = "
+        <html>
+        <head>
+            <title>DARIMU BANTEN</title>
+        </head>
+        <body>
+            <h4>USER : , $nama</h4>
+            <h4>EMAIL : , $email</h4>
+            <p><b>Sudah di Verifikasi !</b></p>
+            <p>Silahkan login pada link berikut <a href='https://darimu.garisdesign.com/sign' target='_blank'>LOGIN</a> dan lakukan verivikasi pada menu Manajemen User !</p>
+        </body>
+        </html>";
+        $email_admin = 'dev.akbarainovationcenter@gmail.com';
+        while (true) {
+            $kirim = array($email_admin);
+        }
+        $this->email->from('akbarainovationcenter@gmail.com', 'DARIMU BANTEN');
+        $this->email->to($kirim);
+        $this->email->subject('PERMINTAAN AKTIVASI USER BARU');
+        $this->email->message($message);
+
+        if (!$this->email->send()) {
+            show_error($this->email->print_debugger());
+        } else {
+            $this->session->set_flashdata('success', '<div class="alert alert-success" role="alert">Sukses!</div>');
+            redirect('admin/user');
+        }
+    }
+
 
     public function login()
     {

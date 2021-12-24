@@ -109,17 +109,20 @@ class User extends CI_Controller
         }
     }
 
+
     public function validasi($id)
     {
         $user = $this->db->get_where('tbl_user', ['id_user' => $id])->row_array();
         $nama = $user['nama'];
         $id_user = $user['id_user'];
+        $email = $user['email'];
         $data = [
             'validasi_user' => '2',
             'timestamp' => date('Y-m-d H:i:s')
         ];
 
         $update = $this->User_model->update($id, $data);
+        $this->sendEmailTo($email, $id_user, $nama);
         if ($update) {
             // echo "success";
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, User ' . $nama . ' dengan ID: ' . $id_user . ' berhasil di verivikasi !</div>');
@@ -147,6 +150,50 @@ class User extends CI_Controller
             redirect('admin/user');
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Failed !</div>');
+            redirect('admin/user');
+        }
+    }
+
+    function sendEmailTo($email, $id_user,  $nama)
+    {
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'akbarainovationcenter@gmail.com',
+            'smtp_pass' => 'betaancor',
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1'
+        );
+
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+        $message = "
+        <html>
+        <head>
+            <title>DARIMU BANTEN</title>
+        </head>
+        <body>
+            <h4>USER : , $nama</h4>
+            <h4>ID : , $id_user</h4>
+            <h4>EMAIL : , $email</h4>
+            <p><b>Sudah di Verifikasi !</b></p>
+            <p>Silahkan login pada link berikut <a href='https://darimu.garisdesign.com/sign' target='_blank'>LOGIN</a> !</p>
+        </body>
+        </html>";
+        // $email_backup = 'dev.akbarainovationcenter@gmail.com';
+        while (true) {
+            $kirim = array($email);
+        }
+        $this->email->from('akbarainovationcenter@gmail.com', 'DARIMU BANTEN');
+        $this->email->to($kirim);
+        $this->email->subject('PERMINTAAN AKTIVASI BARU DITERIMA');
+        $this->email->message($message);
+
+        if (!$this->email->send()) {
+            show_error($this->email->print_debugger());
+        } else {
+            $this->session->set_flashdata('success', '<div class="alert alert-success" role="alert">Sukses!</div>');
             redirect('admin/user');
         }
     }
