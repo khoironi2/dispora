@@ -19,7 +19,7 @@ class Ldk extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Data Lomba Tata Upacara Bendera',
+            'page' => 'Data Latihan Dasar Kepemimpinan',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
             'bursakegiatan' => $this->Bursa_kegiatan_model->get(),

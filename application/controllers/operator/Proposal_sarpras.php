@@ -17,7 +17,7 @@ class Proposal_sarpras extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Data Daya Dukung Fasilitasi Penghargaan, Sarpras dan Kewirausahaan Pemuda',
+            'page' => 'Data Proposal Kegiatan, Sarpras dan Kewirausahaan Pemuda',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'pengaturan' => $this->Pengaturan_model->get(),
             'get' => $this->Proposal_sarpras_model->get()

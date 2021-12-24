@@ -19,7 +19,7 @@ class Pelatihan_keterampilan extends CI_Controller
         $data = [
             'title' => 'Aplikasi Pusat Data Keolahragaan dan Kepemudaan',
             'tab' => 'tab1',
-            'page' => 'Data Pertukan Pelajar Antar Negara',
+            'page' => 'Pelatihan dan Keterampilan',
             'user' => $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array(),
             'jeniskegiatan' => $this->Jenis_kegiatan_model->get(),
             'bursakegiatan' => $this->Bursa_kegiatan_model->get(),
