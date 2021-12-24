@@ -112,6 +112,7 @@ class User extends CI_Controller
 
     public function validasi($id)
     {
+        $pengaturan = $this->db->get_where('pengaturan', ['id' => 1])->row_array();
         $user = $this->db->get_where('tbl_user', ['id_user' => $id])->row_array();
         $nama = $user['nama'];
         $id_user = $user['id_user'];
@@ -122,7 +123,10 @@ class User extends CI_Controller
         ];
 
         $update = $this->User_model->update($id, $data);
-        $this->sendEmailTo($email, $id_user, $nama);
+        if ($pengaturan['status_notifikasi'] == 1) {
+        } else {
+            $this->sendEmailTo($email, $id_user,  $nama);
+        }
         if ($update) {
             // echo "success";
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, User ' . $nama . ' dengan ID: ' . $id_user . ' berhasil di verivikasi !</div>');
@@ -156,12 +160,13 @@ class User extends CI_Controller
 
     function sendEmailTo($email, $id_user,  $nama)
     {
+        $pengaturan = $this->db->get_where('pengaturan', ['id' => 1])->row_array();
         $config = array(
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_port' => 465,
-            'smtp_user' => 'akbarainovationcenter@gmail.com',
-            'smtp_pass' => 'betaancor',
+            'smtp_user' => $pengaturan['email_smtp'],
+            'smtp_pass' => $pengaturan['password_email'],
             'mailtype' => 'html',
             'charset' => 'iso-8859-1'
         );
@@ -182,10 +187,10 @@ class User extends CI_Controller
         </body>
         </html>";
         // $email_backup = 'dev.akbarainovationcenter@gmail.com';
-        while (true) {
-            $kirim = array($email);
-        }
-        $this->email->from('akbarainovationcenter@gmail.com', 'DARIMU BANTEN');
+
+        $kirim = array($email);
+
+        $this->email->from($pengaturan['email_smtp'], 'DARIMU BANTEN');
         $this->email->to($kirim);
         $this->email->subject('PERMINTAAN AKTIVASI BARU DITERIMA');
         $this->email->message($message);

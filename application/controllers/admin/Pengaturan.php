@@ -135,4 +135,37 @@ class Pengaturan extends CI_Controller
         $this->db->update('pengaturan', $data);
         redirect('admin/pengaturan');
     }
+
+    function updatemail()
+    {
+        $data = array(
+            'email_smtp' => $this->input->post('email_smtp'),
+            'password_email' => $this->input->post('password_email')
+        );
+        $id = '1';
+        $this->db->where('id', $id);
+        $this->db->update('pengaturan', $data);
+        redirect('admin/pengaturan');
+    }
+
+    function onnotif()
+    {
+        $data = array(
+            'status_notifikasi' => 2,
+        );
+        $id = '1';
+        $this->db->where('id', $id);
+        $this->db->update('pengaturan', $data);
+        redirect('admin/pengaturan');
+    }
+    function ofnotif()
+    {
+        $data = array(
+            'status_notifikasi' => 1,
+        );
+        $id = '1';
+        $this->db->where('id', $id);
+        $this->db->update('pengaturan', $data);
+        redirect('admin/pengaturan');
+    }
 }

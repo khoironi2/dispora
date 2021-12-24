@@ -28,7 +28,7 @@ class Sign extends CI_Controller
 
     public function register()
     {
-
+        $pengaturan = $this->db->get_where('pengaturan', ['id' => 1])->row_array();
         $this->form_validation->set_rules('nama', 'Nama', 'required');
 
         if ($this->form_validation->run() == FALSE) {
@@ -55,7 +55,10 @@ class Sign extends CI_Controller
             ];
 
             $insert = $this->User_model->register("tbl_user", $data);
-            $this->sendEmailTo($email, $nama);
+            if ($pengaturan['status_notifikasi'] == 1) {
+            } else {
+                $this->sendEmailTo($email, $nama);
+            }
             if ($insert) {
                 echo "success";
                 // $this->session->set_flashdata('success_login', 'Sukses, Anda telah terdaftar.');
@@ -69,12 +72,13 @@ class Sign extends CI_Controller
 
     function sendEmailTo($email,  $nama)
     {
+        $pengaturan = $this->db->get_where('pengaturan', ['id' => 1])->row_array();
         $config = array(
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_port' => 465,
-            'smtp_user' => 'akbarainovationcenter@gmail.com',
-            'smtp_pass' => 'betaancor',
+            'smtp_user' => $pengaturan['email_smtp'],
+            'smtp_pass' => $pengaturan['password_email'],
             'mailtype' => 'html',
             'charset' => 'iso-8859-1'
         );
@@ -93,11 +97,11 @@ class Sign extends CI_Controller
             <p>Silahkan login pada link berikut <a href='https://darimu.garisdesign.com/sign' target='_blank'>LOGIN</a> dan lakukan verivikasi pada menu Manajemen User !</p>
         </body>
         </html>";
-        $email_admin = 'dev.akbarainovationcenter@gmail.com';
-        while (true) {
-            $kirim = array($email_admin);
-        }
-        $this->email->from('akbarainovationcenter@gmail.com', 'DARIMU BANTEN');
+        $email_admin = $pengaturan['email_smtp'];
+
+        $kirim = array($email_admin);
+
+        $this->email->from($pengaturan['email_smtp'], 'DARIMU BANTEN');
         $this->email->to($kirim);
         $this->email->subject('PERMINTAAN AKTIVASI USER BARU');
         $this->email->message($message);

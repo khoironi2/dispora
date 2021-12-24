@@ -21,6 +21,12 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#kt_builder_footer" role="tab">Card Bracnh</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#kt_builder_smtp" role="tab">Mail Seting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#kt_builder_notif" role="tab">Notifikasi</a>
+                </li>
             </ul>
         </div>
         <!--end::Header-->
@@ -213,6 +219,65 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                        <div class="tab-pane" id="kt_builder_smtp">
+                            <form action="<?= base_url('admin/pengaturan/updatemail'); ?>" method="POST">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-lg-right">Email Protokol:</label>
+                                    <div class="col-lg-9 col-xl-4">
+                                        <input type="text" name="email_smtp" value="<?= $key['email_smtp'] ?>" class="form-control form-control-solid" />
+
+                                        <div class="form-text text-muted">Pastikan Allow less secure apps pada Email sudah ON <a href="https://myaccount.google.com/lesssecureapps" target="_blank">CEK DISINI</a></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-lg-right">Password:</label>
+                                    <div class="col-lg-9 col-xl-4">
+                                        <input type="text" name="password_email" value="<?= $key['password_email'] ?>" class="form-control form-control-solid" />
+
+                                        <div class="form-text text-muted">Pastikan password email sudah benar terlebih dahulu</div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <button type="submit" class="btn btn-primary font-weight-bold ">Preview</button>
+                                            <!-- <button type="submit" class="btn btn-clean font-weight-bold">Reset</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="kt_builder_notif">
+
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-lg-right">
+
+                                </label>
+                                <div class="col-lg-9 col-xl-4">
+                                    <?php if ($key['status_notifikasi'] == 1) { ?>
+                                        <span class="symbol-label font-weight-bolder font-size-lg"><b style="color: darkred;">NON AKTIF</b></span>
+                                    <?php } else { ?>
+                                        <span class="symbol-label font-weight-bolder font-size-lg"><b style="color: green ;">Notifikasi AKTIF</b></span>
+                                    <?php } ?>
+                                    <?php if ($key['status_notifikasi'] == 1) { ?>
+                                        <a href="<?= base_url('admin/pengaturan/onnotif'); ?>"><span class="label label-lg label-light-success label-inline">Aktifkan</span></a>
+                                    <?php } else { ?>
+                                        <a href="<?= base_url('admin/pengaturan/ofnotif'); ?>"><span class="label label-lg label-light-danger label-inline">Matikan</span></a>
+                                    <?php } ?>
+
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <button type="submit" class="btn btn-primary font-weight-bold ">Preview</button>
+                                        <!-- <button type="submit" class="btn btn-clean font-weight-bold">Reset</button> -->
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
