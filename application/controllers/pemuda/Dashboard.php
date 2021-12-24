@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller
         parent::__construct();
         $this->CI = &get_instance();
         if ($this->CI->session->userdata['level_user'] != 'pemuda') {
+            $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">Silahkan login terlebih dahulu</div>');
             redirect();
         }
     }

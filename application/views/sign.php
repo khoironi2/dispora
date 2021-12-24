@@ -53,7 +53,9 @@
                 </div>
                 <!--end::Form group-->
                 <!--begin::Form group-->
+
                 <div class="form-group">
+                    <label class="control-label"><sup style="color:crimson"></sup> <span class="text-success" id="email_result"></span></label>
                     <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" id="registrer_email" autocomplete="off" />
                 </div>
                 <!--end::Form group-->
@@ -80,7 +82,7 @@
                 <!--end::Form group-->
                 <!--begin::Form group-->
                 <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
-                    <button type="submit" class="btn btn-register btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                    <button type="submit" class="btn kode btn-register btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
                     <button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button>
                 </div>
                 <!--end::Form group-->
@@ -123,6 +125,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+<script>
+    $(document).ready(function() {
+
+        $('#registrer_email').blur(function() {
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('sign/cekEmail'); ?>",
+                data: $(this).serialize(),
+                success: function(data) {
+                    if (data == "ok") {
+                        $('#email_result').html('<font color="red">Email sudah digunakan</font>');
+                        $(".kode").hide();
+                    } else {
+                        $('#email_result').html('tersedia');
+                        $(".kode").show();
+                    }
+                }
+            });
+        });
+    });
+</script>
 
 <script>
     $(document).ready(function() {
@@ -256,7 +281,28 @@
 
                     success: function(response) {
 
-                        if (response == "pemuda") {
+                        if (response == "invalid") {
+
+                            Swal.fire({
+                                    // type: 'danger',
+                                    title: 'Akun sedang proses verivikasi!',
+                                    text: 'Silahkan coba beberapa saat lagi',
+                                    timer: 9000,
+                                    icon: 'warning',
+                                    showCancelButton: false,
+                                    showConfirmButton: false,
+                                    onOpen: function() {
+                                        Swal.showLoading()
+                                    }
+                                })
+                                .then(function() {
+                                    window.location.href = "<?php echo base_url() ?>/sign";
+                                });
+
+                            $("#email").val('');
+                            $("#password").val('');
+
+                        } else if (response == "pemuda") {
 
                             Swal.fire({
                                     type: 'success',

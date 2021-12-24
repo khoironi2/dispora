@@ -109,6 +109,48 @@ class User extends CI_Controller
         }
     }
 
+    public function validasi($id)
+    {
+        $user = $this->db->get_where('tbl_user', ['id_user' => $id])->row_array();
+        $nama = $user['nama'];
+        $id_user = $user['id_user'];
+        $data = [
+            'validasi_user' => '2',
+            'timestamp' => date('Y-m-d H:i:s')
+        ];
+
+        $update = $this->User_model->update($id, $data);
+        if ($update) {
+            // echo "success";
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Sukses, User ' . $nama . ' dengan ID: ' . $id_user . ' berhasil di verivikasi !</div>');
+            redirect('admin/user');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Failed !</div>');
+            redirect('admin/user');
+        }
+    }
+
+    public function unvalidasi($id)
+    {
+        $user = $this->db->get_where('tbl_user', ['id_user' => $id])->row_array();
+        $nama = $user['nama'];
+        $id_user = $user['id_user'];
+        $data = [
+            'validasi_user' => '1',
+            'timestamp' => date('Y-m-d H:i:s')
+        ];
+
+        $update = $this->User_model->update($id, $data);
+        if ($update) {
+            // echo "success";
+            $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">Sukses, User ' . $nama . ' dengan ID: ' . $id_user . ' berhasil di Unverivikasi !</div>');
+            redirect('admin/user');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Failed !</div>');
+            redirect('admin/user');
+        }
+    }
+
 
     public function delete($id)
     {

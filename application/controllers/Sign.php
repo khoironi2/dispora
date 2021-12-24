@@ -17,6 +17,15 @@ class Sign extends CI_Controller
         $this->load->view('template_branch/footer', $data);
     }
 
+    function cekEmail()
+    {
+        $email = $this->input->post("email");
+        $cek = $this->User_model->Cek_Email($email);
+        if ($cek > 0) {
+            echo "ok";
+        }
+    }
+
     public function register()
     {
 
@@ -41,6 +50,7 @@ class Sign extends CI_Controller
                 'email' => $email,
                 'password' => $pass,
                 'level_user' => 'pemuda',
+                'validasi_user' => '1',
                 'timestamp' => date('Y-m-d H:i:s')
             ];
 
@@ -85,6 +95,7 @@ class Sign extends CI_Controller
                     $this->session->set_userdata('email', $cek_login->email);
                     $this->session->set_userdata('level_user', $cek_login->level_user);
                     $this->session->set_userdata('foto_user', $cek_login->foto_user);
+                    $this->session->set_userdata('validasi_user', $cek_login->validasi_user);
                     date_default_timezone_set("ASIA/JAKARTA");
                     //$email = $this->session->userdata('email');
                     $data = array(
@@ -92,27 +103,32 @@ class Sign extends CI_Controller
                         'time_login_user' => date('Y-m-d H:i:s')
                     );
                     $this->User_model->logout($data, $email);
-                    switch ($cek_login->level_user) {
-                        case 'pemuda':
-                            echo "pemuda";
-                            // redirect(site_url('owner/dashboard'));
-                            break;
-                        case 'admin':
-                            echo "admin";
-                            // redirect(site_url('admin/dashboard'));
-                            break;
-                        case 'pimpinan':
-                            echo "pimpinan";
-                            // redirect(site_url('terapis/dashboard'));
-                            break;
-                        case 'operator':
-                            echo "operator";
-                            // redirect(site_url('terapis/dashboard'));
-                            break;
-                        default:
-                            # code...
-                            break;
+                    if ($cek_login->validasi_user == 1) {
+                        echo "invalid";
+                    } else {
+                        switch ($cek_login->level_user) {
+                            case 'pemuda':
+                                echo "pemuda";
+                                // redirect(site_url('owner/dashboard'));
+                                break;
+                            case 'admin':
+                                echo "admin";
+                                // redirect(site_url('admin/dashboard'));
+                                break;
+                            case 'pimpinan':
+                                echo "pimpinan";
+                                // redirect(site_url('terapis/dashboard'));
+                                break;
+                            case 'operator':
+                                echo "operator";
+                                // redirect(site_url('terapis/dashboard'));
+                                break;
+                            default:
+                                # code...
+                                break;
+                        }
                     }
+
                     // redirect('Admin');
                 } else {
 

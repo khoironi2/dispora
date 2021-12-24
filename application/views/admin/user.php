@@ -38,6 +38,7 @@
                             <th>Nama</th>
                             <th>Email</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,6 +58,13 @@
                                 <td><?= $key['level_user'] ?></td>
                                 <td><?= $key['nama'] ?></td>
                                 <td><?= $key['email'] ?></td>
+                                <td>
+                                    <?php if ($key['validasi_user'] == 1) { ?>
+                                        <a href="<?= base_url('admin/user/validasi/' . $key['id_user']) ?>"><span class="badge badge-pill badge-warning">Menunggu Verivikasi</span></a>
+                                    <?php } else { ?>
+                                        <a href="<?= base_url('admin/user/unvalidasi/' . $key['id_user']) ?>"><span class="badge badge-pill badge-success">Terverivikasi</span></a>
+                                    <?php } ?>
+                                </td>
                                 <td>
                                     <a data-toggle="modal" data-target="#edit<?= $key['id_user'] ?>">
                                         <span style="font-size: 3em; color: red;">

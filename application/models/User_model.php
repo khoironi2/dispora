@@ -96,4 +96,11 @@ class User_model extends CI_Model
         else
             return false;
     }
+
+    function Cek_Email($email)
+    {
+        $this->db->where('email', $email);
+        $query = $this->db->get('tbl_user');
+        return $query->num_rows();
+    }
 }
